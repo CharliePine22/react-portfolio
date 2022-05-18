@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5410ea0a.css",
+    "main.js": "/static/js/main.bf60569d.js",
+    "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
+    "static/media/current-cj-image.jpg": "/static/media/current-cj-image.6492fc75087d8e032e14.jpg",
+    "static/media/headshot.jfif": "/static/media/headshot.89b34cac1b59212a81bd.jfif",
+    "index.html": "/index.html",
+    "main.5410ea0a.css.map": "/static/css/main.5410ea0a.css.map",
+    "main.bf60569d.js.map": "/static/js/main.bf60569d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5410ea0a.css",
+    "static/js/main.bf60569d.js"
+  ]
+}
