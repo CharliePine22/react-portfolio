@@ -1,0 +1,43 @@
+.container {
+    width: 76%;
+    background-color: #191C26;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: right;
+}
+
+.portfolio-description {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: #FFF;
+    padding: 0 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    width: 100%;
+    float: left;
+    color: #fff;
+}
+
+
+.title h3 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        line-height: 2;
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "react-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.0",
+    "emoji-picker-react": "^3.5.1",
+    "firebase": "^9.6.8",
+    "html-react-parser": "^1.4.8",
+    "html-to-text": "^8.1.0",
+    "jodit-react": "^1.2.8",
+    "mongodb": "^4.4.1",
+    "react": "^17.0.2",
+    "react-chat-engine": "^1.11.22",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-loader-spinner": "^6.0.0-0",
+    "react-new-window": "^0.2.1",
+    "react-router-dom": "^6.3.0",
+    "react-rte": "^0.16.5",
+    "react-scripts": "5.0.0",
+    "use-sound": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

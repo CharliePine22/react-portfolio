@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 76%;
+    float:right;
+    background-color: #191C26;
+    margin:0;
+    padding:0;
+    height: 100vh;
+}
+
+.description-container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding: 100px 20px;
+    width: 500px;
+}
+
+.description {
+    color: #A3A9BD;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.description h1 {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color:white;
+    margin-bottom:14px;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.description p {
+    margin-top: 0;
+}
+
+.headshot-container {
+   height: 300px;
+   width: 300px;
+   background: url('../../assets/images/current-cj-image.jpg');
+   background-repeat: no-repeat;
+   background-position: center-left;
+   background-size: cover;
+   border-radius: 50%;
+   position:relative;
+}
+
+.icon-border {
+    /* line-height:1px; */
+    border-right: 1px solid grey;
+}
+
+.icon-border:hover {
+    border: none;
+}
+
+.socials {
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:0;
+}
+
+.socials li {
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all .35s;
+    line-height:1px;
+}
+
+.socials li:hover {
+    transform: scale(1.5);
+    color: white;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        line-height: 2;
+    }
+}

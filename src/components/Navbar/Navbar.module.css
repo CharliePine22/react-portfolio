@@ -1,0 +1,158 @@
+.nav {
+  height: 100vh;
+  background-color: black;
+  width: 24%;
+  max-width: 24%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* NAV Header */
+.nav-header {
+  height: 12%;
+  border-bottom: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.nav-header a,
+.nav-header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-header h1 {
+  margin-left: 30px;
+  font-size: 3rem;
+}
+
+.nav-header h1 span {
+  color: #527ca6;
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+}
+
+/* NAV Items */
+
+.nav-item {
+  cursor: pointer;
+  padding: 15px 15px;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  color: white;
+  padding: 60px 40px;
+  margin: 0;
+}
+
+.nav-list a:visited {
+  text-decoration: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: linear-gradient(to left, transparent 50%, #191c26 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  transition: 0.5s ease-out;
+  font-size: 1.4rem;
+}
+
+.nav-list a:hover {
+  background-position: left;
+}
+
+/* NAV Footer */
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #34495e;
+}
+
+.nav-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  justify-content: center;
+}
+
+.footer-info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 65%;
+}
+
+.footer-email {
+  color: #A3A9BD;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-weight: 900;
+}
+
+.footer-info p {
+  margin: 0;
+}
+
+.nav-footer-inner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* NAV Footer Image */
+.footer-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .nav-list {
+    padding: 60px 30px;
+  }
+
+  .nav-item {
+    padding: 15px 5px;
+  }
+}

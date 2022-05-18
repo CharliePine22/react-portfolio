@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 18px;
+  line-height: 30px;
+  word-wrap: break-word;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amaranth', sans-serif;
+}
