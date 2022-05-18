@@ -54,6 +54,31 @@
     height: 100%;
     width: 20%;
     border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.react:hover {
+    color: #61DBFB;
+}
+
+.python:hover {
+    /* background: -moz-linear-gradient(90deg, rgba(52,113,162,1) 0%, rgba(52,113,162,1) 38%, rgba(255,210,62,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(52,113,162,1) 0%, rgba(52,113,162,1) 38%, rgba(255,210,62,1) 100%);
+    background-image: linear-gradient(90deg, rgba(52,113,162,1) 0%, rgba(52,113,162,1) 38%, rgba(255,210,62,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3471a2",endColorstr="#ffd23e",GradientType=1); */
+    background-image: linear-gradient(right, rgba(52,113,162,1), rgba(255,210,62,1));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.projects-nav span {
+    cursor: pointer;
+    color: #A3A9BD;
+    transition: all .25s;
 }
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
