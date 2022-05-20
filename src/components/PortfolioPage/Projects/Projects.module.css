@@ -18,6 +18,8 @@
   align-items: center;
   text-align: center;
   transition: all .25s;
+  background-size: cover;
+  background-position: center;
 }
 
 .card:hover {
@@ -29,4 +31,15 @@
 .project-title {
     font-weight: 900 !important;
     color: white !important;
+}
+
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 97%;
+
+  }
 }

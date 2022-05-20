@@ -147,3 +147,44 @@
     line-height: 2;
   }
 }
+
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .about-info {
+    flex-direction: column-reverse;
+  }
+
+  .about-info p {
+    max-width: 100%;
+    line-height: 40px;
+  }
+
+  .about-info-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .about-info-right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .about-title {
+    text-align: center;
+    float:none;
+  }
+
+  .hobbies h3 {
+    margin: 0;
+  }
+
+  .hobbies p {
+    width: 100%;
+
+  }
+
+  .hobbies-list li{
+    justify-content: flex-end;
+  }
+}
