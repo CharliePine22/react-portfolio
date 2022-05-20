@@ -48,6 +48,7 @@
    background-size: cover;
    border-radius: 50%;
    position:relative;
+   box-shadow: 0px 2px 5px 1px black;
 }
 
 .icon-border {

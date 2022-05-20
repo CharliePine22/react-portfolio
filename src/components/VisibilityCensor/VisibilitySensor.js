@@ -11,14 +11,14 @@ const VisibilitySensorImage = () => {
         }}
       >
         <img
-          alt={this.props.alt}
-          src={this.props.src}
+          alt={props.alt}
+          src={props.src}
           style={{
             display: 'block',
             maxWidth: '100%',
             width: '100%',
             height: 'auto',
-            opacity: this.state.visibility ? 1 : 0.25,
+            opacity: visibility ? 1 : 0.25,
             transition: 'opacity 500ms linear'
           }}
         />
