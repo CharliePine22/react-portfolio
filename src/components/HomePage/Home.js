@@ -7,7 +7,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-const Home = () => {
+const Home = (props) => {
   // Icons for social media list
 
   const socialIcons = [
@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <main id='home' className={styles.container}>
+    <main id={props.id} className={styles.container}>
       <div className={styles["description-container"]}>
         <div className={styles["headshot-container"]} />
         <div className={styles.description}>

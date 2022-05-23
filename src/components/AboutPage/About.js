@@ -2,10 +2,10 @@ import styles from "./About.module.css";
 import Chicago from "../../assets/images/Chicago.jpg";
 import { FaDumbbell, FaDog, FaGamepad } from "react-icons/fa";
 
-const About = () => {
+const About = (props) => {
   return (
     <>
-      <div id="about" className={styles["about-container"]}>
+      <div id={props.id} className={styles["about-container"]}>
         <div className={styles["about-content"]}>
           <div className={styles["about-title"]}>
             <h3>About Me</h3>

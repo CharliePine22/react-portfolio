@@ -148,6 +148,13 @@
   }
 }
 
+@media screen and (min-width: 812px) {
+  .about-info-right {
+    width: 50%;
+    padding-left: 0;
+  }
+}
+
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .about-info {
     flex-direction: column-reverse;
@@ -186,5 +193,9 @@
 
   .hobbies-list li{
     justify-content: flex-end;
+  }
+
+  .hobbies-list li span {
+    font-size: .75rem;
   }
 }

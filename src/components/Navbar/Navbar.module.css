@@ -8,6 +8,35 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
+  transition: all .5s;
+}
+
+.nav-hidden {
+  height: 100vh;
+  background-color: black;
+  width: 24%;
+  max-width: 24%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -240px;
+  transition: all .5s;
+}
+
+.nav-toggle {
+  color: white;
+  margin: 25px;
+  padding:0;
+  position:fixed;
+  cursor: pointer;
+  opacity: .25;
+  z-index: 1000;
+}
+
+.nav-toggle:hover {
+  opacity: 1;
 }
 
 /* NAV Header */
@@ -39,7 +68,6 @@
 }
 
 /* NAV Items */
-
 .nav-item {
   cursor: pointer;
   padding: 15px 15px;
@@ -68,7 +96,7 @@
   align-items: center;
   background-color: black;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   border-radius: 6px;
   background: linear-gradient(to left, transparent 50%, #191c26 50%);
   background-position: right bottom;
@@ -142,9 +170,13 @@
   border-radius: 50%;
 }
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .nav {
-    display: none;
+    left: 0px;
+  }
+
+  .nav-hidden {
+    left: 0px;
   }
 }
 
@@ -155,6 +187,10 @@
 
   .nav-item {
     padding: 15px 5px;
+  }
+
+  .nav-toggle {
+    display: none;
   }
 
   .footer-image {

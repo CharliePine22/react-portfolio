@@ -4,7 +4,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { useState } from "react";
 import Projects from "./Projects/Projects";
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   const [currentLanguage, setCurrentLanguage] = useState("React");
 
   const reactStyles =
@@ -16,7 +16,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div id="portfolio" className={styles.container}>
+      <div id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
 

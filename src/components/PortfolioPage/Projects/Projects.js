@@ -28,8 +28,6 @@ const Projects = (props) => {
 
   const selectedLanguage = currentLanguage.split(" ")[0].toLowerCase();
   const el = document.querySelectorAll(`.${styles.card}`);
-  
-  console.log(el[0])
 
   return (
     <div className={styles.container}>
