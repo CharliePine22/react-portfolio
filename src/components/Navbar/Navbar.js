@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <span className={styles["nav-toggle"]} style={navVisibility ? { top: '15px', left: '150px' } : {top: '0px', left: '0px'}}>
+      <span className={styles["nav-toggle"]} style={navVisibility ? { top: '7px', left: '100px' } : {top: '0px', left: '0px'}}>
         <GiHamburgerMenu
           size={35}
           onClick={() => setNavVisibility(!navVisibility)} 

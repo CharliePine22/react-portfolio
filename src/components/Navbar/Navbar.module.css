@@ -201,3 +201,39 @@
     width: 100%;
   }
 }
+
+
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .nav {
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .nav-list {
+    padding: 30px 10px;
+  }
+
+  .nav-list a {
+    font-size: 1.15rem;
+  }
+
+  .nav-header h1 {
+    font-size: 2rem;
+  }
+
+  .nav-footer {
+    padding: 20px 5px;
+  }
+
+  .footer-image {
+    display:none;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+
+  .footer-email {
+    font-size: 12px;
+  }
+}
