@@ -12,14 +12,15 @@ const Portfolio = (props) => {
   const pythonStyles =
     currentLanguage == "Python" ? styles["python-active"] : styles.python;
   const htmlStyles =
-    currentLanguage == "HTML | CSS | JS" ? styles["html-active"] : styles.html;
+    currentLanguage == "HTML | CSS | JS"
+      ? styles["html-active"]
+      : styles.frontend;
 
   return (
     <>
       <div id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
-
           <div className={styles["portfolio-description"]}>
             <p>Here are some of the projects that I've worked on!</p>
           </div>
@@ -54,6 +55,7 @@ const Portfolio = (props) => {
                   }}
                 />{" "}
                 <FaCss3
+                  className={styles.css}
                   size={30}
                   style={{
                     color:
@@ -63,6 +65,7 @@ const Portfolio = (props) => {
                   }}
                 />{" "}
                 <IoLogoJavascript
+                  className={styles.javascript}
                   size={30}
                   style={{
                     color:

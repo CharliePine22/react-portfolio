@@ -45,7 +45,7 @@
 .projects {
     display:flex;
     margin: 50px auto;
-    width: 95%;
+    width: 100%;
     height: 600px;
     border: 3px solid black;
     border-radius:4px;
@@ -56,7 +56,7 @@
 /* Portfolio Nav */
 .projects-nav {
     height: 100%;
-    width: 20%;
+    width: 15%;
     border-right: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -91,10 +91,18 @@
 }
 
 /* HTML */
-.html:hover {
-    color: 'orange';
+.frontend:hover svg:first-of-type {
+    color: #E34F26 !important;
+    transition: all .25s;
 }
-
+.frontend:hover svg:nth-child(2)  {
+    color: #2965f1 !important;
+    transition: all .25s;
+}
+.frontend:hover svg:nth-child(3)  {
+    color: #F7DF1E !important;
+    transition: all .25s;
+}
 
 .projects-nav span {
     cursor: pointer;
@@ -105,7 +113,7 @@
 
 /* Portfolio Projects Container */
 .projects-container {
-    width: 80%;
+    width: 85%;
     /* height: 40%; */
     display:flex;
     flex-direction: column;

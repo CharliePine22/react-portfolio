@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import resume from '../../assets/images/cpine-resume.jpg';
 import {
   FaFacebook,
   FaInstagram,
@@ -66,6 +67,9 @@ const Home = (props) => {
               )
             )}
           </ul>
+          <a href={resume} className={styles.resume} download='cpine-resume.jpg'> 
+              Download Resume
+          </a>
         </div>
       </div>
     </main>

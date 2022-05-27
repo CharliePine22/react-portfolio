@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
+// For scrolling and auto setting active classes on nav items on links.
+import { Link } from "react-scroll";
+
+// React Nav Icons
 import {
   FaHome,
   FaUserNinja,
@@ -7,20 +11,30 @@ import {
   FaJournalWhills,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+// Headshot for bottom of nav with larger desktops
 import headShot from "../../assets/images/headshot.jfif";
 
 const Navbar = () => {
   const [activeNavItem, setActiveNavItem] = useState("Home");
   const [navVisibility, setNavVisibility] = useState(false);
 
+  // On mobile, hide the nav unless the user opens it
   const navStyles = navVisibility ? styles.nav : styles["nav-hidden"];
 
   return (
     <>
-      <span className={styles["nav-toggle"]} style={navVisibility ? { top: '7px', left: '100px' } : {top: '0px', left: '0px'}}>
+      <span
+        className={styles["nav-toggle"]}
+        style={
+          navVisibility
+            ? { top: "7px", left: "100px" }
+            : { top: "0px", left: "0px" }
+        }
+      >
         <GiHamburgerMenu
           size={35}
-          onClick={() => setNavVisibility(!navVisibility)} 
+          onClick={() => setNavVisibility(!navVisibility)}
         />
       </span>
       <nav className={navStyles}>
@@ -33,8 +47,11 @@ const Navbar = () => {
         </div>
 
         <ul className={styles["nav-list"]}>
-          <a
-            href="#home"
+          {/* Home Page Link */}
+          <Link
+            to="home"
+            activeClass={styles["active"]}
+            spy={true}
             style={{
               backgroundColor:
                 activeNavItem == "Home" ? "#191C26" : "transparent",
@@ -44,9 +61,14 @@ const Navbar = () => {
             <li className={styles["nav-item"]}>
               <FaHome style={{ marginRight: "10px" }} /> Home
             </li>
-          </a>
-          <a
-            href="#about"
+          </Link>
+
+          {/* About Page Link */}
+          <Link
+            to="about"
+            activeClass={styles.active}
+            offset={70}
+            spy={true}
             style={{
               backgroundColor:
                 activeNavItem == "About" ? "#191C26" : "transparent",
@@ -56,9 +78,15 @@ const Navbar = () => {
             <li className={styles["nav-item"]}>
               <FaUserNinja style={{ marginRight: "10px" }} /> About
             </li>
-          </a>
-          <a
+          </Link>
+
+          {/* Portfolio Page Link */}
+          <Link
+            to="portfolio"
             href="#portfolio"
+            offset={70}
+            activeClass={styles["nav-item-active"]}
+            spy={true}
             style={{
               backgroundColor:
                 activeNavItem == "Portfolio" ? "#191C26" : "transparent",
@@ -68,9 +96,14 @@ const Navbar = () => {
             <li className={styles["nav-item"]}>
               <FaNewspaper style={{ marginRight: "10px" }} /> Portfolio
             </li>
-          </a>
-          <a
+          </Link>
+
+          {/* Contact Page Link */}
+          <Link
+            to="contact"
             href="#contact"
+            activeClass={styles["nav-item-active"]}
+            spy={true}
             style={{
               backgroundColor:
                 activeNavItem == "Contact" ? "#191C26" : "transparent",
@@ -80,7 +113,7 @@ const Navbar = () => {
             <li className={styles["nav-item"]}>
               <FaJournalWhills style={{ marginRight: "10px" }} /> Contact
             </li>
-          </a>
+          </Link>
         </ul>
         <div className={styles["footer-container"]}>
           <div className={styles["nav-footer"]}>

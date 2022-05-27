@@ -33,6 +33,7 @@
   cursor: pointer;
   opacity: .25;
   z-index: 1000;
+  display:none;
 }
 
 .nav-toggle:hover {
@@ -75,6 +76,11 @@
   border-radius: 6px;
   display: flex;
   align-items: center;
+  background-color: transparent;
+}
+
+.nav-item > .active {
+  background: #191C26;
 }
 
 .nav-list {
@@ -189,10 +195,6 @@
     padding: 15px 5px;
   }
 
-  .nav-toggle {
-    display: none;
-  }
-
   .footer-image {
     display: none;
   }
@@ -207,6 +209,10 @@
   .nav {
     width: 50%;
     max-width: 100%;
+  }
+
+  .nav-toggle {
+    display:block;
   }
 
   .nav-list {

@@ -60,6 +60,27 @@
   border: none;
 }
 
+.resume {
+  display:inline-block;
+  text-decoration: none;
+  color: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 30px;
+  padding: 12px;
+  margin-top: 18px;
+  transition: all .25s;
+}
+
+.resume:hover {
+  border: 2px solid black;
+  transform: translateY(-10px);
+  color: black;
+  font-weight: bold;
+  background-color: #FFF;
+  /* box-shadow: 0px 0px 20px black; */
+  box-shadow: 1px 5px 5px 1px black;
+}
+
 .socials {
   list-style: none;
   display: flex;
