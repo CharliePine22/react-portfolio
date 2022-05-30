@@ -19,6 +19,12 @@ const CardFlip = (props) => {
     window.open(props.github, "_blank");
   };
 
+  const currentWindowWidth = window.innerWidth;
+
+  if (currentWindowWidth <= 375) {
+    
+  } 
+
   return (
     <>
       <ReactCardFlip
@@ -34,7 +40,7 @@ const CardFlip = (props) => {
         {/* Back Of Card */}
         <div className={styles["card-back"]}>
           <div className={styles.back}>
-            <img className={styles['background-image']} src={props.image} />
+            {/* <img className={styles['background-image']} src={props.image} /> */}
             {/* Back Arrow */}
             <div className={styles["back-arrow"]} onClick={handleFlip}>
               <IoReturnUpBackOutline size={25} />
