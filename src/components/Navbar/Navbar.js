@@ -97,6 +97,7 @@ const Navbar = () => {
           <Link
             to="contact"
             href="#contact"
+            offset={70}
             activeClass={styles["nav-item-active"]}
             spy={true}
             style={{

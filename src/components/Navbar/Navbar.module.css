@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .nav-hidden {
@@ -22,7 +22,7 @@
   position: fixed;
   top: 0;
   left: -240px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 /* Hamburger Nav Toggler */
@@ -30,14 +30,14 @@
 .nav-toggle {
   color: white;
   margin: 25px;
-  padding:0;
-  position:fixed;
+  padding: 0;
+  position: fixed;
   cursor: pointer;
-  opacity: .25;
+  opacity: 0.25;
   z-index: 1000;
-  display:none;
-  top:8px;
-  left:0;
+  display: none;
+  top: 8px;
+  left: 0;
 }
 
 .nav-toggle:hover {
@@ -84,7 +84,7 @@
 }
 
 .nav-item > .active {
-  background: #191C26;
+  background: #191c26;
 }
 
 .nav-list {
@@ -146,7 +146,7 @@
 }
 
 .footer-email {
-  color: #A3A9BD;
+  color: #a3a9bd;
   font-size: 14px;
 }
 
@@ -190,6 +190,20 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .nav-toggle {
+    display: block;
+  }
+  
+  .footer-image {
+    display: none;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .nav-list {
     padding: 60px 30px;
@@ -208,7 +222,6 @@
   }
 }
 
-
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .nav {
     width: 50%;
@@ -216,7 +229,7 @@
   }
 
   .nav-toggle {
-    display:block;
+    display: block;
   }
 
   .nav-list {
@@ -228,12 +241,12 @@
   }
 
   .nav-header {
-    justify-content:flex-end;
+    justify-content: flex-end;
   }
 
   .nav-header h1 {
     font-size: 2.5rem;
-    margin-right: 30px;
+    margin-right: 34px;
     /* margin-top: 18px; */
   }
 
@@ -242,7 +255,7 @@
   }
 
   .footer-image {
-    display:none;
+    display: none;
   }
 
   .footer-info {

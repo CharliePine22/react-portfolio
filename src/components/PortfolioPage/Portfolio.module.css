@@ -38,7 +38,7 @@
     clear: both;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 /* Portfolio Projects */
@@ -75,7 +75,11 @@
 
 /* Python */
 .python-active {
-    color: rgba(255,210,62,1) !important;
+    /* color: rgba(255,210,62,1) !important; */
+}
+
+.python-fill {
+    stop-color: rgba(52,113,162,1);
 }
 
 .python:hover {
@@ -84,13 +88,19 @@
     background: -webkit-linear-gradient(90deg, rgba(52,113,162,1) 0%, rgba(52,113,162,1) 38%, rgba(255,210,62,1) 100%);
     background-image: linear-gradient(90deg, rgba(52,113,162,1) 0%, rgba(52,113,162,1) 38%, rgba(255,210,62,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3471a2",endColorstr="#ffd23e",GradientType=1); */
-    background-image: linear-gradient(to right, rgba(52,113,162,1), rgba(255,210,62,1));
+    /* background-image: linear-gradient(to right, rgba(52,113,162,1), rgba(255,210,62,1)); */
     /* color: transparent; */
-    -webkit-background-clip: text;
-    background-clip: text;
+    /* -webkit-background-clip: text;
+    background-clip: text; */
 }
 
 /* HTML */
+
+.frontend {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .frontend:hover svg:first-of-type {
     color: #E34F26 !important;
     transition: all .25s;
@@ -108,12 +118,14 @@
     cursor: pointer;
     color: #A3A9BD;
     transition: all .25s;
+    display:flex;
+    width: 100%;
+    justify-content: center;
 }
 
 /* Portfolio Projects Container */
 .projects-container {
     width: 85%;
-    /* height: 40%; */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +155,12 @@
 @media screen and (min-width: 1440px) {
     .projects {
         height: 600px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .projects {
+        height: 750px;
     }
 }
 

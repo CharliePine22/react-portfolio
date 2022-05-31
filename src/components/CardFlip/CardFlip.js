@@ -19,11 +19,8 @@ const CardFlip = (props) => {
     window.open(props.github, "_blank");
   };
 
+  // Grab width to determine if user is viewing from a mobile screen.
   const currentWindowWidth = window.innerWidth;
-
-  if (currentWindowWidth <= 375) {
-    
-  } 
 
   return (
     <>

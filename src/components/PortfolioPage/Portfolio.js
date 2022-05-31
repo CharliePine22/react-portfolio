@@ -5,6 +5,7 @@ import { useState } from "react";
 import Projects from "./Projects/Projects";
 
 const Portfolio = (props) => {
+  // TODO: HAVE TO FIX PYTHON HOVER COLORS
   const [currentLanguage, setCurrentLanguage] = useState("React");
 
   const reactStyles =
@@ -16,9 +17,29 @@ const Portfolio = (props) => {
       ? styles["html-active"]
       : styles.frontend;
 
+  const activePythonFill = e => {
+    e.target.style.fill = "url(#python-gradient)";
+  }
+
+  const normalPythonFill = e => {
+    e.target.style.fill = "#A3A9BD";
+  }
+
   return (
     <>
-      <div id={props.id} className={styles.container}>
+      <svg className={styles['python-fill']} width="0" height="0">
+        <linearGradient
+          id="python-gradient"
+          x1="100%"
+          y1="100%"
+          x2="0%"
+          y2="0%"
+        >
+          <stop stopColor="rgba(52,113,162,1)" offset="50%" />
+          <stop stopColor="rgba(255,210,62,1)" offset="50%" />
+        </linearGradient>
+      </svg>
+      <main id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
           <div className={styles["portfolio-description"]}>
@@ -26,20 +47,35 @@ const Portfolio = (props) => {
           </div>
           {/* Projects Card */}
           <div className={styles.projects}>
-            {/* Left Side */}
+            {/* Nav Side */}
             <div className={styles["projects-nav"]}>
+              {/* React Projects Icon */}
               <span
                 className={reactStyles}
                 onClick={() => setCurrentLanguage("React")}
               >
                 <FaReact size={40} />
               </span>
+
+              {/* Python Projects Icon */}
               <span
                 className={pythonStyles}
                 onClick={() => setCurrentLanguage("Python")}
               >
-                <FaPython size={40} />
+                <FaPython
+                  onMouseOver={activePythonFill}
+                  onMouseOut={normalPythonFill}
+                  size={40}
+                  style={{
+                    fill:
+                      currentLanguage == "Python"
+                        ? "url(#python-gradient)"
+                        : "#A3A9BD",
+                  }}
+                />
               </span>
+
+              {/* HTML, CSS, JS Projects Icon */}
               <span
                 className={htmlStyles}
                 onClick={() => setCurrentLanguage("HTML | CSS | JS")}
@@ -87,7 +123,7 @@ const Portfolio = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
