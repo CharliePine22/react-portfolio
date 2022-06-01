@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px 20px;
+  padding: 80px 20px;
   width: 500px;
 }
 
@@ -27,7 +27,7 @@
 
 .description h1 {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 3.25rem;
   font-weight: 700;
   color: white;
   margin-bottom: 14px;
@@ -37,6 +37,7 @@
 
 .description p {
   margin-top: 0;
+  font-size: 1.2rem;
 }
 
 .headshot-container {
@@ -69,9 +70,10 @@
   color: #FFF;
   border: 2px solid #FFF;
   border-radius: 30px;
-  padding: 12px;
+  padding: 12px 20px;
   margin-top: 18px;
   transition: all .25s;
+  font-size: 1.75rem;
 }
 
 .resume:hover {
@@ -89,6 +91,7 @@
   justify-content: center;
   align-items: center;
   padding: 0;
+  margin-top:0;
 }
 
 .socials li {
@@ -102,6 +105,8 @@
   transform: scale(1.5);
   color: white;
 }
+
+/* Mac 1440x759 */
 
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .container {
@@ -123,9 +128,25 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 812px) and (max-width: 1435px) {
   .container {
     width: 100%;
     line-height: 2;
+  }
+
+  .description {
+    line-height: 1.2;
+  }
+
+  .description-container {
+    padding: 50px 20px 100px;
+  }
+
+  .description h1 {
+    font-size: 3rem;
+  }
+
+  .description p {
+    font-size: 1.3rem;
   }
 }

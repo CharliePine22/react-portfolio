@@ -6,6 +6,7 @@ import Portfolio from "./components/PortfolioPage/Portfolio";
 import "./index.css";
 
 function App() {
+  // CHROME DEVELOPER MAC SCREEN SIZE 1440x759
   return (
     <>
       <Navbar />

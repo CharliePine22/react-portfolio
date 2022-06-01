@@ -34,7 +34,7 @@
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px black;
   box-shadow: 0 0 5px black;
-  font-size: 1rem;
+  font-size: 1.5rem;
   align-items: center;
 }
 
@@ -54,7 +54,7 @@
 
 .bottom p {
   width: auto;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 900;
 }
 
@@ -176,13 +176,14 @@
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 1435px) {
   .contact {
     width: 100%;
     line-height: 2;
   }
 }
 
+/* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .contact {
     text-align: center;
@@ -196,5 +197,18 @@
 
   .contact-methods-list {
     flex-direction: column;
+  }
+
+  .form-title {
+      display:flex;
+      flex-direction:column;
+  }
+
+  .form-title p {
+    max-width: 100%;
+  }
+
+  .form-container {
+    padding: 50px 20px 55px;
   }
 }

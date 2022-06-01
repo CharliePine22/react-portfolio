@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import styles from "./Home.module.css";
-import resume from '../../assets/images/cpine-resume.jpg';
+import resume from "../../assets/images/cpine-resume.jpg";
 import {
   FaFacebook,
   FaInstagram,
@@ -9,14 +10,17 @@ import {
 } from "react-icons/fa";
 
 const Home = (props) => {
-  // Icons for social media list
+  // Grab user screen height to determine icon size
+  const currentScreenWidth = window.innerWidth;
+  console.log(currentScreenWidth);
 
+  // Social Media Icons from React Icons
   const socialIcons = [
-    <FaFacebook />,
-    <FaInstagram />,
-    <FaTwitch />,
-    <FaGithub />,
-    <FaLinkedin />,
+    <FaFacebook size={currentScreenWidth >= 1440 ? 35 : 30} />,
+    <FaInstagram size={currentScreenWidth >= 1440 ? 35 : 30} />,
+    <FaTwitch size={currentScreenWidth >= 1440 ? 35 : 30} />,
+    <FaGithub size={currentScreenWidth >= 1440 ? 35 : 30} />,
+    <FaLinkedin size={currentScreenWidth >= 1440 ? 35 : 30} />,
   ];
 
   // Replaces current window with the corresponding social media page.
@@ -26,7 +30,7 @@ const Home = (props) => {
         window.location.replace("https://www.facebook.com/charlie.c.pine");
         break;
       case 1:
-        window.location.replace("https://www.instagram.com/mintyphreshh/")
+        window.location.replace("https://www.instagram.com/mintyphreshh/");
         break;
       case 2:
         window.location.replace("https://www.twitch.tv/epiqagl");
@@ -67,8 +71,12 @@ const Home = (props) => {
               )
             )}
           </ul>
-          <a href={resume} className={styles.resume} download='cpine-resume.jpg'> 
-              Download Resume
+          <a
+            href={resume}
+            className={styles.resume}
+            download="cpine-resume.jpg"
+          >
+            Download Resume
           </a>
         </div>
       </div>

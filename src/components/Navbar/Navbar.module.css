@@ -21,12 +21,11 @@
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: -240px;
+  left: -350px;
   transition: all 0.5s;
 }
 
 /* Hamburger Nav Toggler */
-
 .nav-toggle {
   color: white;
   margin: 25px;
@@ -133,7 +132,7 @@
   height: auto;
   display: flex;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px 0px;
   justify-content: center;
 }
 
@@ -147,11 +146,12 @@
 
 .footer-email {
   color: #a3a9bd;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .footer-name {
   font-weight: 900;
+  font-size:1.5rem;
 }
 
 .footer-info p {
@@ -180,7 +180,7 @@
   border-radius: 50%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1435px) {
   .nav {
     left: 0px;
   }
@@ -190,11 +190,11 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1434px) {
   .nav-toggle {
     display: block;
   }
-  
+
   .footer-image {
     display: none;
   }
@@ -204,13 +204,34 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 812px) and (max-width: 1435px) {
+  .about-info {
+    font-size: 1.6rem;
+  }
+
+  .about-info h3 {
+    font-size: 32px;
+  }
+
+  .about-info-left {
+    width: 55%;
+  }
+
   .nav-list {
     padding: 60px 30px;
   }
 
   .nav-item {
     padding: 15px 5px;
+  }
+
+  .nav-header {
+    justify-content: flex-end;
+  }
+
+  .nav-header h1 {
+    font-size: 3.5rem;
+    margin-right: 45px;
   }
 
   .footer-image {
@@ -247,7 +268,6 @@
   .nav-header h1 {
     font-size: 2.5rem;
     margin-right: 34px;
-    /* margin-top: 18px; */
   }
 
   .nav-footer {

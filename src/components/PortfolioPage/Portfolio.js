@@ -8,13 +8,15 @@ const Portfolio = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
   const [currentLanguage, setCurrentLanguage] = useState("React");
 
+  const currentWindowWidth = window.innerWidth;
+
   const reactStyles =
     currentLanguage == "React" ? styles["react-active"] : styles.react;
   const pythonStyles =
     currentLanguage == "Python" ? styles["python-active"] : styles.python;
   const htmlStyles =
     currentLanguage == "HTML | CSS | JS"
-      ? styles["html-active"]
+      ? styles["frontend-active"]
       : styles.frontend;
 
   const activePythonFill = e => {
@@ -54,7 +56,7 @@ const Portfolio = (props) => {
                 className={reactStyles}
                 onClick={() => setCurrentLanguage("React")}
               >
-                <FaReact size={40} />
+                <FaReact size={currentWindowWidth > 1440 ? 55 : 48} />
               </span>
 
               {/* Python Projects Icon */}
@@ -65,7 +67,7 @@ const Portfolio = (props) => {
                 <FaPython
                   onMouseOver={activePythonFill}
                   onMouseOut={normalPythonFill}
-                  size={40}
+                  size={currentWindowWidth > 1440 ? 55 : 48}
                   style={{
                     fill:
                       currentLanguage == "Python"
@@ -82,7 +84,7 @@ const Portfolio = (props) => {
               >
                 <FaHtml5
                   className={styles.html}
-                  size={30}
+                  size={currentWindowWidth > 1440 ? 45 : 38}
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"
@@ -92,7 +94,7 @@ const Portfolio = (props) => {
                 />{" "}
                 <FaCss3
                   className={styles.css}
-                  size={30}
+                  size={currentWindowWidth > 1440 ? 45 : 38}
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"
@@ -102,7 +104,7 @@ const Portfolio = (props) => {
                 />{" "}
                 <IoLogoJavascript
                   className={styles.javascript}
-                  size={30}
+                  size={currentWindowWidth > 1440 ? 45 : 38}
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"

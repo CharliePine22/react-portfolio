@@ -56,7 +56,7 @@
 /* Portfolio Nav */
 .projects-nav {
     height: 100%;
-    width: 15%;
+    width: 18%;
     border-right: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -95,10 +95,13 @@
 }
 
 /* HTML */
-
 .frontend {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
+}
+
+.frontend-active {
+    justify-content: space-evenly !important;
 }
 
 .frontend:hover svg:first-of-type {
@@ -125,7 +128,7 @@
 
 /* Portfolio Projects Container */
 .projects-container {
-    width: 85%;
+    width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -144,8 +147,7 @@
 }
 
 
-
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 1435px) {
     .container {
         width: 100%;
         line-height: 2;
@@ -164,6 +166,23 @@
     }
 }
 
+@media screen and (min-width: 813px) and (max-width: 1435px) {
+    .projects {
+        height: 650px;
+    }
+    
+    .projects-nav {
+        width: 13%;
+    }
+    .portfolio-content h3 {
+        font-size: 54px;
+    }
+    .portfolio-content p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 812px) {
     .portfolio {
         align-items: center;

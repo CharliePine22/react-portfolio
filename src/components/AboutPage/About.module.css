@@ -93,7 +93,7 @@
 
 .hobbies p {
   width: 75%;
-  color: #A3A9BD;
+  color: #a3a9bd;
   line-height: 40px;
   text-align: center;
 }
@@ -122,7 +122,7 @@
   cursor: pointer;
   color: #a3a9bd;
   transition: all 0.5s;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -133,15 +133,15 @@
 }
 
 .hobbies-list li:hover > span {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hobbies-list li span {
-    opacity: 0;
-    font-size: 1rem;
+  opacity: 0;
+  font-size: 1rem;
 }
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 1435px) {
   .about-container {
     width: 100%;
     line-height: 2;
@@ -155,6 +155,29 @@
   }
 }
 
+@media screen and (min-width: 813px) and (max-width: 1435px) {
+  .about-info-left {
+    width: 55%;
+  }
+
+  .about-info h3 {
+    font-size: 30px;
+  }
+
+  .about-info p {
+    font-size: 1.5rem;
+  }
+
+  .hobbies h3 {
+    font-size: 34px;
+  }
+
+  .hobbies p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .about-info {
     flex-direction: column-reverse;
@@ -179,7 +202,7 @@
 
   .about-title {
     text-align: center;
-    float:none;
+    float: none;
   }
 
   .hobbies h3 {
@@ -188,14 +211,13 @@
 
   .hobbies p {
     width: 100%;
-
   }
 
-  .hobbies-list li{
+  .hobbies-list li {
     justify-content: flex-end;
   }
 
   .hobbies-list li span {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
