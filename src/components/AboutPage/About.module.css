@@ -31,7 +31,7 @@
   float: left;
   color: #fff;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: normal;
   margin-bottom: 35px;
   margin-top: 0;
 }
@@ -75,7 +75,7 @@
 
 .about-title h3 {
   font-size: 45px;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 1;
   margin: 0;
 }
@@ -100,8 +100,8 @@
 .hobbies h3 {
   text-align: center;
   font-size: 30px;
-  font-weight: 600;
-  /* margin-bottom: 30px; */
+  font-weight: normal;
+  margin-bottom: 20px;
   margin-top: 15px;
 }
 
@@ -173,6 +173,34 @@
 
   .hobbies p {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about-info {
+    justify-content: space-between;
+  }
+
+  .about-info p {
+    font-size: 1.3em;
+    line-height: 65px;
+  }
+
+  .about-info-left {
+    width: 60%;
+  }
+
+  .about-info-right {
+    width: 40%;
+    margin-right: 15px;
+  }
+
+  .hobbies {
+    margin-top: 60px;
+  }
+
+  .hobbies p {
+    font-size: 1.15em;
   }
 }
 

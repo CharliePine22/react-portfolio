@@ -90,7 +90,7 @@
 .nav-list {
   list-style: none;
   color: white;
-  padding: 60px 40px;
+  padding: 75px 25px 30px;
   margin: 0;
 }
 
@@ -106,13 +106,13 @@
   align-items: center;
   background-color: black;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   border-radius: 6px;
   background: linear-gradient(to left, transparent 50%, #191c26 50%);
   background-position: right bottom;
   background-size: 200% 100%;
   transition: 0.5s ease-out;
-  font-size: 1.4rem;
+  font-size: 1em;
 }
 
 .nav-list a:hover {
@@ -169,8 +169,8 @@
 
 /* NAV Footer Image */
 .footer-image {
-  height: 65px;
-  width: 65px;
+  height: 57px;
+  width: 57px;
   border-radius: 50%;
   margin-right: 10px;
 }

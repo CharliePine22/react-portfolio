@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   height: 100vh;
+
 }
 
 .description-container {
@@ -16,6 +17,10 @@
   flex-direction: column;
   padding: 80px 20px;
   width: 500px;
+  animation-name: fadeInHome;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 800ms;
 }
 
 .description {
@@ -28,7 +33,7 @@
 .description h1 {
   text-align: center;
   font-size: 3.25rem;
-  font-weight: 700;
+  font-weight: normal;
   color: white;
   margin-bottom: 14px;
   margin-top: 0;
@@ -106,8 +111,20 @@
   color: white;
 }
 
-/* Mac 1440x759 */
 
+@keyframes fadeInHome {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .container {
     width: 100%;
@@ -123,11 +140,17 @@
     margin-top: 20px;
   }
 
+  .headshot-container {
+    height: 225px;
+    width: 225px;
+  }
+
   .resume {
     font-size: 1.25rem;
   }
 }
 
+/* Mac 1440x759 */
 @media screen and (min-width: 812px) and (max-width: 1435px) {
   .container {
     width: 100%;
@@ -149,4 +172,6 @@
   .description p {
     font-size: 1.3rem;
   }
+
+
 }

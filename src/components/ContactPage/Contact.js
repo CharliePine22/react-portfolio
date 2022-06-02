@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { FaPhone, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import FadeInSection from "../Fade/FadeInSection";
 
 const Contact = (props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,46 +59,47 @@ const Contact = (props) => {
     setIsSubmitting(true);
 
     // EmailJS SDK Sent Email
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
-        formRef.current,
-        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.json);
-          setStatusMessage("Message Sent!");
-          setHasError(false);
-        },
-        (error) => {
-          console.log(error.json);
-          setStatusMessage("An error occured, please try again!");
-          setHasError(true);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+    //     process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+    //     formRef.current,
+    //     process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+    //   )
+    //   .then(
+    //     (result) => {
+    //       setStatusMessage("Message Sent!");
+    //       setHasError(false);
+    //     },
+    //     (error) => {
+    //       setStatusMessage("An error occured, please try again!");
+    //       setHasError(true);
+    //     }
+    //   );
 
     setTimeout(() => {
       setIsSubmitting(false);
+      setHasError(true);
+      setStatusMessage("Message Sent!")
       // Reset Input Values
       nameRef.current.value = "";
       emailRef.current.value = "";
       messageRef.current.value = "";
-    }, 3000);
+    }, 2000);
   };
 
   return (
     <main id={props.id} className={styles.contact}>
       <div className={styles.container}>
         {/* Contact Page Header */}
+        
         <div className={styles.title}>
           <h3>Contact</h3>
           <p>
             Looking to get in touch? Reach out using any of the methods below!
           </p>
         </div>
-
+        <FadeInSection>
         {/* Phone, Email, and Discord Contact List */}
         <div className={styles["contact-methods-container"]}>
           <ul className={styles["contact-methods-list"]}>
@@ -120,7 +122,7 @@ const Contact = (props) => {
           <div className={styles["form-title"]}>
             <h3>
               Looking to discuss something further? <br />{" "}
-              <strong>Or talk about puppies?</strong>
+              Or talk about <strong><i>puppies</i></strong>?
             </h3>
             <p>Send a message below and I'll do my best to reply soon!</p>
           </div>
@@ -178,6 +180,7 @@ const Contact = (props) => {
             </div>
           </form>
         </div>
+        </FadeInSection>
       </div>
     </main>
   );

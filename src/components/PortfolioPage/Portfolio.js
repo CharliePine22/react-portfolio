@@ -3,6 +3,7 @@ import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { useState } from "react";
 import Projects from "./Projects/Projects";
+import FadeInSection from "../Fade/FadeInSection";
 
 const Portfolio = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
@@ -13,7 +14,7 @@ const Portfolio = (props) => {
   const reactStyles =
     currentLanguage == "React" ? styles["react-active"] : styles.react;
   const pythonStyles =
-    currentLanguage == "Python" ? styles["python-active"] : styles.python;
+    currentLanguage == "Python" ? styles["python-fill"] : styles.python;
   const htmlStyles =
     currentLanguage == "HTML | CSS | JS"
       ? styles["frontend-active"]
@@ -44,118 +45,120 @@ const Portfolio = (props) => {
       <main id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
-          <div className={styles["portfolio-description"]}>
-            <p>Here are some of the projects that I've worked on!</p>
-          </div>
-          {/* Projects Card */}
-          <div className={styles.projects}>
-            {/* Nav Side */}
-            <div className={styles["projects-nav"]}>
-              {/* React Projects Icon */}
-              <span
-                className={reactStyles}
-                onClick={() => setCurrentLanguage("React")}
-              >
-                <FaReact
-                  size={
-                    currentWindowWidth >= 1440
-                      ? 55
-                      : currentWindowWidth <= 375
-                      ? 35
-                      : 48
-                  }
-                />
-              </span>
-
-              {/* Python Projects Icon */}
-              <span
-                className={pythonStyles}
-                onClick={() => setCurrentLanguage("Python")}
-              >
-                <FaPython
-                  onMouseOver={activePythonFill}
-                  onMouseOut={normalPythonFill}
-                  size={
-                    currentWindowWidth >= 1440
-                      ? 55
-                      : currentWindowWidth <= 375
-                      ? 35
-                      : 48
-                  }
-                  style={{
-                    fill:
-                      currentLanguage == "Python"
-                        ? "url(#python-gradient)"
-                        : "#A3A9BD",
-                  }}
-                />
-              </span>
-
-              {/* HTML, CSS, JS Projects Icon */}
-              <span
-                className={htmlStyles}
-                onClick={() => setCurrentLanguage("HTML | CSS | JS")}
-              >
-                <FaHtml5
-                  className={styles.html}
-                  size={
-                    currentWindowWidth >= 1440
-                      ? 45
-                      : currentWindowWidth <= 375
-                      ? 30
-                      : 33
-                  }
-                  style={{
-                    color:
-                      currentLanguage == "HTML | CSS | JS"
-                        ? "#E34F26"
-                        : "#A3A9BD",
-                  }}
-                />{" "}
-                <FaCss3
-                  className={styles.css}
-                  size={
-                    currentWindowWidth >= 1440
-                      ? 45
-                      : currentWindowWidth <= 375
-                      ? 30
-                      : 33
-                  }
-                  style={{
-                    color:
-                      currentLanguage == "HTML | CSS | JS"
-                        ? "#2965f1"
-                        : "#A3A9BD",
-                  }}
-                />{" "}
-                <IoLogoJavascript
-                  className={styles.javascript}
-                  size={
-                    currentWindowWidth >= 1440
-                      ? 45
-                      : currentWindowWidth <= 375
-                      ? 30
-                      : 33
-                  }
-                  style={{
-                    color:
-                      currentLanguage == "HTML | CSS | JS"
-                        ? "#F7DF1E"
-                        : "#A3A9BD",
-                  }}
-                />
-              </span>
+          <FadeInSection>
+            <div className={styles["portfolio-description"]}>
+              <p>Here are some of the projects that I've worked on!</p>
             </div>
-            {/* Right Side */}
-            <div className={styles["projects-container"]}>
-              <div className={styles["language-title"]}>
-                <h3>{currentLanguage}</h3>
+            {/* Projects Card */}
+            <div className={styles.projects}>
+              {/* Nav Side */}
+              <div className={styles["projects-nav"]}>
+                {/* React Projects Icon */}
+                <span
+                  className={reactStyles}
+                  onClick={() => setCurrentLanguage("React")}
+                >
+                  <FaReact
+                    size={
+                      currentWindowWidth >= 1440
+                        ? 50
+                        : currentWindowWidth <= 375
+                        ? 35
+                        : 48
+                    }
+                  />
+                </span>
+
+                {/* Python Projects Icon */}
+                <span
+                  className={pythonStyles}
+                  onClick={() => setCurrentLanguage("Python")}
+                >
+                  <FaPython
+                    onMouseOver={activePythonFill}
+                    onMouseOut={normalPythonFill}
+                    size={
+                      currentWindowWidth >= 1440
+                        ? 50
+                        : currentWindowWidth <= 375
+                        ? 35
+                        : 48
+                    }
+                    style={{
+                      fill:
+                        currentLanguage == "Python"
+                          ? "url(#python-gradient)"
+                          : "#A3A9BD",
+                    }}
+                  />
+                </span>
+
+                {/* HTML, CSS, JS Projects Icon */}
+                <span
+                  className={htmlStyles}
+                  onClick={() => setCurrentLanguage("HTML | CSS | JS")}
+                >
+                  <FaHtml5
+                    className={styles.html}
+                    size={
+                      currentWindowWidth >= 1440
+                        ? 42
+                        : currentWindowWidth <= 375
+                        ? 30
+                        : 33
+                    }
+                    style={{
+                      color:
+                        currentLanguage == "HTML | CSS | JS"
+                          ? "#E34F26"
+                          : "#A3A9BD",
+                    }}
+                  />{" "}
+                  <FaCss3
+                    className={styles.css}
+                    size={
+                      currentWindowWidth >= 1440
+                        ? 42
+                        : currentWindowWidth <= 375
+                        ? 30
+                        : 33
+                    }
+                    style={{
+                      color:
+                        currentLanguage == "HTML | CSS | JS"
+                          ? "#2965f1"
+                          : "#A3A9BD",
+                    }}
+                  />{" "}
+                  <IoLogoJavascript
+                    className={styles.javascript}
+                    size={
+                      currentWindowWidth >= 1440
+                        ? 42
+                        : currentWindowWidth <= 375
+                        ? 30
+                        : 33
+                    }
+                    style={{
+                      color:
+                        currentLanguage == "HTML | CSS | JS"
+                          ? "#F7DF1E"
+                          : "#A3A9BD",
+                    }}
+                  />
+                </span>
               </div>
-              <div className={styles["current-projects"]}>
-                <Projects currentLanguage={currentLanguage} />
+              {/* Right Side */}
+              <div className={styles["projects-container"]}>
+                <div className={styles["language-title"]}>
+                  <h3>{currentLanguage}</h3>
+                </div>
+                <div className={styles["current-projects"]}>
+                  <Projects currentLanguage={currentLanguage} />
+                </div>
               </div>
             </div>
-          </div>
+          </FadeInSection>
         </div>
       </main>
     </>

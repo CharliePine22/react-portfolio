@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import resume from "../../assets/images/cpine-resume.jpg";
 import {
@@ -12,15 +12,32 @@ import {
 const Home = (props) => {
   // Grab user screen height to determine icon size
   const currentScreenWidth = window.innerWidth;
+  const [iconSize, setIconSize] = useState();
 
   // Social Media Icons from React Icons
   const socialIcons = [
-    <FaFacebook size={currentScreenWidth >= 1440 ? 32 : 27} />,
-    <FaInstagram size={currentScreenWidth >= 1440 ? 32 : 27} />,
-    <FaTwitch size={currentScreenWidth >= 1440 ? 32 : 27} />,
-    <FaGithub size={currentScreenWidth >= 1440 ? 32 : 27} />,
-    <FaLinkedin size={currentScreenWidth >= 1440 ? 32 : 27} />,
+    <FaFacebook size={iconSize} />,
+    <FaInstagram size={iconSize} />,
+    <FaTwitch size={iconSize} />,
+    <FaGithub size={iconSize} />,
+    <FaLinkedin size={iconSize} />,
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 375) {
+        setIconSize(32)
+      } else if (window.innerWidth <= 375) {
+        setIconSize(27)
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  });
 
   // Replaces current window with the corresponding social media page.
   const goToSocial = (i) => {

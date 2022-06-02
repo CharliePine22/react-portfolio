@@ -49,6 +49,7 @@
 
 .top h3 {
   font-size: 1.55rem;
+  font-weight:normal;
 }
 
 .bottom {
@@ -60,7 +61,7 @@
 .bottom p {
   width: auto;
   font-size: 1.08rem;
-  font-weight: 900;
+  font-weight: normal;
 }
 
 .container {
@@ -83,7 +84,7 @@
 
 .title h3 {
   font-size: 45px;
-  font-weight: 800;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 25px;
   line-height: 1;
@@ -127,8 +128,8 @@
 .submit-loading {
   color: #fff;
   background-color: #111319;
-  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 4s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='white' /%3E%3Cstop offset='25%25' stop-color='white' /%3E%3Cstop offset='50%25' stop-color='white' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E")
-    1;
+  /* border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 4s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='white' /%3E%3Cstop offset='25%25' stop-color='white' /%3E%3Cstop offset='50%25' stop-color='white' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E")
+    1; */
   box-shadow: 1px 5px 5px 1px black;
   transition: all 0.25s;
   transform: translateY(-10px);
@@ -369,6 +370,10 @@
   .submit {
     margin-bottom: 5px;
     padding: 10px;
+  }
+
+  .top {
+    width:65%;
   }
 
   .top h3 {

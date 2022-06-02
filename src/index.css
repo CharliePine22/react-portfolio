@@ -11,13 +11,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Oxygen', sans-serif;
   font-size: 18px;
   line-height: 30px;
   word-wrap: break-word;
   letter-spacing: 0;
   background-color:black;
-  user-select:none;
+  
 }
 
 .item-active {
@@ -25,5 +25,5 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Amaranth', sans-serif;
+  font-family: 'Bevan', cursive;
 }

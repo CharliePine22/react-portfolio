@@ -11,6 +11,7 @@ const CardFlip = (props) => {
 
   const handleFlip = (e) => {
     e.preventDefault();
+    console.log(e.target)
     setIsFlipped(!isFlipped);
   };
 
@@ -22,14 +23,19 @@ const CardFlip = (props) => {
   // Grab width to determine if user is viewing from a mobile screen.
   const currentWindowWidth = window.innerWidth;
 
+  const card = document.querySelector('.card1');
+  const currentCard = props.id;
+
+  const currentCardClass = `${styles['card-front']} ${currentCard}`;
+
   return (
     <>
       <ReactCardFlip
         isFlipped={isFlipped}
-        containerClassName={styles.container}
+        containerClassName={styles.container} 
       >
         {/* Front Of Card */}
-        <div className={styles["card-front"]} onClick={handleFlip}>
+        <div className={currentCardClass} onClick={handleFlip} >
           <div className={styles.front}>
             <p className={styles["project-title"]}>{props.title}</p>
           </div>
@@ -52,9 +58,9 @@ const CardFlip = (props) => {
                 <li className={styles.github} onClick={goToGithub}>
                   <FaGithub size={25} />
                 </li>
-                <li className={styles.link}>
+                {props.live !== "" && <li className={styles.link}>
                   <FaLink size={25} />
-                </li>
+                </li>}
               </ul>
             </div>
           </div>

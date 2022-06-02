@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 85%;
+  height: 93%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
 }
 
 @media screen and (min-width: 375px) and (max-width: 812px) {
