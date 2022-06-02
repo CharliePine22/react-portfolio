@@ -154,28 +154,23 @@
   }
 }
 
+/* Tablets to Small Laptops */
 @media screen and (min-width: 813px) and (max-width: 1435px) {
   .about-info-left {
     width: 55%;
   }
 
-  .about-info h3 {
-    font-size: 30px;
+  .about-info-right {
+    width: 45%
   }
 
   .about-info p {
-    font-size: 1.5rem;
+    font-size: 1em;
   }
 
-  .hobbies h3 {
-    font-size: 34px;
-  }
-
-  .hobbies p {
-    font-size: 1.5rem;
-  }
 }
 
+/* Desktops */
 @media screen and (min-width: 1600px) {
   .about-info {
     justify-content: space-between;

@@ -63,7 +63,7 @@
 
 .nav-header h1 {
   margin-left: 30px;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .nav-header h1 span {
@@ -100,7 +100,7 @@
 
 .nav-list a {
   text-decoration: none;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   color: white;
   display: flex;
   align-items: center;
@@ -224,11 +224,11 @@
   }
 
   .nav-list {
-    padding: 60px 30px;
+    padding: 70px 10px 30px;
   }
 
   .nav-item {
-    padding: 15px 5px;
+    padding: 10px 5px;
   }
 
   .nav-header {
@@ -236,8 +236,9 @@
   }
 
   .nav-header h1 {
-    font-size: 3.5rem;
-    margin-right: 45px;
+    font-size: 2.4rem;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .footer-image {
@@ -246,6 +247,11 @@
 
   .footer-info {
     width: 100%;
+    padding: 0;
+  }
+
+  .footer-email {
+    font-size: 13.5px;
   }
 }
 
@@ -260,11 +266,7 @@
   }
 
   .nav-list {
-    padding: 30px 10px;
-  }
-
-  .nav-list a {
-    font-size: 1.15rem;
+    padding: 70px 10px 30px;
   }
 
   .nav-header {
@@ -272,8 +274,13 @@
   }
 
   .nav-header h1 {
-    font-size: 2.5rem;
-    margin-right: 34px;
+    font-size: 1.15em;
+    margin-right: 16px;
+    margin-bottom: 11px;
+  }
+
+  .nav-item {
+    padding: 8px 15px;
   }
 
   .nav-footer {
@@ -286,6 +293,7 @@
 
   .footer-info {
     width: 100%;
+    margin-left: 5px;
   }
 
   .footer-email {
