@@ -1,7 +1,7 @@
 .contact {
   height: 100%;
   background-color: #111319;
-  width: 76%;
+  width: 80%;
   display: flex;
   float: right;
   flex-direction: column;
@@ -25,11 +25,12 @@
 
 /* Contact Method Styles */
 .contact-item {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   background-color: #191c26;
   color: #a9afc3;
-  padding: 40px 0;
+  padding: 20px 0;
   width: 32%;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px black;
@@ -43,7 +44,11 @@
   justify-content: space-evenly;
   width: 55%;
   align-items: center;
-  color: #FFF;
+  color: #fff;
+}
+
+.top h3 {
+  font-size: 1.55rem;
 }
 
 .bottom {
@@ -54,7 +59,7 @@
 
 .bottom p {
   width: auto;
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 900;
 }
 
@@ -83,7 +88,6 @@
   margin-bottom: 25px;
   line-height: 1;
   color: #fff;
-  
 }
 
 .title p {
@@ -93,104 +97,245 @@
 
 /* Contact Form Styles */
 .actions {
-    display:flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.actions button {
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 150px;
-    padding: 15px;
-    cursor: pointer;
-    color: #FFF;
-    font-size: 1.2rem;
-    
+/* SUBMIT BUTTON STYLES */
+.submit,
+.submit-loading {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 158px;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: #7e7e7e;
+  font-size: 1.3rem;
+  transition: all 0.25s;
 }
 
-.actions button:hover {
-    color: white;
-    background-color: #111319;
-    box-shadow: 1px 5px 5px 1px black;
+.submit:hover {
+  color: white;
+  background-color: #111319;
+  box-shadow: 1px 5px 5px 1px black;
+  border: 2px solid black;
+  transform: translateY(-10px);
+}
+
+.submit-loading {
+  color: #fff;
+  background-color: #111319;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 4s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='white' /%3E%3Cstop offset='25%25' stop-color='white' /%3E%3Cstop offset='50%25' stop-color='white' /%3E%3Cstop offset='100%25' stop-color='white' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E")
+    1;
+  box-shadow: 1px 5px 5px 1px black;
+  transition: all 0.25s;
+  transform: translateY(-10px);
+  animation-name: buttonHover;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 3.75s;
+}
+
+.success {
+  border: 2px solid transparent;
+  color: white;
+  background-color: green;
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.4);
+  transition: all 0.25s;
+  /* Fade in border and color change */
+  animation-name: fadeInSuccess;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.error {
+  border: 2px solid transparent;
+  color: white;
+  background-color: red;
+  box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
+  transition: all 0.25s;
+  /* Fade in border and color change */
+  animation-name: fadeInError;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 }
 
 .form-container {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    padding: 50px 45px 55px;
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    background-color:#191c26;
-    -webkit-box-shadow: 0 0 5px black;
-    box-shadow: 0 0 5px black;
-    color: #a9afc3;
-    margin-right: 0;
-    margin-bottom: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  padding: 50px 45px 55px;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  background-color: #191c26;
+  -webkit-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  color: #a9afc3;
+  margin-right: 0;
+  margin-bottom: 50px;
 }
 
 .form-container input {
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-bottom: 1px solid #cbd3d9;
-    border-bottom-color: rgba(169,175,195,.5);
-    background-color: transparent;
-    font-size: 16px;
-    color: #7e7e7e;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #cbd3d9;
+  border-bottom-color: rgba(169, 175, 195, 0.5);
+  background-color: transparent;
+  font-size: 16px;
+  color: #7e7e7e;
 }
 
 .form-container input:focus {
-    outline:none;
+  outline: none;
 }
 
 .form-container form {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-
-.form-name, .form-email, .form-message {
-    width:100%;
-    margin-bottom: 60px;
-    display:flex;
+.form-name,
+.form-email,
+.form-message {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
 }
 
 .form-title {
-    width: 100%;
-    margin-bottom: 35px;
+  width: 100%;
+  margin-bottom: 35px;
 }
 
 .form-title h3 {
-    font-size: 24px;
-    color: #fff;
-    font-weight:normal;
-    margin-top:0;
+  font-size: 24px;
+  color: #fff;
+  font-weight: normal;
+  margin-top: 0;
 }
 
 .form-title p {
-    margin-top:0;
-    font-size: 1.05rem;
-    max-width: 80%;
+  margin-top: 0;
+  font-size: 1.05rem;
+  max-width: 80%;
 }
 
+/* Email Status Styles */
+.status {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 100%;
+  justify-content: center;
+  opacity: 0;
+}
+
+.status-success {
+  color: green;
+  animation-name: fadeInMessage;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+.status-error {
+  color: red;
+  animation-name: fadeInMessage;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+/* Fade In Success Styles Keyframe */
+@keyframes fadeInSuccess {
+  0% {
+    color: white;
+    background-color:#111319;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    color:white;
+    background-color: green;
+    /* box-shadow: 0px 15px 20px rgba(0, 255, 0, 0.4); */
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.4);
+  }
+}
+
+/* Fade In Error Styles Keyframe */
+@keyframes fadeInError {
+  0% {
+    color: white;
+    background-color:#111319;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    color:white;
+    background-color: red;
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
+  }
+}
+
+/* Floating Button Animation for submit button when loading. */
+@keyframes buttonHover {
+  0%, 50%, 100%  {
+    transform: translateY(-10px);
+    box-shadow: 1px 8px 5px 1px black;
+  }
+  25%, 75% {
+    transform: translateY(0px);
+    box-shadow: 1px 2px 2px 1px black;
+  } 
+}
+
+/* Fade In Status Message */
+@keyframes fadeInMessage {
+  0% {
+    opacity:0;
+  }
+
+  100% {
+    opacity:1;
+  }
+}
 
 @media screen and (min-width: 0px) and (max-width: 1435px) {
   .contact {
     width: 100%;
     line-height: 2;
   }
+
+  .actions {
+    width:100%;
+  }
 }
 
 /* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 812px) {
+  .actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom p {
+    font-size: 1rem;
+  }
+
   .contact {
     text-align: center;
   }
 
   .contact-item {
-    width: 85%;
+    width: 75%;
     padding: 10px 0;
     margin: 10px auto;
   }
@@ -200,15 +345,38 @@
   }
 
   .form-title {
-      display:flex;
-      flex-direction:column;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-title p {
     max-width: 100%;
+    margin-top: 10px;
   }
 
   .form-container {
     padding: 50px 20px 55px;
+  }
+
+  .form-container input {
+    text-align: center;
+  }
+
+  .status p {
+    font-size: 1.1rem;
+  }
+
+  .submit {
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .top h3 {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .title p {
+    margin: 0 auto;
   }
 }

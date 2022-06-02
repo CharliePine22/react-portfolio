@@ -32,9 +32,7 @@ const About = (props) => {
           <div className={styles.hobbies}>
             <h3>Hobbies</h3>
             <p>
-              I'm always up for an adventure! In my free time I enjoy doing the
-              things I love. Hover over each icon to discover my favorite
-              activities!
+              I'm always up for an adventure! These are just a few of the things that I enjoy most!
             </p>
             <div className={styles["hobbies-list"]}>
               <ul>

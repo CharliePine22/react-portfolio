@@ -1,13 +1,18 @@
 import styles from "./Contact.module.css";
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { FaPhone, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Contact = (props) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("Submit");
+  const [statusMessage, setStatusMessage] = useState("");
+  const [hasError, setHasError] = useState(false);
 
-  // Input Refs
+  // Used for submitting EmailJS Form
+  const formRef = useRef();
+
+  // Input Refs used for resetting values
   const nameRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
@@ -23,19 +28,63 @@ const Contact = (props) => {
     { name: "Discord", icon: <FaDiscord size={30} />, content: "EpiqAGL#5924" },
   ];
 
-  // Form Submit 
-  const formSubmitHandler = (e) => {
+  // Submit Button Styles
+  const submitButtonStyles = isSubmitting
+    ? styles["submit-loading"]
+    : !isSubmitting && !hasError && statusMessage !== ""
+    ? `${styles.submit} ${styles.success}`
+    : !isSubmitting && hasError && statusMessage !== ""
+    ? `${styles.submit} ${styles.error}`
+    : styles.submit;
+
+  // Status Message Styles
+  const statusMessageStyles =
+    statusMessage !== "" && !isSubmitting && hasError
+      ? `${styles.status} ${styles["status-error"]}`
+      : statusMessage !== "" && !isSubmitting && !hasError
+      ? `${styles.status} ${styles["status-success"]}`
+      : styles.status;
+
+  // If the user has already submitted a message and they click an input, remove the message and styles
+  const inputFocusHandler = () => {
+    if (statusMessage !== "" && isSubmitting == false) {
+      setStatusMessage("");
+    }
+  };
+
+  // Form Submit
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
-    setSubmitStatus('Submitting');
-    const name = nameRef.current.value;
-    const email = emailRef.current.value;
-    const message = messageRef.current.value;
+    setIsSubmitting(true);
 
-    console.log(name);
-    console.log(email);
-    console.log(message);
+    // EmailJS SDK Sent Email
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.json);
+          setStatusMessage("Message Sent!");
+          setHasError(false);
+        },
+        (error) => {
+          console.log(error.json);
+          setStatusMessage("An error occured, please try again!");
+          setHasError(true);
+        }
+      );
 
-    setSubmitStatus('Submit');
+    setTimeout(() => {
+      setIsSubmitting(false);
+      // Reset Input Values
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      messageRef.current.value = "";
+    }, 3000);
   };
 
   return (
@@ -73,19 +122,18 @@ const Contact = (props) => {
               Looking to discuss something further? <br />{" "}
               <strong>Or talk about puppies?</strong>
             </h3>
-            <p>
-              Go ahead and send a message below and I'll do my best to reply
-              soon!
-            </p>
+            <p>Send a message below and I'll do my best to reply soon!</p>
           </div>
-          <form method="POST" onSubmit={formSubmitHandler}>
+          <form method="POST" ref={formRef} onSubmit={formSubmitHandler}>
             {/* Name */}
             <div className={styles["form-name"]}>
               <input
                 ref={nameRef}
                 type="text"
                 id="name"
+                name="name"
                 placeholder="Name"
+                onFocus={inputFocusHandler}
                 required
               />
             </div>
@@ -96,6 +144,8 @@ const Contact = (props) => {
                 type="email"
                 id="email"
                 placeholder="Email"
+                onFocus={inputFocusHandler}
+                name="email"
                 required
               />
             </div>
@@ -106,11 +156,25 @@ const Contact = (props) => {
                 type="textarera"
                 id="message"
                 placeholder="Message"
+                onFocus={inputFocusHandler}
+                name="message"
                 required
               />
             </div>
+            {/* Submit Button and Status Container */}
             <div className={styles.actions}>
-              <button type="submit">{submitStatus}</button>
+              {/* Button */}
+              <button
+                className={submitButtonStyles}
+                onMouseOver={() => setStatusMessage("")}
+                type="submit"
+              >
+                {isSubmitting ? "Submitting" : "Submit"}
+              </button>
+              <div className={statusMessageStyles}>
+                {/* Status */}
+                <p>{statusMessage}</p>
+              </div>
             </div>
           </form>
         </div>

@@ -19,17 +19,17 @@ const Portfolio = (props) => {
       ? styles["frontend-active"]
       : styles.frontend;
 
-  const activePythonFill = e => {
+  const activePythonFill = (e) => {
     e.target.style.fill = "url(#python-gradient)";
-  }
+  };
 
-  const normalPythonFill = e => {
+  const normalPythonFill = (e) => {
     e.target.style.fill = "#A3A9BD";
-  }
+  };
 
   return (
     <>
-      <svg className={styles['python-fill']} width="0" height="0">
+      <svg className={styles["python-fill"]} width="0" height="0">
         <linearGradient
           id="python-gradient"
           x1="100%"
@@ -56,7 +56,15 @@ const Portfolio = (props) => {
                 className={reactStyles}
                 onClick={() => setCurrentLanguage("React")}
               >
-                <FaReact size={currentWindowWidth > 1440 ? 55 : 48} />
+                <FaReact
+                  size={
+                    currentWindowWidth >= 1440
+                      ? 55
+                      : currentWindowWidth <= 375
+                      ? 35
+                      : 48
+                  }
+                />
               </span>
 
               {/* Python Projects Icon */}
@@ -67,7 +75,13 @@ const Portfolio = (props) => {
                 <FaPython
                   onMouseOver={activePythonFill}
                   onMouseOut={normalPythonFill}
-                  size={currentWindowWidth > 1440 ? 55 : 48}
+                  size={
+                    currentWindowWidth >= 1440
+                      ? 55
+                      : currentWindowWidth <= 375
+                      ? 35
+                      : 48
+                  }
                   style={{
                     fill:
                       currentLanguage == "Python"
@@ -84,7 +98,13 @@ const Portfolio = (props) => {
               >
                 <FaHtml5
                   className={styles.html}
-                  size={currentWindowWidth > 1440 ? 45 : 38}
+                  size={
+                    currentWindowWidth >= 1440
+                      ? 45
+                      : currentWindowWidth <= 375
+                      ? 30
+                      : 33
+                  }
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"
@@ -94,7 +114,13 @@ const Portfolio = (props) => {
                 />{" "}
                 <FaCss3
                   className={styles.css}
-                  size={currentWindowWidth > 1440 ? 45 : 38}
+                  size={
+                    currentWindowWidth >= 1440
+                      ? 45
+                      : currentWindowWidth <= 375
+                      ? 30
+                      : 33
+                  }
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"
@@ -104,7 +130,13 @@ const Portfolio = (props) => {
                 />{" "}
                 <IoLogoJavascript
                   className={styles.javascript}
-                  size={currentWindowWidth > 1440 ? 45 : 38}
+                  size={
+                    currentWindowWidth >= 1440
+                      ? 45
+                      : currentWindowWidth <= 375
+                      ? 30
+                      : 33
+                  }
                   style={{
                     color:
                       currentLanguage == "HTML | CSS | JS"

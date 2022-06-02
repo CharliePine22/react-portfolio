@@ -3,11 +3,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 76%;
+  width: 80%;
   float: right;
   padding-bottom: 120px;
   padding-top: 120px;
-  position: relative;
 }
 
 /* Section with the about me information */

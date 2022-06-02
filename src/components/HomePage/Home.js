@@ -12,7 +12,6 @@ import {
 const Home = (props) => {
   // Grab user screen height to determine icon size
   const currentScreenWidth = window.innerWidth;
-  console.log(currentScreenWidth);
 
   // Social Media Icons from React Icons
   const socialIcons = [

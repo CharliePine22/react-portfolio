@@ -1,5 +1,5 @@
 .container {
-    width: 76%;
+    width: 80%;
     background-color: #191C26;
     margin:0;
     padding-bottom: 120px;
@@ -64,6 +64,15 @@
     justify-content: space-evenly;
 }
 
+.projects-nav span {
+    cursor: pointer;
+    color: #A3A9BD;
+    transition: all .25s;
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
 /* React */
 .react-active {
     color: #61DBFB !important;
@@ -96,7 +105,7 @@
 
 /* HTML */
 .frontend {
-    display: flex;
+    display: flex !important;
     justify-content: space-evenly !important;
 }
 
@@ -117,14 +126,10 @@
     transition: all .25s;
 }
 
-.projects-nav span {
-    cursor: pointer;
-    color: #A3A9BD;
-    transition: all .25s;
-    display:flex;
-    width: 100%;
-    justify-content: center;
+.javascript {
+    height:100%;
 }
+
 
 /* Portfolio Projects Container */
 .projects-container {
@@ -211,7 +216,7 @@
     .projects-nav {
         width: 100%;
         flex-direction: row;
-        height:20%;
+        height:15%;
         border-right: none;
         border-bottom: 1px solid white;
     }
