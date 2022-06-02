@@ -15,11 +15,11 @@ const Home = (props) => {
 
   // Social Media Icons from React Icons
   const socialIcons = [
-    <FaFacebook size={currentScreenWidth >= 1440 ? 35 : 30} />,
-    <FaInstagram size={currentScreenWidth >= 1440 ? 35 : 30} />,
-    <FaTwitch size={currentScreenWidth >= 1440 ? 35 : 30} />,
-    <FaGithub size={currentScreenWidth >= 1440 ? 35 : 30} />,
-    <FaLinkedin size={currentScreenWidth >= 1440 ? 35 : 30} />,
+    <FaFacebook size={currentScreenWidth >= 1440 ? 32 : 27} />,
+    <FaInstagram size={currentScreenWidth >= 1440 ? 32 : 27} />,
+    <FaTwitch size={currentScreenWidth >= 1440 ? 32 : 27} />,
+    <FaGithub size={currentScreenWidth >= 1440 ? 32 : 27} />,
+    <FaLinkedin size={currentScreenWidth >= 1440 ? 32 : 27} />,
   ];
 
   // Replaces current window with the corresponding social media page.
