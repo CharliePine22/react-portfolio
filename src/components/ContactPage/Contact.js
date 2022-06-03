@@ -59,33 +59,31 @@ const Contact = (props) => {
     setIsSubmitting(true);
 
     // EmailJS SDK Sent Email
-    // emailjs
-    //   .sendForm(
-    //     process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-    //     process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
-    //     formRef.current,
-    //     process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setStatusMessage("Message Sent!");
-    //       setHasError(false);
-    //     },
-    //     (error) => {
-    //       setStatusMessage("An error occured, please try again!");
-    //       setHasError(true);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setStatusMessage("Message Sent!");
+          setHasError(false);
+        },
+        (error) => {
+          setStatusMessage("An error occured, please try again!");
+          setHasError(true);
+        }
+      );
 
     setTimeout(() => {
       setIsSubmitting(false);
-      setHasError(true);
-      setStatusMessage("Message Sent!")
       // Reset Input Values
       nameRef.current.value = "";
       emailRef.current.value = "";
       messageRef.current.value = "";
-    }, 2000);
+    }, 1500);
   };
 
   return (
