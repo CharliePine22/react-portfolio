@@ -46,7 +46,7 @@
   display: flex;
   margin: 50px auto;
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
   border: 3px solid black;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 5px black;
@@ -72,7 +72,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  margin: 75px auto;
+  margin: 60px auto;
 }
 
 /* React */
@@ -139,20 +139,25 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: #111319;
   overflow: hidden;
+  /* z-index: -5; */
 }
 
 .language-title {
+  margin-bottom: 50px;
   margin: 0;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .current-projects {
-  height: 100%;
+  display: flex;
   width: 100%;
   justify-content: space-evenly;
+  align-items: baseline;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 1435px) {
@@ -164,19 +169,19 @@
 
 @media screen and (min-width: 1440px) {
   .projects {
-    height: 600px;
+    /* height: 600px; */
   }
 }
 
 @media screen and (min-width: 1440px) {
   .projects {
-    height: 750px;
+    /* height: 750px; */
   }
 }
 
 @media screen and (min-width: 813px) and (max-width: 1435px) {
   .projects {
-    height: 650px;
+    /* height: 650px; */
   }
 
   .projects-nav {
@@ -184,9 +189,6 @@
   }
   .portfolio-content h3 {
     font-size: 54px;
-  }
-  .portfolio-content p {
-    font-size: 1.3rem;
   }
 }
 

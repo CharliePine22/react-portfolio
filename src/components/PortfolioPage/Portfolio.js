@@ -2,15 +2,18 @@ import styles from "./Portfolio.module.css";
 import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { useState } from "react";
-import Projects from "./Projects/Projects";
+import { projectTitles } from "./ProjectData";
+// import CardFlip from '../CardFlip/CardFlip';
 import FadeInSection from "../Fade/FadeInSection";
+import Popcard from "../Popcard/Popcard";
 
 const Portfolio = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
   const [currentLanguage, setCurrentLanguage] = useState("React");
-
   const currentWindowWidth = window.innerWidth;
+  const selectedLanguage = currentLanguage.split(" ")[0].toLowerCase();
 
+  // Styles for Portfolio Nav Icons
   const reactStyles =
     currentLanguage == "React" ? styles["react-active"] : styles.react;
   const pythonStyles =
@@ -20,10 +23,12 @@ const Portfolio = (props) => {
       ? styles["frontend-active"]
       : styles.frontend;
 
+  // Active Hover Effect for Python
   const activePythonFill = (e) => {
     e.target.style.fill = "url(#python-gradient)";
   };
 
+  // Normal Python Color
   const normalPythonFill = (e) => {
     e.target.style.fill = "#A3A9BD";
   };
@@ -154,7 +159,35 @@ const Portfolio = (props) => {
                   <h3>{currentLanguage}</h3>
                 </div>
                 <div className={styles["current-projects"]}>
-                  <Projects currentLanguage={currentLanguage} />
+                  {projectTitles[selectedLanguage].map((project, i) => {
+                     return (
+                      <Popcard
+                        key={i}
+                        title={project.title}
+                        id={`card${i}`}
+                        rank={i}
+                        description={project.description}
+                        image={project.image}
+                        github={project.github}
+                        live={project.live}
+                        stack={project.stack}
+                      />
+                    );
+
+                    // CARD FLIP VERSION
+                    // return (
+                    //   <CardFlip
+                    //     key={project.title}
+                    //     title={project.title}
+                    //     id={`card${i}`}
+                    //     delayTime={i}
+                    //     description={project.description}
+                    //     image={project.image}
+                    //     github={project.github}
+                    //     live={project.live}
+                    //   />
+                    // );
+                  })}
                 </div>
               </div>
             </div>
