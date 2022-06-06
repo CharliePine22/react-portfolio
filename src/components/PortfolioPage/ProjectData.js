@@ -1,5 +1,5 @@
 // Icon Imports
-import { DiFirebase, DiMongodb, DiPostgresql, DiJavascript1 } from 'react-icons/di';
+import { DiFirebase, DiMongodb, DiPostgresql } from 'react-icons/di';
 import { FaDatabase, FaReact, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
 import { BsFillChatTextFill, BsBootstrapFill } from 'react-icons/bs';
 import { IconBrandNextjs } from '@tabler/icons';
@@ -21,6 +21,22 @@ import terror from "../../assets/images/ProjectImages/terror-trades.png";
 import tindog from "../../assets/images/ProjectImages/yuna.jpg";
 import top from "../../assets/images/ProjectImages/top-movies.png";
 
+// Stack Icon Image Imports
+import bootstrapIcon from "../../assets/images/StackImages/bootstrap-logo.png";
+import bs4Icon from "../../assets/images/StackImages/bs4-logo.jpg";
+import css3Icon from "../../assets/images/StackImages/css3-icon.png";
+import chatengineIcon from "../../assets/images/StackImages/chat-engine-icon.ico"
+import firebaseIcon from "../../assets/images/StackImages/firebase-logo.jpg";
+import flaskIcon from "../../assets/images/StackImages/flask-logo.png";
+import htmlIcon from "../../assets/images/StackImages/html-icon.png";
+import javascriptIcon from "../../assets/images/StackImages/javascript-icon.png";
+import mongodbIcon from "../../assets/images/StackImages/mongodb-icon.png";
+import nextjsIcon from "../../assets/images/StackImages/nextjs-logo.png";
+import pythonIcon from "../../assets/images/StackImages/python-icon.png";
+import rawgIcon from "../../assets/images/StackImages/rawg-logo.jpg";
+import reactIcon from "../../assets/images/StackImages/react-icon.png";
+import sqlIcon from "../../assets/images/StackImages/sql-icon.png";
+
 // Project data to be mapped out
 export const projectTitles = {
   react: [
@@ -31,37 +47,37 @@ export const projectTitles = {
       image: retro,
       github: "https://github.com/CharliePine22/retro-chat-application",
       live: "https://simply-phresh.web.app/meals",
-      stack: [<DiFirebase />, <DiMongodb />, <BsFillChatTextFill />]
+      stack: [reactIcon, firebaseIcon, chatengineIcon]
     },
     {
       title: "Simply Phresh",
       description:
-        "A mock food app, in which the user can create an account, place an order, and view past orders placed.",
+        "A fake food app, in which the user can place and view fake food orders.",
       image: simply,
       github: "https://github.com/CharliePine22/Simply-Phresh",
       live: "https://astro-chat.netlify.app/", //Right now, this app is broken, need to fix....
-      stack: [<DiFirebase />, <FaDatabase />, <FaReact />]
+      stack: [reactIcon, firebaseIcon, sqlIcon]
     },
     {
       title: "Video Game Database",
       description:
-        "An application in which a user can rank their favorite games, view completed games, and even link their Steam library to view owned games.",
+        "An application in which a user can rank, view, and edit their owned games.",
       image: video,
       github: "https://github.com/CharliePine22/video_game_database",
       live: "",
-      stack: [<IconBrandNextjs />, <DiMongodb />, <MdVideogameAsset />]
+      stack: [nextjsIcon, mongodbIcon, rawgIcon]
     },
   ],
   python: [
     {
       title: "Animal Crossing Database",
       description:
-        "An app related to Animal Crossing: New Horizons, that uses the GUI Tkinter that allows the user to look up details about villagers and save them to match their own islands.",
+        "An app related to Animal Crossing: New Horizons, that allows the user to look up and save details about their villagers.",
       image: animal,
       github:
         "https://github.com/CharliePine22/animal_crossing_island_database",
       live: "",
-      stack: [<DiPostgresql />, <FaPython />, <GiSpiderWeb />]
+      stack: [pythonIcon, sqlIcon, bs4Icon]
     },
     {
       title: "Planner",
@@ -70,7 +86,7 @@ export const projectTitles = {
       image: planner,
       github: "https://github.com/CharliePine22/planner",
       live: "",
-      stack: [<FaPython />, <SiFlask />, <BsBootstrapFill />]
+      stack: [pythonIcon, flaskIcon, bootstrapIcon]
     },
     {
       title: "Spotify Playlist Generator",
@@ -79,7 +95,7 @@ export const projectTitles = {
       image: spotify,
       github: "https://github.com/CharliePine22/spotify_top_100",
       live: "",
-      stack: [<FaPython />, <GiSpiderWeb />]
+      stack: [pythonIcon, bs4Icon]
     },
   ],
   html: [
@@ -89,7 +105,7 @@ export const projectTitles = {
       image: terror,
       github: "https://github.com/CharliePine22/tindog", // Have to fix it ,
       live: "",
-      stack: [<FaHtml5 />, <FaCss3 />, <DiJavascript1 />]
+      stack: [htmlIcon, css3Icon, javascriptIcon]
     },
     {
       title: "Tindog",
@@ -98,7 +114,7 @@ export const projectTitles = {
       image: tindog,
       github: "",
       live: "",
-      stack: [<FaHtml5 />, <FaCss3 />, <BsBootstrapFill />]
+      stack: [htmlIcon, css3Icon, bootstrapIcon]
     },
     {
       title: "Top Movies Database",
@@ -107,7 +123,7 @@ export const projectTitles = {
       image: top,
       github: "https://github.com/CharliePine22/top_movies_database",
       live: "",
-      stack: [<FaHtml5 />, <BsBootstrapFill  />, <SiFlask />]
+      stack: [htmlIcon, bootstrapIcon, flaskIcon]
     },
   ],
 };

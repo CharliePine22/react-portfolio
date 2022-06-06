@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3cb1fb5.css",
-    "main.js": "/static/js/main.87c44b11.js",
+    "main.css": "/static/css/main.f02013fc.css",
+    "main.js": "/static/js/main.57bc3349.js",
     "static/media/video-game-database.jpg": "/static/media/video-game-database.590d986d85ed4d81da0a.jpg",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
@@ -11,15 +11,20 @@
     "static/media/terror-trades.png": "/static/media/terror-trades.6f079fea8cc08d332190.png",
     "static/media/top-movies.png": "/static/media/top-movies.cbbcc486a9473d07fa8e.png",
     "static/media/simply-phresh.png": "/static/media/simply-phresh.7fe70d9addedf1f2ae86.png",
+    "static/media/react-icon.png": "/static/media/react-icon.81ed438b18e24116794d.png",
+    "static/media/chat-engine-icon.ico": "/static/media/chat-engine-icon.c3c30fcca33e051b235d.ico",
     "static/media/yuna.jpg": "/static/media/yuna.527ddf1b76798a7daa27.jpg",
+    "static/media/flask-logo.png": "/static/media/flask-logo.b979c3f17171ee75f69a.png",
+    "static/media/python-icon.png": "/static/media/python-icon.2e65c2b73eddaaf97e06.png",
     "static/media/retro-chat.png": "/static/media/retro-chat.578afed492e305ffcae1.png",
     "static/media/headshot.jfif": "/static/media/headshot.89b34cac1b59212a81bd.jfif",
+    "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.c3cb1fb5.css.map": "/static/css/main.c3cb1fb5.css.map",
-    "main.87c44b11.js.map": "/static/js/main.87c44b11.js.map"
+    "main.f02013fc.css.map": "/static/css/main.f02013fc.css.map",
+    "main.57bc3349.js.map": "/static/js/main.57bc3349.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3cb1fb5.css",
-    "static/js/main.87c44b11.js"
+    "static/css/main.f02013fc.css",
+    "static/js/main.57bc3349.js"
   ]
 }
