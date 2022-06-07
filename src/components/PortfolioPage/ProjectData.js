@@ -1,12 +1,3 @@
-// Icon Imports
-import { DiFirebase, DiMongodb, DiPostgresql } from 'react-icons/di';
-import { FaDatabase, FaReact, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { BsFillChatTextFill, BsBootstrapFill } from 'react-icons/bs';
-import { IconBrandNextjs } from '@tabler/icons';
-import { MdVideogameAsset } from 'react-icons/md';
-import { GiSpiderWeb } from 'react-icons/gi';
-import { SiFlask } from 'react-icons/si';
-
 // Card image imports, named them the first word of their respective project title
 // React Project Images
 import retro from "../../assets/images/ProjectImages/retro-chat.png";

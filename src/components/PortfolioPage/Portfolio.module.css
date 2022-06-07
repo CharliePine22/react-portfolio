@@ -199,13 +199,19 @@
   }
 
   .portfolio-description {
+    align-items: center;
     text-align: center;
+    width: 100%;
+  }
+
+  .portfolio-description p {
+    width: 50%;
   }
 
   .projects {
     flex-direction: column;
-    width: 100%;
-    height: 600px;
+    width: 50%;
+    /* height: 600px; */
   }
 
   .projects-container {
@@ -219,5 +225,9 @@
     height: 15%;
     border-right: none;
     border-bottom: 1px solid white;
+  }
+
+  .projects-nav span {
+    margin: 20px auto;
   }
 }

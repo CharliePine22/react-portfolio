@@ -1,9 +1,18 @@
 import styles from "./Portfolio.module.css";
+// Portfolio Nav Icons
 import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { useState } from "react";
+// Imported Project Data
 import { projectTitles } from "./ProjectData";
-// import CardFlip from '../CardFlip/CardFlip';
+// Swiper Carousel
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import FadeInSection from "../Fade/FadeInSection";
 import Popcard from "../Popcard/Popcard";
 
@@ -31,6 +40,70 @@ const Portfolio = (props) => {
   // Normal Python Color
   const normalPythonFill = (e) => {
     e.target.style.fill = "#A3A9BD";
+  };
+
+  console.log(window.innerWidth);
+
+  // Determine if user is on a mobile device and if so, add the carousel effect
+  const determineSwiper = () => {
+    // If the user is on a mobile device, enable carousel effect
+    if (window.innerWidth <= 425) {
+      return (
+        <>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            slidesPerGroup={3}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {projectTitles[selectedLanguage].map((project, i) => {
+              return (
+                <>
+                  <SwiperSlide>
+                    <Popcard
+                      key={i}
+                      title={project.title}
+                      id={`card${i}`}
+                      rank={i}
+                      description={project.description}
+                      image={project.image}
+                      github={project.github}
+                      live={project.live}
+                      stack={project.stack}
+                    />
+                  </SwiperSlide>
+                </>
+              );
+            })}
+          </Swiper>
+        </>
+      );
+    }
+    // Otherwise, display normal styles
+    else {
+      projectTitles[selectedLanguage].map((project, i) => {
+        return (
+          <Popcard
+            key={i}
+            title={project.title}
+            id={`card${i}`}
+            rank={i}
+            description={project.description}
+            image={project.image}
+            github={project.github}
+            live={project.live}
+            stack={project.stack}
+          />
+        );
+      });
+    }
   };
 
   return (
@@ -153,14 +226,16 @@ const Portfolio = (props) => {
                   />
                 </span>
               </div>
+
               {/* Right Side */}
               <div className={styles["projects-container"]}>
                 <div className={styles["language-title"]}>
                   <h3>{currentLanguage}</h3>
                 </div>
+                {/* Popcard for each project */}
                 <div className={styles["current-projects"]}>
                   {projectTitles[selectedLanguage].map((project, i) => {
-                     return (
+                    return (
                       <Popcard
                         key={i}
                         title={project.title}
@@ -173,20 +248,6 @@ const Portfolio = (props) => {
                         stack={project.stack}
                       />
                     );
-
-                    // CARD FLIP VERSION
-                    // return (
-                    //   <CardFlip
-                    //     key={project.title}
-                    //     title={project.title}
-                    //     id={`card${i}`}
-                    //     delayTime={i}
-                    //     description={project.description}
-                    //     image={project.image}
-                    //     github={project.github}
-                    //     live={project.live}
-                    //   />
-                    // );
                   })}
                 </div>
               </div>
