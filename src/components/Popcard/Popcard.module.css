@@ -39,9 +39,9 @@
 .back {
   opacity: 0;
   position: absolute;
-  top: 54%;
+  /* top: 0; */
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,11 +82,11 @@
 .card:hover > .front .stats {
   font-size: 1em;
   position: absolute;
-  bottom: -35%;
+  bottom: -32%;
   right: -62px;
   flex-direction: column;
   align-items: center;
-  width: 19em;
+  width: 19.5em;
 }
 
 .card:hover > .front .stack {
@@ -106,21 +106,25 @@
 
 .card:hover .stack-item {
   display: flex;
+  height: 60px;
   flex-direction: column;
   align-items: center;
   font-weight: normal;
   text-align: center;
   width: 33%;
+  font-size: .95em;
+  justify-content: space-around;
 }
 
 .card:hover .stack-item img {
+  transform: none;
   border: none;
   width: 1.5em;
   height: 1.5em;
 }
 
 .card:hover > .rank {
-  transform: translate(130%, -23%);
+  transform: translate(127%, -27%);
 }
 
 .card:hover > .thumbnail {
@@ -128,12 +132,12 @@
 }
 
 .card:hover .stack-items {
-  width: 100%;
+  width: 90%;
   justify-content: space-evenly;
 }
 
-.card:hover .stack-items img {
-  transform: none;
+.card:hover .stack-items .stack-item img {
+  transform: translateX(0)
 }
 
 /* Hover Effects for back of card */
@@ -143,6 +147,8 @@
   transition: transform 250ms ease, opacity 150ms linear;
   transform: translateY(0);
   line-height: 1.25;
+  top: 50%;
+  bottom: 0;
 }
 
 .description {
@@ -183,7 +189,7 @@ img {
   display: flex;
   justify-content: center;
   width: 1px;
-  top: -1px;
+  top: 0px;
   right: 1em;
   font-size: 1.125rem;
   background: rgba(0, 0, 0, 0.65);
@@ -215,14 +221,14 @@ img {
   background-color: transparent;
 }
 
-.stack-items img:nth-of-type(1) {
-  transform: translateX(30%);
+.stack-items .stack-item:nth-of-type(1) img {
+  transform: translateX(20%);
 }
-.stack-items img:nth-of-type(2) {
+.stack-items .stack-item:nth-of-type(2) img {
   z-index: 2;
 }
-.stack-items img:nth-of-type(3) {
-  transform: translateX(-25%);
+.stack-items .stack-item:nth-of-type(3) img {
+  transform: translateX(-23%);
   z-index: 3;
 }
 
@@ -270,7 +276,7 @@ img {
 
 @media screen and (min-width: 1440px) {
   .card:hover > .rank {
-    transform: translate(128%, -28%);
+    transform: translate(125%, -25%);
   }
 }
 

@@ -34,7 +34,7 @@ export const projectTitles = {
     {
       title: "Retro Chat",
       description:
-        "A chat application built using Chat Engine, inspired by AOL's Instant Messanger(AIM).",
+        "A chat application inspired by AOL's Instant Messanger (AIM).",
       image: retro,
       github: "https://github.com/CharliePine22/retro-chat-application",
       live: "https://simply-phresh.web.app/meals",
@@ -61,9 +61,9 @@ export const projectTitles = {
   ],
   python: [
     {
-      title: "Animal Crossing Database",
+      title: "AC:NH Database",
       description:
-        "An app for Animal Crossing, that allows the user to locate and save details about their villagers.",
+        "An Animal Crossing app, in which the user can search and save their island villagers.",
       image: animal,
       github:
         "https://github.com/CharliePine22/animal_crossing_island_database",
@@ -80,7 +80,7 @@ export const projectTitles = {
       stack: [{src: pythonIcon, name: 'Python'}, {src: flaskIcon, name: 'Flask'}, {src: bootstrapIcon, name: 'Bootstrap'}]
     },
     {
-      title: "Spotify Playlist Generator",
+      title: "SP Playlist Generator",
       description:
         "An app that generates a Spotify playlist of the top 100 songs of the entered date.",
       image: spotify,
