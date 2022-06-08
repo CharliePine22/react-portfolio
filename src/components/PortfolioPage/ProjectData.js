@@ -38,7 +38,7 @@ export const projectTitles = {
       image: retro,
       github: "https://github.com/CharliePine22/retro-chat-application",
       live: "https://simply-phresh.web.app/meals",
-      stack: [reactIcon, firebaseIcon, chatengineIcon]
+      stack: [{src: reactIcon, name: 'React'}, {src: firebaseIcon, name: 'Firebase'}, {src: chatengineIcon, name: 'Chat Engine'}]
     },
     {
       title: "Simply Phresh",
@@ -47,7 +47,7 @@ export const projectTitles = {
       image: simply,
       github: "https://github.com/CharliePine22/Simply-Phresh",
       live: "https://astro-chat.netlify.app/", //Right now, this app is broken, need to fix....
-      stack: [reactIcon, firebaseIcon, sqlIcon]
+      stack: [{src: reactIcon, name: 'React-Redux'}, {src: firebaseIcon, name: 'Firebase'}, {src: sqlIcon, name: 'SQL'}]
     },
     {
       title: "Video Game Database",
@@ -56,19 +56,19 @@ export const projectTitles = {
       image: video,
       github: "https://github.com/CharliePine22/video_game_database",
       live: "",
-      stack: [nextjsIcon, mongodbIcon, rawgIcon]
+      stack: [{src: nextjsIcon, name: 'NextJS'}, {src: mongodbIcon, name: 'MongoDB'}, {src: rawgIcon, name: 'Rawg'}]
     },
   ],
   python: [
     {
       title: "Animal Crossing Database",
       description:
-        "An app related to Animal Crossing: New Horizons, that allows the user to look up and save details about their villagers.",
+        "An app for Animal Crossing, that allows the user to locate and save details about their villagers.",
       image: animal,
       github:
         "https://github.com/CharliePine22/animal_crossing_island_database",
       live: "",
-      stack: [pythonIcon, sqlIcon, bs4Icon]
+      stack: [{src: pythonIcon, name: 'Python'}, {src: sqlIcon, name: 'PostgreSQL'}, {src: bs4Icon, name: 'Beautiful Soup'}]
     },
     {
       title: "Planner",
@@ -77,16 +77,16 @@ export const projectTitles = {
       image: planner,
       github: "https://github.com/CharliePine22/planner",
       live: "",
-      stack: [pythonIcon, flaskIcon, bootstrapIcon]
+      stack: [{src: pythonIcon, name: 'Python'}, {src: flaskIcon, name: 'Flask'}, {src: bootstrapIcon, name: 'Bootstrap'}]
     },
     {
       title: "Spotify Playlist Generator",
       description:
-        "An app that connects to the user's Spotify account, and generates a playlist of the top 100 songs of the date the user chooses.",
+        "An app that generates a Spotify playlist of the top 100 songs of the entered date.",
       image: spotify,
       github: "https://github.com/CharliePine22/spotify_top_100",
       live: "",
-      stack: [pythonIcon, bs4Icon]
+      stack: [{src: pythonIcon, name: 'Python'}, {src: bs4Icon, name: 'Beautiful Soup'}]
     },
   ],
   html: [
@@ -96,7 +96,7 @@ export const projectTitles = {
       image: terror,
       github: "https://github.com/CharliePine22/tindog", // Have to fix it ,
       live: "",
-      stack: [htmlIcon, css3Icon, javascriptIcon]
+      stack: [{src: htmlIcon, name: "HTML5"}, {src: css3Icon, name: 'CSS3'}, {src: javascriptIcon, name: 'Javascript'}]
     },
     {
       title: "Tindog",
@@ -105,7 +105,7 @@ export const projectTitles = {
       image: tindog,
       github: "",
       live: "",
-      stack: [htmlIcon, css3Icon, bootstrapIcon]
+      stack: [{src: htmlIcon, name: "HTML5"}, {src: css3Icon, name: 'CSS3'}, {src: bootstrapIcon, name: 'Bootstrap'}]
     },
     {
       title: "Top Movies Database",
@@ -114,7 +114,7 @@ export const projectTitles = {
       image: top,
       github: "https://github.com/CharliePine22/top_movies_database",
       live: "",
-      stack: [htmlIcon, bootstrapIcon, flaskIcon]
+      stack: [{src: htmlIcon, name: "HTML5"}, {src: bootstrapIcon, name: 'Bootstrap'}, {src: flaskIcon, name: 'Flask'}]
     },
   ],
 };

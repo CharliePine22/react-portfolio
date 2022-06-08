@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.266825c9.css",
-    "main.js": "/static/js/main.e718ff12.js",
+    "main.css": "/static/css/main.ef824873.css",
+    "main.js": "/static/js/main.6d348744.js",
     "static/media/video-game-database.jpg": "/static/media/video-game-database.590d986d85ed4d81da0a.jpg",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
@@ -20,11 +20,11 @@
     "static/media/headshot.jfif": "/static/media/headshot.89b34cac1b59212a81bd.jfif",
     "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.266825c9.css.map": "/static/css/main.266825c9.css.map",
-    "main.e718ff12.js.map": "/static/js/main.e718ff12.js.map"
+    "main.ef824873.css.map": "/static/css/main.ef824873.css.map",
+    "main.6d348744.js.map": "/static/js/main.6d348744.js.map"
   },
   "entrypoints": [
-    "static/css/main.266825c9.css",
-    "static/js/main.e718ff12.js"
+    "static/css/main.ef824873.css",
+    "static/js/main.6d348744.js"
   ]
 }

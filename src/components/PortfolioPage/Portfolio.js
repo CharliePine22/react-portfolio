@@ -26,7 +26,7 @@ const Portfolio = (props) => {
   const reactStyles =
     currentLanguage == "React" ? styles["react-active"] : styles.react;
   const pythonStyles =
-    currentLanguage == "Python" ? styles["python-fill"] : styles.python;
+    currentLanguage == "Python" ? styles["python-active"] : styles.python;
   const htmlStyles =
     currentLanguage == "HTML | CSS | JS"
       ? styles["frontend-active"]
@@ -41,8 +41,6 @@ const Portfolio = (props) => {
   const normalPythonFill = (e) => {
     e.target.style.fill = "#A3A9BD";
   };
-
-  console.log(window.innerWidth);
 
   // Determine if user is on a mobile device and if so, add the carousel effect
   const determineSwiper = () => {
@@ -68,7 +66,7 @@ const Portfolio = (props) => {
                 <>
                   <SwiperSlide>
                     <Popcard
-                      key={i}
+                      key={project.title}
                       title={project.title}
                       id={`card${i}`}
                       rank={i}
@@ -108,18 +106,7 @@ const Portfolio = (props) => {
 
   return (
     <>
-      <svg className={styles["python-fill"]} width="0" height="0">
-        <linearGradient
-          id="python-gradient"
-          x1="100%"
-          y1="100%"
-          x2="0%"
-          y2="0%"
-        >
-          <stop stopColor="rgba(52,113,162,1)" offset="50%" />
-          <stop stopColor="rgba(255,210,62,1)" offset="50%" />
-        </linearGradient>
-      </svg>
+
       <main id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
@@ -153,8 +140,6 @@ const Portfolio = (props) => {
                   onClick={() => setCurrentLanguage("Python")}
                 >
                   <FaPython
-                    onMouseOver={activePythonFill}
-                    onMouseOut={normalPythonFill}
                     size={
                       currentWindowWidth >= 1440
                         ? 50
@@ -162,12 +147,6 @@ const Portfolio = (props) => {
                         ? 35
                         : 48
                     }
-                    style={{
-                      fill:
-                        currentLanguage == "Python"
-                          ? "url(#python-gradient)"
-                          : "#A3A9BD",
-                    }}
                   />
                 </span>
 

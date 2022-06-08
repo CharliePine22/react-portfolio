@@ -13,6 +13,7 @@ const Popcard = (props) => {
       <div className={styles.rank}>
         <span>{props.rank + 1}</span>
       </div>
+
       {/* Front of Card */}
       <div className={styles.front}>
         <img
@@ -22,15 +23,17 @@ const Popcard = (props) => {
         />
         <h3 className={styles.title}>{props.title}</h3>
         <div className={styles.stats}>
-          <p className={styles.stack}>Stack:</p>
+          <p className={styles.stack}>Toolkit</p>
           <div className={styles["stack-items"]}>
-            {props.stack.map((item, i) => (
+            {props.stack.map((item, i) => <>
+            <div key={i} className={styles['stack-item']}>
+              <span className={styles['language-name']}>{item.name}</span>
               <img
-                src={item}
-                key={i}
-                alt="thumbnail icons of tools used in app"
+                src={item.src}
+                alt={`${item.name} icon thumbnail`}
               />
-            ))}
+              </div>
+            </>)}
           </div>
         </div>
       </div>
