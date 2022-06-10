@@ -106,7 +106,6 @@ const Portfolio = (props) => {
 
   return (
     <>
-
       <main id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>

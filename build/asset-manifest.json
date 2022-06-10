@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8b0db2b.css",
-    "main.js": "/static/js/main.3f30d5a3.js",
-    "static/media/video-game-database.jpg": "/static/media/video-game-database.590d986d85ed4d81da0a.jpg",
+    "main.css": "/static/css/main.3a4b8419.css",
+    "main.js": "/static/js/main.6951a67b.js",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
+    "static/media/video-game-databaseBIG.jpg": "/static/media/video-game-databaseBIG.59a1f0c4d02856f1c4a5.jpg",
     "static/media/cpine-resume.jpg": "/static/media/cpine-resume.6c249dd148dc095fbf9e.jpg",
     "static/media/animal-crossing-database.png": "/static/media/animal-crossing-database.f2cea1bb7177b4aac590.png",
     "static/media/current-cj-image.jpg": "/static/media/current-cj-image.6492fc75087d8e032e14.jpg",
     "static/media/terror-trades.png": "/static/media/terror-trades.6f079fea8cc08d332190.png",
     "static/media/top-movies.png": "/static/media/top-movies.cbbcc486a9473d07fa8e.png",
     "static/media/simply-phresh.png": "/static/media/simply-phresh.7fe70d9addedf1f2ae86.png",
+    "static/media/yunaBIG.jpg": "/static/media/yunaBIG.17c72cb5aa9b7ec6b8ed.jpg",
     "static/media/react-icon.png": "/static/media/react-icon.81ed438b18e24116794d.png",
+    "static/media/spotifyBIG.jpg": "/static/media/spotifyBIG.0779d18095ea9db071bb.jpg",
     "static/media/chat-engine-icon.ico": "/static/media/chat-engine-icon.c3c30fcca33e051b235d.ico",
-    "static/media/yuna.jpg": "/static/media/yuna.527ddf1b76798a7daa27.jpg",
     "static/media/flask-logo.png": "/static/media/flask-logo.b979c3f17171ee75f69a.png",
     "static/media/python-icon.png": "/static/media/python-icon.2e65c2b73eddaaf97e06.png",
     "static/media/retro-chat.png": "/static/media/retro-chat.578afed492e305ffcae1.png",
     "static/media/headshot.jfif": "/static/media/headshot.89b34cac1b59212a81bd.jfif",
     "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.b8b0db2b.css.map": "/static/css/main.b8b0db2b.css.map",
-    "main.3f30d5a3.js.map": "/static/js/main.3f30d5a3.js.map"
+    "main.3a4b8419.css.map": "/static/css/main.3a4b8419.css.map",
+    "main.6951a67b.js.map": "/static/js/main.6951a67b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8b0db2b.css",
-    "static/js/main.3f30d5a3.js"
+    "static/css/main.3a4b8419.css",
+    "static/js/main.6951a67b.js"
   ]
 }

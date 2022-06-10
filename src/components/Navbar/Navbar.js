@@ -9,6 +9,7 @@ import {
   FaUserNinja,
   FaNewspaper,
   FaJournalWhills,
+  FaBookReader
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -24,9 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <span
-        className={styles["nav-toggle"]}
-      >
+      <span className={styles["nav-toggle"]}>
         <GiHamburgerMenu
           size={35}
           onClick={() => setNavVisibility(!navVisibility)}
@@ -45,7 +44,7 @@ const Navbar = () => {
           {/* Home Page Link */}
           <Link
             to="home"
-            activeClass={styles["active"]}
+            activeClass={styles.active}
             spy={true}
             style={{
               backgroundColor:
@@ -55,6 +54,40 @@ const Navbar = () => {
           >
             <li className={styles["nav-item"]}>
               <FaHome style={{ marginRight: "10px" }} /> Home
+            </li>
+          </Link>
+
+          {/* Portfolio Page Link */}
+          <Link
+            to="portfolio"
+            offset={70}
+            activeClass={styles.active}
+            spy={true}
+            style={{
+              backgroundColor:
+                activeNavItem == "Portfolio" ? "#191C26" : "transparent",
+            }}
+            onClick={() => setActiveNavItem("Portfolio")}
+          >
+            <li className={styles["nav-item"]}>
+              <FaNewspaper style={{ marginRight: "10px" }} /> Portfolio
+            </li>
+          </Link>
+
+          {/* Skills and Experience Link */}
+          <Link
+            to="skills"
+            offset={70}
+            activeClass={styles.active}
+            spy={true}
+            style={{
+              backgroundColor:
+                activeNavItem == "Skills" ? "#191C26" : "transparent",
+            }}
+            onClick={() => setActiveNavItem("Skills")}
+          >
+            <li className={styles["nav-item"]}>
+              <FaBookReader style={{ marginRight: "10px" }} /> Skills & Experience
             </li>
           </Link>
 
@@ -75,30 +108,11 @@ const Navbar = () => {
             </li>
           </Link>
 
-          {/* Portfolio Page Link */}
-          <Link
-            to="portfolio"
-            href="#portfolio"
-            offset={70}
-            activeClass={styles["nav-item-active"]}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "Portfolio" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("Portfolio")}
-          >
-            <li className={styles["nav-item"]}>
-              <FaNewspaper style={{ marginRight: "10px" }} /> Portfolio
-            </li>
-          </Link>
-
           {/* Contact Page Link */}
           <Link
             to="contact"
-            href="#contact"
             offset={70}
-            activeClass={styles["nav-item-active"]}
+            activeClass={styles.active}
             spy={true}
             style={{
               backgroundColor:

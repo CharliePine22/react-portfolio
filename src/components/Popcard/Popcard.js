@@ -8,7 +8,7 @@ const Popcard = (props) => {
   };
 
   return (
-    <div className={styles.card} key={props.title}>
+    <div className={styles.card} style={{animationDelay: `${props.rank}00ms`}} key={props.title}>
       {/* Project Number */}
       <div className={styles.rank}>
         <span>{props.rank + 1}</span>
@@ -25,15 +25,14 @@ const Popcard = (props) => {
         <div className={styles.stats}>
           <p className={styles.stack}>Toolkit</p>
           <div className={styles["stack-items"]}>
-            {props.stack.map((item, i) => <>
-            <div key={i} className={styles['stack-item']}>
-              <span className={styles['language-name']}>{item.name}</span>
-              <img
-                src={item.src}
-                alt={`${item.name} icon thumbnail`}
-              />
-              </div>
-            </>)}
+            {props.stack.map((item, i) => (
+              <>
+                <div key={i} className={styles["stack-item"]}>
+                  <span className={styles["language-name"]}>{item.name}</span>
+                  <img src={item.src} alt={`${item.name} icon thumbnail`} />
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </div>
@@ -57,7 +56,10 @@ const Popcard = (props) => {
         </div>
       </div>
 
-      <div className={styles.background}></div>
+      {/* <div className={styles.background} style={{backgroundImage: 'url(' + props.image + ')'}} /> */}
+      <div className={styles.background}>
+        <img src={props.image} />
+      </div>
     </div>
   );
 };
