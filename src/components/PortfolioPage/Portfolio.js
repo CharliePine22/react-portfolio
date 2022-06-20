@@ -56,11 +56,13 @@ const Portfolio = (props) => {
             showIndicators={false}
             infiniteLoop={true}
             showThumbs={false}
-            // centerMode={true}
+            // swipeable={false}
+            style={{overflow: 'visible'}}
           >
             {projectTitles[selectedLanguage].map((project, i) => {
               return (
                 <Popcard
+                  key={project.title}
                   title={project.title}
                   id={`card${i}`}
                   rank={i}

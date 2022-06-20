@@ -27,7 +27,7 @@ const Popcard = (props) => {
           <div className={styles["stack-items"]}>
             {props.stack.map((item, i) => (
               <>
-                <div key={i} className={styles["stack-item"]}>
+                <div key={item.name} className={styles["stack-item"]}>
                   <span className={styles["language-name"]}>{item.name}</span>
                   <img src={item.src} alt={`${item.name} icon thumbnail`} />
                 </div>

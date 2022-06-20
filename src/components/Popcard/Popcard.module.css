@@ -301,18 +301,31 @@ img {
     justify-content: center;
   }
 
-  .stats p {
-    margin-right: 20px;
-  }
-
   .card:hover > .rank {
     transform: translate(123%, -28%);
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 430px) {
+@media screen and (min-width: 320px) and (max-width: 430px) {
   .card {
-    width: 75%;
+    width: 65%;
     margin: 10px auto;
   }
+
+  .card:hover .stack-items {
+    width:100%;
+  }
+
+  .card:hover .stack-item {
+    justify-content: space-evenly;
+  }
+
+  .card:hover > .front .stats {
+    right: -50px;
+  }
+
+  .front {
+    justify-content: flex-start;
+  }
+
 }

@@ -183,13 +183,18 @@
   margin-bottom: 20px;
 }
 
-/* Swiper Component Styles */
+/* Carousel Component Styles */
 .carousel {
   width:100%;
 }
 
-.carousel.carousel-slider {
-  overflow:visible;
+/* Disable hidden overflows on carousel for popcard effect to work on mobile */
+.carousel > div {
+  overflow: visible !important;
+}
+
+.carousel > div > div {
+  overflow: visible !important;
 }
 
 /* Animate Front Card title to the back */
@@ -233,7 +238,7 @@
 }
 
 /* Mobile Devices */
-@media screen and (min-width: 375px) and (max-width: 812px) {
+@media screen and (min-width: 320px) and (max-width: 812px) {
   .portfolio {
     align-items: center;
   }
@@ -248,7 +253,7 @@
   }
 
   .language-title h3 {
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 5px 0 10px;
   }
 
@@ -259,12 +264,12 @@
   }
 
   .portfolio-description p {
-    width: 50%;
+    width: 75%;
   }
 
   .projects {
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     overflow: hidden;
     margin: 20px auto;
   }
