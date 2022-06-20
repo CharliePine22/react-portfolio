@@ -230,6 +230,9 @@ const Portfolio = (props) => {
                 </div>
               </div>
             </div>
+            <div className={styles.more}>
+              <button>More Details</button>
+            </div>
           </FadeInSection>
         </div>
       </main>

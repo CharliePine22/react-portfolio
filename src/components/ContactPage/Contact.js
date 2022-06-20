@@ -4,11 +4,16 @@ import { useRef, useState } from "react";
 import { FaPhone, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import FadeInSection from "../Fade/FadeInSection";
+import Modal from "../Modal/Modal";
 
 const Contact = (props) => {
+  // Message Form States
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [hasError, setHasError] = useState(false);
+
+  // Modal Display State
+  const [show, setShow] = useState(false);
 
   // Used for submitting EmailJS Form
   const formRef = useRef();
@@ -90,7 +95,7 @@ const Contact = (props) => {
     <main id={props.id} className={styles.contact}>
       <div className={styles.container}>
         {/* Contact Page Header */}
-        
+
         <div className={styles.title}>
           <h3>Contact</h3>
           <p>
@@ -98,86 +103,99 @@ const Contact = (props) => {
           </p>
         </div>
         <FadeInSection>
-        {/* Phone, Email, and Discord Contact List */}
-        <div className={styles["contact-methods-container"]}>
-          <ul className={styles["contact-methods-list"]}>
-            {contactIcons.map((icon) => (
-              <li key={icon.name} className={styles["contact-item"]}>
-                <div className={styles.top}>
-                  {icon.icon}
-                  <h3>{icon.name}</h3>
-                </div>
-                <div className={styles.bottom}>
-                  <p>{icon.content}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Contact Message Form */}
-        <div className={styles["form-container"]}>
-          <div className={styles["form-title"]}>
-            <h3>
-              Looking to discuss something further? <br />{" "}
-              Or talk about <strong><i>puppies</i></strong>?
-            </h3>
-            <p>Send a message below and I'll do my best to reply soon!</p>
+          {/* Phone, Email, and Discord Contact List */}
+          <div className={styles["contact-methods-container"]}>
+            <ul className={styles["contact-methods-list"]}>
+              {contactIcons.map((icon) => (
+                <li key={icon.name} className={styles["contact-item"]}>
+                  <div className={styles.top}>
+                    {icon.icon}
+                    <h3>{icon.name}</h3>
+                  </div>
+                  <div className={styles.bottom}>
+                    <p>{icon.content}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
-          <form method="POST" ref={formRef} onSubmit={formSubmitHandler}>
-            {/* Name */}
-            <div className={styles["form-name"]}>
-              <input
-                ref={nameRef}
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                onFocus={inputFocusHandler}
-                required
-              />
+
+          {/* Contact Message Form */}
+          <div className={styles["form-container"]}>
+            <div className={styles["form-title"]}>
+              <h3>
+                Looking to discuss something further? <br /> Or talk about{" "}
+                <strong>
+                  <i>puppies</i>
+                </strong>
+                ?
+              </h3>
+              <p>Send a message below and I'll do my best to reply soon!</p>
             </div>
-            {/* Email */}
-            <div className={styles["form-email"]}>
-              <input
-                ref={emailRef}
-                type="email"
-                id="email"
-                placeholder="Email"
-                onFocus={inputFocusHandler}
-                name="email"
-                required
-              />
-            </div>
-            {/* Message */}
-            <div className={styles["form-message"]}>
-              <input
-                ref={messageRef}
-                type="textarera"
-                id="message"
-                placeholder="Message"
-                onFocus={inputFocusHandler}
-                name="message"
-                required
-              />
-            </div>
-            {/* Submit Button and Status Container */}
-            <div className={styles.actions}>
-              {/* Button */}
-              <button
-                className={submitButtonStyles}
-                onMouseOver={() => setStatusMessage("")}
-                type="submit"
-              >
-                {isSubmitting ? "Submitting" : "Submit"}
-              </button>
-              <div className={statusMessageStyles}>
-                {/* Status */}
-                <p>{statusMessage}</p>
+            {/* Form */}
+            <form method="POST" ref={formRef}>
+              {/* Name */}
+              <div className={styles["form-name"]}>
+                <input
+                  ref={nameRef}
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  onFocus={inputFocusHandler}
+                  required
+                />
               </div>
-            </div>
-          </form>
-        </div>
+              {/* Email */}
+              <div className={styles["form-email"]}>
+                <input
+                  ref={emailRef}
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  onFocus={inputFocusHandler}
+                  name="email"
+                  required
+                />
+              </div>
+              {/* Message */}
+              <div className={styles["form-message"]}>
+                <input
+                  ref={messageRef}
+                  type="textarera"
+                  id="message"
+                  placeholder="Message"
+                  onFocus={inputFocusHandler}
+                  name="message"
+                  required
+                />
+              </div>
+              {/* Submit Button and Status Container */}
+              <div className={styles.actions}>
+                {/* Button */}
+                <button
+                  onClick={() => setShow(true)}
+                  type="button"
+                  className={submitButtonStyles}
+                  onMouseOver={() => setStatusMessage("")}
+                >
+                  {isSubmitting ? "Submitting" : "Submit"}
+                </button>
+                <div className={statusMessageStyles}>
+                  {/* Status */}
+                  <p>{statusMessage}</p>
+                </div>
+                <Modal
+                  title="Confirm Submit"
+                  onSubmit={formSubmitHandler}
+                  onClose={() => setShow(false)}
+                  show={show}
+                >
+                  <p>Are you sure you want to send your message?</p>
+                </Modal>
+              </div>
+            </form>
+          </div>
         </FadeInSection>
       </div>
     </main>

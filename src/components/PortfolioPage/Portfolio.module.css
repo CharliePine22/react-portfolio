@@ -10,6 +10,34 @@
   width: 80%;
 }
 
+.more {
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
+.more button {
+  padding: 15px 30px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-size: 1em;
+  /* box-shadow: rgba(0, 0, 0, 1) 0px 12px 28px 0px, rgba(0, 0, 0, 1) 0px 2px 4px 0px, rgba(255, 255, 255, 1) 0px 0px 0px 1px inset; */
+}
+
+.more button:hover {
+  color: #fff;
+  background-color: black;
+  border: 1px solid #fff;
+} 
+
+.more button:focus {
+  outline: none;
+}
+
 .portfolio-content {
   display: flex;
   flex-direction: column;
@@ -143,8 +171,8 @@
 }
 
 .language-title h3 {
+  transform: translateX(-25px);
   animation: animateTitle 500ms forwards;
-  opacity:0;
 }
 
 .current-projects {
@@ -155,6 +183,7 @@
   margin-bottom: 20px;
 }
 
+/* Animate Front Card title to the back */
 @keyframes animateTitle {
   0% {
     transform: translateX(-25px);
@@ -167,12 +196,14 @@
   }
 }
 
+/* Once the screen gets below a laptop, hide nav and take up full screen */
 @media screen and (max-width: 1435px) {
   .container {
     width: 100%;
   }
 }
 
+/* Laptops and Large Desktops */
 @media screen and (min-width: 1440px) {
   .projects-container {
     display: flex;

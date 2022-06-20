@@ -9,7 +9,7 @@ import {
   FaUserNinja,
   FaNewspaper,
   FaJournalWhills,
-  FaBookReader
+  FaBookReader,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -41,89 +41,68 @@ const Navbar = () => {
         </div>
 
         <ul className={styles["nav-list"]}>
+
           {/* Home Page Link */}
-          <Link
-            to="home"
-            activeClass={styles.active}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "Home" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("Home")}
-          >
-            <li className={styles["nav-item"]}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="home"
+              activeClass={styles.active}
+              spy={true}
+              onClick={() => setActiveNavItem("Home")}
+            >
               <FaHome style={{ marginRight: "10px" }} /> Home
-            </li>
-          </Link>
+            </Link>
+          </li>
 
           {/* Portfolio Page Link */}
-          <Link
-            to="portfolio"
-            offset={70}
-            activeClass={styles.active}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "Portfolio" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("Portfolio")}
-          >
-            <li className={styles["nav-item"]}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="portfolio"
+              activeClass={styles.active}
+              spy={true}
+              onClick={() => setActiveNavItem("Portfolio")}
+            >
               <FaNewspaper style={{ marginRight: "10px" }} /> Portfolio
-            </li>
-          </Link>
+            </Link>
+          </li>
 
           {/* Skills and Experience Link */}
-          <Link
-            to="skills"
-            offset={70}
-            activeClass={styles.active}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "Skills" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("Skills")}
-          >
-            <li className={styles["nav-item"]}>
-              <FaBookReader style={{ marginRight: "10px" }} /> Skills & Experience
-            </li>
-          </Link>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="skills"
+              activeClass={styles.active}
+              spy={true}
+              onClick={() => setActiveNavItem("Skills")}
+            >
+              <FaBookReader style={{ marginRight: "10px" }} /> Skills &
+              Experience
+            </Link>
+          </li>
 
           {/* About Page Link */}
-          <Link
-            to="about"
-            activeClass={styles.active}
-            offset={70}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "About" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("About")}
-          >
-            <li className={styles["nav-item"]}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="about"
+              activeClass={styles.active}
+              spy={true}
+              onClick={() => setActiveNavItem("About")}
+            >
               <FaUserNinja style={{ marginRight: "10px" }} /> About
-            </li>
-          </Link>
+            </Link>
+          </li>
 
           {/* Contact Page Link */}
-          <Link
-            to="contact"
-            offset={70}
-            activeClass={styles.active}
-            spy={true}
-            style={{
-              backgroundColor:
-                activeNavItem == "Contact" ? "#191C26" : "transparent",
-            }}
-            onClick={() => setActiveNavItem("Contact")}
-          >
-            <li className={styles["nav-item"]}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="contact"
+              activeClass={styles.active}
+              spy={true}
+              onClick={() => setActiveNavItem("Contact")}
+            >
               <FaJournalWhills style={{ marginRight: "10px" }} /> Contact
-            </li>
-          </Link>
+            </Link>
+          </li>
+          
         </ul>
         <div className={styles["footer-container"]}>
           <div className={styles["nav-footer"]}>
