@@ -25,7 +25,7 @@ const Home = (props) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 375) {
+      if (window.innerWidth >= 425) {
         setIconSize(32)
       } else if (window.innerWidth <= 375) {
         setIconSize(27)

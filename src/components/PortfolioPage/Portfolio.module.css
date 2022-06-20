@@ -183,6 +183,15 @@
   margin-bottom: 20px;
 }
 
+/* Swiper Component Styles */
+.carousel {
+  width:100%;
+}
+
+.carousel.carousel-slider {
+  overflow:visible;
+}
+
 /* Animate Front Card title to the back */
 @keyframes animateTitle {
   0% {
@@ -230,8 +239,12 @@
   }
 
   .portfolio-content {
-    align-items: center;
+    /* align-items: center; */
     float: none;
+  }
+
+  .portfolio-content h3 {
+    text-align: center;
   }
 
   .language-title h3 {
@@ -251,7 +264,7 @@
 
   .projects {
     flex-direction: column;
-    width: 53%;
+    width: 100%;
     overflow: hidden;
     margin: 20px auto;
   }

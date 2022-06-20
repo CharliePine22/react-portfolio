@@ -2,24 +2,22 @@ import styles from "./Portfolio.module.css";
 // Portfolio Nav Icons
 import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // Imported Project Data
 import { projectTitles } from "./ProjectData";
-// Swiper Carousel
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
+// Carousel Imports
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+// Component Imports
 import FadeInSection from "../Fade/FadeInSection";
 import Popcard from "../Popcard/Popcard";
 
 const Portfolio = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
   const [currentLanguage, setCurrentLanguage] = useState("React");
-  const currentWindowWidth = window.innerWidth;
+  const [width, setWidth] = useState(window.innerWidth);
   const selectedLanguage = currentLanguage.split(" ")[0].toLowerCase();
 
   // Styles for Portfolio Nav Icons
@@ -32,64 +30,58 @@ const Portfolio = (props) => {
       ? styles["frontend-active"]
       : styles.frontend;
 
-  // Active Hover Effect for Python
-  const activePythonFill = (e) => {
-    e.target.style.fill = "url(#python-gradient)";
+  const handleResize = () => {
+    setWidth(window.innerWidth);
   };
 
-  // Normal Python Color
-  const normalPythonFill = (e) => {
-    e.target.style.fill = "#A3A9BD";
-  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = width <= 425;
 
   // Determine if user is on a mobile device and if so, add the carousel effect
   const determineSwiper = () => {
     // If the user is on a mobile device, enable carousel effect
-    if (window.innerWidth <= 425) {
+    if (isMobile) {
       return (
         <>
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            slidesPerGroup={3}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
+          <Carousel
+            className={styles.carousel}
+            showStatus={false}
+            showIndicators={false}
+            infiniteLoop={true}
+            showThumbs={false}
+            // centerMode={true}
           >
             {projectTitles[selectedLanguage].map((project, i) => {
               return (
-                <>
-                  <SwiperSlide>
-                    <Popcard
-                      key={project.title}
-                      title={project.title}
-                      id={`card${i}`}
-                      rank={i}
-                      description={project.description}
-                      image={project.image}
-                      github={project.github}
-                      live={project.live}
-                      stack={project.stack}
-                    />
-                  </SwiperSlide>
-                </>
+                <Popcard
+                  title={project.title}
+                  id={`card${i}`}
+                  rank={i}
+                  description={project.description}
+                  image={project.image}
+                  github={project.github}
+                  live={project.live}
+                  stack={project.stack}
+                />
               );
             })}
-          </Swiper>
+          </Carousel>
         </>
       );
     }
     // Otherwise, display normal styles
     else {
-      projectTitles[selectedLanguage].map((project, i) => {
+      return projectTitles[selectedLanguage].map((project, i) => {
         return (
           <Popcard
-            key={i}
+            key={project.title}
             title={project.title}
             id={`card${i}`}
             rank={i}
@@ -109,7 +101,7 @@ const Portfolio = (props) => {
       <main id={props.id} className={styles.container}>
         <div className={styles["portfolio-content"]}>
           <h3>Portfolio</h3>
-          <FadeInSection>
+          <FadeInSection style={{ width: "100%" }}>
             <div className={styles["portfolio-description"]}>
               <p>Here are some of the projects that I've worked on!</p>
             </div>
@@ -124,9 +116,9 @@ const Portfolio = (props) => {
                 >
                   <FaReact
                     size={
-                      currentWindowWidth >= 1440
+                      width >= 1440
                         ? 50
-                        : currentWindowWidth <= 375
+                        : width <= 375
                         ? 35
                         : 48
                     }
@@ -140,9 +132,9 @@ const Portfolio = (props) => {
                 >
                   <FaPython
                     size={
-                      currentWindowWidth >= 1440
+                      width >= 1440
                         ? 50
-                        : currentWindowWidth <= 375
+                        : width <= 375
                         ? 35
                         : 48
                     }
@@ -157,9 +149,9 @@ const Portfolio = (props) => {
                   <FaHtml5
                     className={styles.html}
                     size={
-                      currentWindowWidth >= 1440
+                      width >= 1440
                         ? 42
-                        : currentWindowWidth <= 375
+                        : width <= 375
                         ? 30
                         : 33
                     }
@@ -173,9 +165,9 @@ const Portfolio = (props) => {
                   <FaCss3
                     className={styles.css}
                     size={
-                      currentWindowWidth >= 1440
+                      width >= 1440
                         ? 42
-                        : currentWindowWidth <= 375
+                        : width <= 375
                         ? 30
                         : 33
                     }
@@ -189,9 +181,9 @@ const Portfolio = (props) => {
                   <IoLogoJavascript
                     className={styles.javascript}
                     size={
-                      currentWindowWidth >= 1440
+                      width >= 1440
                         ? 42
-                        : currentWindowWidth <= 375
+                        : width <= 375
                         ? 30
                         : 33
                     }
@@ -212,27 +204,13 @@ const Portfolio = (props) => {
                 </div>
                 {/* Popcard for each project */}
                 <div className={styles["current-projects"]}>
-                  {projectTitles[selectedLanguage].map((project, i) => {
-                    return (
-                      <Popcard
-                        key={i}
-                        title={project.title}
-                        id={`card${i}`}
-                        rank={i}
-                        description={project.description}
-                        image={project.image}
-                        github={project.github}
-                        live={project.live}
-                        stack={project.stack}
-                      />
-                    );
-                  })}
+                  {determineSwiper()}
                 </div>
               </div>
             </div>
-            <div className={styles.more}>
+            {/* <div className={styles.more}>
               <button>More Details</button>
-            </div>
+            </div> */}
           </FadeInSection>
         </div>
       </main>

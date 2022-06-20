@@ -159,6 +159,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: 250ms;
+  width: 100%;
 }
 
 .front .title {
@@ -211,7 +212,7 @@ img {
 }
 
 .stack-items img {
-  width: 1.5em;
+  width: 1.5em !important;
   height: 1.5em;
   border-radius: 50%;
   border: 2px solid #111319;
@@ -290,7 +291,7 @@ img {
   }
 }
 
-/* Mobile Devices */
+/* Mobile Devices & Tablets */
 @media screen and (min-width: 375px) and (max-width: 812px) {
   .title {
     text-align: center;
@@ -306,5 +307,12 @@ img {
 
   .card:hover > .rank {
     transform: translate(123%, -28%);
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .card {
+    width: 75%;
+    margin: 10px auto;
   }
 }
