@@ -310,7 +310,7 @@ img {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 430px) {
   .card {
     width: 75%;
     margin: 10px auto;

@@ -42,7 +42,7 @@ const Portfolio = (props) => {
     };
   }, []);
 
-  const isMobile = width <= 425;
+  const isMobile = width <= 430;
 
   // Determine if user is on a mobile device and if so, add the carousel effect
   const determineSwiper = () => {
