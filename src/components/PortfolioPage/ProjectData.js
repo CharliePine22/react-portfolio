@@ -38,7 +38,7 @@ export const projectTitles = {
         "A chat application inspired by AOL's Instant Messanger (AIM).",
       image: retro,
       github: "https://github.com/CharliePine22/retro-chat-application",
-      live: "https://simply-phresh.web.app/meals",
+      live: "https://astro-chat.netlify.app/", //Right now, this app is broken, need to fix....
       stack: [{src: reactIcon, name: 'React'}, {src: firebaseIcon, name: 'Firebase'}, {src: chatengineIcon, name: 'Chat Engine'}]
     },
     {
@@ -47,7 +47,7 @@ export const projectTitles = {
         "A fake food app, in which the user can place and view fake food orders.",
       image: simply,
       github: "https://github.com/CharliePine22/Simply-Phresh",
-      live: "https://astro-chat.netlify.app/", //Right now, this app is broken, need to fix....
+      live: "https://simply-phresh.web.app/meals",
       stack: [{src: reactIcon, name: 'React-Redux'}, {src: firebaseIcon, name: 'Firebase'}, {src: sqlIcon, name: 'SQL'}]
     },
     {
@@ -95,8 +95,8 @@ export const projectTitles = {
       title: "Terror Trades",
       description: "A fake Crypto Trading website inspired by Futureswap.",
       image: terror,
-      github: "https://github.com/CharliePine22/tindog", // Have to fix it ,
-      live: "",
+      github: "", 
+      live: "https://terror-trades-landing.netlify.app/",
       stack: [{src: htmlIcon, name: "HTML5"}, {src: css3Icon, name: 'CSS3'}, {src: javascriptIcon, name: 'Javascript'}]
     },
     {
@@ -104,8 +104,8 @@ export const projectTitles = {
       description:
         "A fake Tinder for dogs website, inspired by the trademark name.",
       image: tindog,
-      github: "",
-      live: "",
+      github: "https://github.com/CharliePine22/tindog", 
+      live: "https://tindog-cp.netlify.app/",
       stack: [{src: htmlIcon, name: "HTML5"}, {src: css3Icon, name: 'CSS3'}, {src: bootstrapIcon, name: 'Bootstrap'}]
     },
     {

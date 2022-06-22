@@ -7,6 +7,10 @@ const Popcard = (props) => {
     window.open(props.github, "_blank");
   };
 
+  const goToWebsite = () => {
+    window.open(props.live, "_blank");
+  };
+
   return (
     <div className={styles.card} style={{animationDelay: `${props.rank}00ms`}} key={props.title}>
       {/* Project Number */}
@@ -45,11 +49,11 @@ const Popcard = (props) => {
         {/* <button>See Full Description</button>{" "} */}
         {/* Either see full descriptions or see more projects or something else*/}
         <div className={styles.actions}>
-          <div className={styles.action} onClick={goToGithub}>
+          {props.github !== '' && <div className={styles.action} onClick={goToGithub}>
             <FaGithub size={22} />
-          </div>
+          </div>}
           {props.live !== "" && (
-            <div className={styles.action}>
+            <div className={styles.action} onClick={goToWebsite}>
               <FaLink size={22} />
             </div>
           )}
