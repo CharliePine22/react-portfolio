@@ -138,12 +138,13 @@
 /* Small Movile Devices */
 @media screen and (max-width: 375px) {
   .col {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .col span {
     transform: translateX(0) !important;
   }
+
   .header {
     display: flex;
     flex-direction: column;
@@ -151,10 +152,32 @@
     text-align: center;
   }
 
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .middle {
+    flex-direction: column;
+  }
+
+  .middle span {
+    margin: 10px 0;
+  }
+
   .skills {
     width: 100%;
     border-radius: 5px;
   }
+
+  .skills span {
+    margin: 6px auto;
+  }
+
+  .subheader {
+    text-align: center;
+    margin-left: 20px
+  }
+
 }
 
 /* Mobile Devices */

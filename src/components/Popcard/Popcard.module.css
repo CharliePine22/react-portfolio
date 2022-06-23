@@ -321,11 +321,20 @@ img {
   }
 
   .card:hover > .front .stats {
-    right: -50px;
+    right: -60px;
+    bottom: -36%;
+  }
+
+  .card:hover > .back {
+    top: 56%;
   }
 
   .front {
     justify-content: flex-start;
+  }
+
+  .thumbnail {
+    height: 85%;
   }
 
 }
