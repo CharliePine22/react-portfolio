@@ -1,7 +1,7 @@
 import styles from "./About.module.css";
 import Chicago from "../../assets/images/Chicago.jpg";
 import FadeInSection from "../Fade/FadeInSection";
-import { FaDumbbell, FaDog, FaGamepad } from "react-icons/fa";
+import { FaDumbbell, FaDog, FaGamepad, FaBook } from "react-icons/fa";
 
 const About = (props) => {
   return (
@@ -35,8 +35,8 @@ const About = (props) => {
             <div className={styles.hobbies}>
               <h3>Hobbies</h3>
               <p>
-                I'm always up for an adventure! These are just a few of the
-                things that I enjoy most!
+                I'm always up for an adventure! When I'm not coding, I'm usually playign with my dog. 
+                Besides that, these are just a few of the things that I enjoy most!
               </p>
               <div className={styles["hobbies-list"]}>
                 <ul>
@@ -45,8 +45,8 @@ const About = (props) => {
                     <FaDumbbell size={38} />
                   </li>
                   <li>
-                    <span>Playing With My Dog</span>
-                    <FaDog size={38} />
+                    <span>Reading</span>
+                    <FaBook size={38} />
                   </li>
                   <li>
                     <span>Video Games</span>

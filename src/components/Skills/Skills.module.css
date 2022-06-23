@@ -1,0 +1,143 @@
+.container {
+  background-color: #191c26;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  float: right;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  color: #fff;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 40px;
+}
+
+.col:nth-of-type(1) span:nth-of-type(2),
+.col:nth-of-type(1) span:nth-of-type(3) {
+  transform: translateX(-75px);
+}
+
+.col:nth-of-type(3) span:nth-of-type(2),
+.col:nth-of-type(3) span:nth-of-type(3) {
+  transform: translateX(75px);
+}
+
+.col:nth-child(2) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.col:nth-child(1),
+.col:nth-child(3) {
+  display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+}
+
+.col span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.col span p {
+  margin: 0;
+  color: #fff;
+  font-size: .85em;
+  font-weight: bold;
+  text-shadow: 2px 2px #000000;
+}
+
+.header {
+  width: 100%;
+  float: left;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.header h3 {
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 2px 2px #000000;
+}
+
+.header p {
+  max-width: 90%;
+  color: #a9afc3;
+  margin: 0;
+  line-height: 50px;
+  padding-top: 30px;
+}
+
+.main-content {
+  height: auto;
+  padding: 0 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  background-color: #111319;
+  height: 600px;
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 3px 5px 3px black
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills img {
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1435px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+/* Mobile Devices */
+@media screen and (min-width: 320px) and (max-width: 812px) {
+  .header {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+  }
+
+  .skills {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .col span {
+    transform: translateX(0) !important;
+  }
+}
+

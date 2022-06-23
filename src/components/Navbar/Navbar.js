@@ -74,8 +74,7 @@ const Navbar = () => {
               spy={true}
               onClick={() => setActiveNavItem("Skills")}
             >
-              <FaBookReader style={{ marginRight: "10px" }} /> Skills &
-              Experience
+              <FaBookReader style={{ marginRight: "10px" }} /> Skills
             </Link>
           </li>
 

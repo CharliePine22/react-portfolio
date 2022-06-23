@@ -1,5 +1,5 @@
 .about-container {
-  background-color: #191c26;
+  background-color: #111319;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -71,6 +71,7 @@
   width: 100%;
   float: left;
   color: #fff;
+  text-shadow: 2px 2px #000000;
 }
 
 .about-title h3 {
@@ -237,9 +238,11 @@
 
   .hobbies-list li {
     justify-content: flex-end;
+    width:33%;
+    text-align: center;
   }
 
   .hobbies-list li span {
-    font-size: 0.75rem;
+    font-size: .75rem;
   }
 }
