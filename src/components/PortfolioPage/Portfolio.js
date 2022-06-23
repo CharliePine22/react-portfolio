@@ -3,6 +3,7 @@ import styles from "./Portfolio.module.css";
 import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { useState, useEffect } from "react";
+
 // Imported Project Data
 import { projectTitles } from "./ProjectData";
 
@@ -56,7 +57,6 @@ const Portfolio = (props) => {
             showIndicators={false}
             infiniteLoop={true}
             showThumbs={false}
-            // swipeable={false}
             style={{overflow: 'visible'}}
           >
             {projectTitles[selectedLanguage].map((project, i) => {
