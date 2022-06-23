@@ -37,7 +37,7 @@
   margin-bottom: 14px;
   margin-top: 0;
   line-height: 1.2;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 3px 3px #000000;
 }
 
 .description p {
@@ -57,17 +57,9 @@
 }
 
 .icon-border {
-  /* line-height:1px; */
   border-right: 1px solid grey;
+  height: 30px;
 }
-
-.icon-border:hover {
-  border: none;
-}
-/* 
-.icon-border:hover + .icon-border {
-  border:none;
-} */
 
 .resume {
   display:inline-block;
@@ -101,14 +93,19 @@
 
 .socials li {
   padding: 0 15px;
-  cursor: pointer;
   transition: all 0.35s;
   line-height: 1px;
 }
 
-.socials li:hover {
+.facebook:hover,
+.instagram:hover,
+.twitch:hover,
+.github:hover,
+.linkedin:hover {
   transform: scale(1.5);
+  transition: all 0.35s;
   color: white;
+  cursor: pointer;
 }
 
 

@@ -16,11 +16,11 @@ const Home = (props) => {
 
   // Social Media Icons from React Icons
   const socialIcons = [
-    <FaFacebook size={iconSize} />,
-    <FaInstagram size={iconSize} />,
-    <FaTwitch size={iconSize} />,
-    <FaGithub size={iconSize} />,
-    <FaLinkedin size={iconSize} />,
+    <FaFacebook className={styles.facebook} size={iconSize} />,
+    <FaInstagram className={styles.instagram} size={iconSize} />,
+    <FaTwitch className={styles.twitch} size={iconSize} />,
+    <FaGithub className={styles.github} size={iconSize} />,
+    <FaLinkedin className={styles.linkedin} size={iconSize} />,
   ];
 
   useEffect(() => {

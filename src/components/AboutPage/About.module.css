@@ -71,7 +71,6 @@
   width: 100%;
   float: left;
   color: #fff;
-  text-shadow: 2px 2px #000000;
 }
 
 .about-title h3 {
@@ -79,6 +78,7 @@
   font-weight: normal;
   line-height: 1;
   margin: 0;
+  text-shadow: 3px 3px #000000;
 }
 
 /* Hobbies Section */
@@ -162,13 +162,12 @@
   }
 
   .about-info-right {
-    width: 45%
+    width: 45%;
   }
 
   .about-info p {
     font-size: 1em;
   }
-
 }
 
 /* Desktops */
@@ -238,11 +237,11 @@
 
   .hobbies-list li {
     justify-content: flex-end;
-    width:33%;
+    width: 33%;
     text-align: center;
   }
 
   .hobbies-list li span {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
