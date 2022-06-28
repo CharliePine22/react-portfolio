@@ -64,29 +64,35 @@ const Contact = (props) => {
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    let flag = false;
+    let submitFlag = false;
+    let nameFlag = true;
+    let emailFlag = true;
+    let messageFlag = true;
 
     // If any fields are left blank or not formatted correctly, cancel send function and display error
     if (nameRef.current.value.trim() == "") {
       setStatusMessage('Please fill out all fields!');
       nameRef.current.style.borderColor = 'red';
+      nameFlag = false;
     }
     if (emailRef.current.value.trim() == "" || !emailRef.current.value.includes('@')) {
       setStatusMessage("Please use the correct email format.")
       emailRef.current.style.borderColor = 'red';
+      emailFlag = false;
     }
     if (messageRef.current.value.trim() == "") {
       setStatusMessage('Please fill out all fields!');
       messageRef.current.style.borderColor = 'red';
+      messageFlag = false;
     } 
 
-    // If the message is blank, it means there are no erorrs, so continue with sending message
-    if(statusMessage == "") {
-      flag = true;
+    // If all flags are true, it means there are no erorrs, so continue with sending message
+    if(nameFlag && emailFlag && messageFlag) {
+      submitFlag = true;
     }
 
 
-    if (flag) {
+    if (submitFlag) {
       // EmailJS SDK Sent Email
       emailjs
         .sendForm(

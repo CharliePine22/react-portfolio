@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c7e12c44.css",
-    "main.js": "/static/js/main.388814a4.js",
+    "main.js": "/static/js/main.3bb3fc5a.js",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
     "static/media/video-game-databaseBIG.jpg": "/static/media/video-game-databaseBIG.59a1f0c4d02856f1c4a5.jpg",
@@ -23,10 +23,10 @@
     "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
     "main.c7e12c44.css.map": "/static/css/main.c7e12c44.css.map",
-    "main.388814a4.js.map": "/static/js/main.388814a4.js.map"
+    "main.3bb3fc5a.js.map": "/static/js/main.3bb3fc5a.js.map"
   },
   "entrypoints": [
     "static/css/main.c7e12c44.css",
-    "static/js/main.388814a4.js"
+    "static/js/main.3bb3fc5a.js"
   ]
 }
