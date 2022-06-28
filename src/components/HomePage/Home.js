@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Home.module.css";
-import resume from "../../assets/images/cpine-resume.jpg";
+import resume from "../../assets/images/FinalizedResume.PDF";
 import {
   FaFacebook,
   FaInstagram,
@@ -11,7 +11,6 @@ import {
 
 const Home = (props) => {
   // Grab user screen height to determine icon size
-  const currentScreenWidth = window.innerWidth;
   const [iconSize, setIconSize] = useState();
 
   // Social Media Icons from React Icons

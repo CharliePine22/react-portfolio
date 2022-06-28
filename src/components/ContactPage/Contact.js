@@ -1,5 +1,6 @@
 import styles from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
+import ReactTypingEffect from "react-typing-effect";
 import { useRef, useState } from "react";
 import { FaPhone, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -52,43 +53,70 @@ const Contact = (props) => {
       : styles.status;
 
   // If the user has already submitted a message and they click an input, remove the message and styles
-  const inputFocusHandler = () => {
+  const inputFocusHandler = (e) => {
     if (statusMessage !== "" && isSubmitting == false) {
       setStatusMessage("");
     }
+    e.target.style.borderColor = 'rgba(169, 175, 195, 0.5)';
   };
 
   // Form Submit
   const formSubmitHandler = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    let flag = false;
 
-    // EmailJS SDK Sent Email
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
-        formRef.current,
-        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          setStatusMessage("Message Sent!");
-          setHasError(false);
-        },
-        (error) => {
-          setStatusMessage("An error occured, please try again!");
-          setHasError(true);
-        }
-      );
+    // If any fields are left blank or not formatted correctly, cancel send function and display error
+    if (nameRef.current.value.trim() == "") {
+      setStatusMessage('Please fill out all fields!');
+      nameRef.current.style.borderColor = 'red';
+    }
+    if (emailRef.current.value.trim() == "" || !emailRef.current.value.includes('@')) {
+      setStatusMessage("Please use the correct email format.")
+      emailRef.current.style.borderColor = 'red';
+    }
+    if (messageRef.current.value.trim() == "") {
+      setStatusMessage('Please fill out all fields!');
+      messageRef.current.style.borderColor = 'red';
+    } 
 
-    setTimeout(() => {
+    // If the message is blank, it means there are no erorrs, so continue with sending message
+    if(statusMessage == "") {
+      flag = true;
+    }
+
+
+    if (flag) {
+      // EmailJS SDK Sent Email
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+          process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+          formRef.current,
+          process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            setStatusMessage("Message Sent!");
+            setHasError(false);
+          },
+          (error) => {
+            setStatusMessage("An error occured, please try again!");
+            setHasError(true);
+          }
+        );
+
+      setTimeout(() => {
+        setIsSubmitting(false);
+        // Reset Input Values
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
+      }, 1500);
+    } else {
       setIsSubmitting(false);
-      // Reset Input Values
-      nameRef.current.value = "";
-      emailRef.current.value = "";
-      messageRef.current.value = "";
-    }, 1500);
+      setHasError(true);
+    }
   };
 
   return (
@@ -126,9 +154,16 @@ const Contact = (props) => {
               <h3>
                 Looking to discuss something further? <br /> Or talk about{" "}
                 <strong>
-                  <i>puppies</i>
+                  <i>
+                    {" "}
+                    <ReactTypingEffect
+                      text={["work?", "books?", "puppies?"]}
+                      typingDelay={0}
+                      eraseDelay={2500}
+                      speed={350}
+                    />
+                  </i>
                 </strong>
-                ?
               </h3>
               <p>Send a message below and I'll do my best to reply soon!</p>
             </div>

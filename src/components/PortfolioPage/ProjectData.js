@@ -38,7 +38,7 @@ export const projectTitles = {
         "A chat application inspired by AOL's Instant Messanger (AIM).",
       image: retro,
       github: "https://github.com/CharliePine22/retro-chat-application",
-      live: "https://astro-chat.netlify.app/", //Right now, this app is broken, need to fix....
+      live: "https://retro-chat-cp.netlify.app/", //Right now, this app is broken, need to fix....
       stack: [{src: reactIcon, name: 'React'}, {src: firebaseIcon, name: 'Firebase'}, {src: chatengineIcon, name: 'Chat Engine'}]
     },
     {

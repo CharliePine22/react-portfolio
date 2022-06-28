@@ -1,0 +1,122 @@
+.icon {
+  height: 65px;
+  width: 65px;
+  animation: rotatingSpinner linear 1s forwards, endSpinner 300ms linear 1s forwards, fadeIcon 400ms linear 1.3s forwards;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: absolute;
+  left: 48%;
+  bottom: 50%;
+  z-index: 10;
+}
+
+.landing-container {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  animation: hideLanding 1s linear 2.25s forwards;
+}
+
+.landing-left {
+  background-color: #121315;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid transparent;
+  animation: slideLeft 1s forwards;
+  animation-delay: 1.5s;
+  position: absolute;
+  z-index: 9;
+  left:0;
+}
+
+.landing-right {
+  background-color: #121315;
+  border-left: 1px solid transparent;
+  width: 50%;
+  height: 100%;
+  animation: slideRight 1s forwards;
+  animation-delay: 1.5s;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+
+/* Rotating icon animation */
+@keyframes rotatingSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* End spinner clicking animation */
+@keyframes endSpinner {
+  50% {
+   transform:scale(1.15); 
+   box-shadow: 0px 0px 5px #FFF;
+   -moz-box-shadow: 0px 0px 5px #FFF;
+   -webkit-box-shadow: 0px 0px 5px #FFF;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 0px 1px #FFF;
+    -moz-box-shadow: 0px 0px 1px #FFF;
+    -webkit-box-shadow: 0px 0px 1px #FFF;
+
+  }
+}
+
+@keyframes hideLanding {
+  0% {
+    z-index:0;
+  }
+
+  100% {
+    z-index:-1;
+  }
+}
+
+/* Fade the icon out animation */
+@keyframes fadeIcon {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* SLides left div out animation */
+@keyframes slideLeft {
+  0% {
+    left: 0;
+    border-right: 1px solid white;
+  }
+  100% {
+    left: -50%;
+    border-right: 1px solid transparent;
+  }
+}
+
+/* SLides right div out animation */
+@keyframes slideRight {
+  0% {
+    border-left: 1px solid white;
+    right: 0;
+  }
+  100% {
+    border-left: 1px solid transparent;
+    right: -50%;
+  }
+}
