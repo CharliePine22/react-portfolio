@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
 import ReactTypingEffect from "react-typing-effect";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaPhone, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import FadeInSection from "../Fade/FadeInSection";

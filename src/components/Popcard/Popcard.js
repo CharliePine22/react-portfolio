@@ -1,4 +1,5 @@
 import { FaGithub, FaLink } from "react-icons/fa";
+import React from "react";
 import styles from "./Popcard.module.css";
 
 const Popcard = (props) => {
@@ -12,7 +13,7 @@ const Popcard = (props) => {
   };
 
   return (
-    <div className={styles.card} style={{animationDelay: `${props.rank}00ms`}} key={props.title}>
+    <div key={props.title} className={styles.card} style={{animationDelay: `${props.rank}00ms`}}>
       {/* Project Number */}
       <div className={styles.rank}>
         <span>{props.rank + 1}</span>
@@ -30,12 +31,10 @@ const Popcard = (props) => {
           <p className={styles.stack}>Toolkit</p>
           <div className={styles["stack-items"]}>
             {props.stack.map((item, i) => (
-              <>
-                <div key={item.name} className={styles["stack-item"]}>
+                <div key={i} className={styles["stack-item"]}>
                   <span className={styles["language-name"]}>{item.name}</span>
                   <img src={item.src} alt={`${item.name} icon thumbnail`} />
                 </div>
-              </>
             ))}
           </div>
         </div>

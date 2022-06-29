@@ -1,5 +1,4 @@
-import { useState } from "react";
-// import { Scrollbars } from 'react-custom-scrollbars';
+import React, { useEffect } from "react";
 import About from "./components/AboutPage/About";
 import Contact from "./components/ContactPage/Contact";
 import Home from "./components/HomePage/Home";
@@ -10,15 +9,23 @@ import Landing from "./components/LandingAnimation/Landing";
 import "./index.css";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const timer = setTimeout(() => {
+      document.body.style.overflow = 'overlay'
+    }, 2600);
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <>
-      <Landing/>
-      <Navbar />
-      <Home id="home" />
-      <Portfolio id="portfolio" />
-      <Skills id="skills" />
-      <About id="about" />
-      <Contact id="contact" />
+        <Navbar />
+        <Home id="home" />
+        <Landing />
+        <Portfolio id="portfolio" />
+        <Skills id="skills" />
+        <About id="about" />
+        <Contact id="contact" />
     </>
   );
 }

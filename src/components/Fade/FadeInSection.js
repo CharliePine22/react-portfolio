@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import React from "react";
 import styles from "./FadeInSection.module.css";
 
 const FadeInSection = (props) => {

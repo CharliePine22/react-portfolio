@@ -198,7 +198,7 @@
 @media screen and (max-width: 1435px) {
   .nav-toggle {
     display: block;
-    z-index:1;
+    z-index:2;
   }
 
   .nav-footer {

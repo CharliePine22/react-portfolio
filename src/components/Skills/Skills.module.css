@@ -30,7 +30,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .col:nth-child(1),
@@ -92,10 +92,10 @@
 }
 
 .middle span:nth-of-type(1) {
-  transform:translateX(-90px);
+  transform: translateX(-80px);
 }
 .middle span:nth-of-type(3) {
-  transform:translateX(90px);
+  transform: translateX(80px);
 }
 
 .subheader {
@@ -131,6 +131,7 @@
   width: 40px;
 }
 
+/* Small laptops */
 @media screen and (min-width: 0px) and (max-width: 1435px) {
   .container {
     width: 100%;
@@ -177,15 +178,15 @@
 
   .subheader {
     text-align: center;
-    margin-left: 20px
+    margin-left: 20px;
   }
-
 }
 
 /* Mobile Devices */
 @media screen and (min-width: 375px) and (max-width: 750px) {
   .col {
     margin: 0 25px;
+    height: 92% !important;
   }
 
   .col span {
@@ -205,21 +206,57 @@
 
   .middle {
     flex-direction: column;
-    position:static;
+    position: static;
   }
 
   .middle span {
     margin: 9px;
   }
 
+  .middle span:nth-of-type(1) {
+    transform: translateX(-75px);
+  }
+  .middle span:nth-of-type(3) {
+    transform: translateX(75px);
+  }
+
   .subheader {
     text-align: center;
-    margin-left: 20px
+    margin-left: 20px;
   }
 
   .skills {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
-    font-size:.9em;
+    font-size: 0.9em;
+  }
+}
+
+/* Tablets to Small Laptops */
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  .col {
+    margin: 10px 30px;
+  }
+
+  .col:nth-child(1),
+  .col:nth-child(3) {
+    height: auto;
+  }
+
+  .middle {
+    left: 0;
+  }
+
+  .middle span:nth-of-type(1) {
+    transform: translateX(0);
+  }
+
+  .col:nth-of-type(1) span:nth-of-type(2),
+  .col:nth-of-type(1) span:nth-of-type(4) {
+    transform: translateX(-60px);
+  }
+  .col:nth-of-type(3) span:nth-of-type(2),
+  .col:nth-of-type(3) span:nth-of-type(4) {
+    transform: translateX(60px);
   }
 }

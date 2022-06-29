@@ -1,5 +1,6 @@
-import favicon from "../../assets/images/favicon.ico";
+import favicon from "../../assets/images/landing-icon.png";
 import styles from "./Landing.module.css";
+import React from "react";
 
 const Landing = (props) => {
   return (
@@ -9,6 +10,7 @@ const Landing = (props) => {
         <img className={styles.icon} src={favicon} />
         <div className={styles["landing-right"]} />
       </div>
+      {props.children}
     </>
   );
 };

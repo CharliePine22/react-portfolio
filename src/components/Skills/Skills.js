@@ -1,4 +1,5 @@
 import styles from "./Skills.module.css";
+import React from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -21,6 +22,7 @@ import nextJSIcon from "../../assets/images/StackImages/nextjsicon.png";
 import FadeInSection from "../Fade/FadeInSection";
 
 const Skills = (props) => {
+  const currentWidth = window.innerWidth;
   return (
     <main id={props.id} className={styles.container}>
       <div className={styles["main-content"]}>
@@ -52,6 +54,10 @@ const Skills = (props) => {
                   <FaBootstrap size={40} />
                   <p>Bootstrap</p>
                 </span>
+                {currentWidth <= 435 && <span style={{ color: "yellow" }}>
+                      <SiFirebase size={40} />
+                      <p>Firebase</p>
+                    </span>}
               </div>
               {/* Column 2 */}
               <div className={styles.col}>
@@ -84,14 +90,13 @@ const Skills = (props) => {
                     <SiJquery size={40} />
                     <p>Jquery</p>
                   </span>
-                  <span style={{ color: "#31648C" }}>
+                 {currentWidth >= 435 && <><span style={{ color: "#31648C" }}>
                     <SiPostgresql size={40} />
-                    <p>SQL</p>
-                  </span>
-                  <span style={{ color: "yellow" }}>
-                    <SiFirebase size={40} />
-                    <p>Firebase</p>
-                  </span>
+                    <p>PostgreSQL</p>
+                  </span><span style={{ color: "yellow" }}>
+                      <SiFirebase size={40} />
+                      <p>Firebase</p>
+                    </span></>}
                 </div>
                 <span style={{ color: "#FFF" }}>
                   <FaGithub size={40} />
@@ -121,6 +126,10 @@ const Skills = (props) => {
                   <img src={nextJSIcon} />
                   <p>NextJS</p>
                 </span>
+                {currentWidth <= 435 && <span style={{ color: "#31648C" }}>
+                    <SiPostgresql size={40} />
+                    <p>PostgreSQL</p>
+                  </span>}
               </div>
             </div>
           </div>

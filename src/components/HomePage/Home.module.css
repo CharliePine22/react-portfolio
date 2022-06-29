@@ -35,7 +35,7 @@
   font-weight: normal;
   color: white;
   margin-bottom: 14px;
-  margin-top: 0;
+  margin-top: 10px;
   line-height: 1.2;
   text-shadow: 3px 3px #000000;
 }
@@ -58,7 +58,7 @@
 
 .icon-border {
   border-right: 1px solid grey;
-  height: 30px;
+  height: 32px;
 }
 
 .resume {
@@ -70,7 +70,6 @@
   padding: 12px 20px;
   margin-top: 18px;
   transition: all .25s;
-  font-size: 1.75rem;
 }
 
 .resume:hover {
@@ -142,6 +141,10 @@
     width: 225px;
   }
 
+  .icon-border {
+    height: 25px;
+  }
+
   .resume {
     font-size: 1.25rem;
   }
@@ -159,16 +162,30 @@
   }
 
   .description-container {
-    padding: 50px 20px 100px;
+    padding: 30px 20px 30px;
+    
   }
 
   .description h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .description p {
-    font-size: 1.3rem;
+    font-size: .75em;
   }
 
+  .headshot-container {
+    width: 50%;
+  }
 
+  .resume {
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (width: 1024px) {
+  .headshot-container {
+    width: 60%;
+    height: 250px;
+  }
 }

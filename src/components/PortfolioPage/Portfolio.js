@@ -2,7 +2,7 @@ import styles from "./Portfolio.module.css";
 // Portfolio Nav Icons
 import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // Imported Project Data
 import { projectTitles } from "./ProjectData";

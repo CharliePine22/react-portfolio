@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import resume from "../../assets/images/FinalizedResume.PDF";
 import {
@@ -23,38 +23,47 @@ const Home = (props) => {
   ];
 
   useEffect(() => {
+    // Determine icon size on render
+    if (window.innerWidth >= 435) {
+      setIconSize(32);
+    } else {
+      setIconSize(27);
+    }
+    // Handle icon sizes if screen resizes
     const handleResize = () => {
-      if (window.innerWidth >= 425) {
-        setIconSize(32)
-      } else if (window.innerWidth <= 375) {
-        setIconSize(27)
+      if (window.innerWidth >= 435) {
+        setIconSize(32);
+      } else {
+        setIconSize(27);
       }
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  });
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // Replaces current window with the corresponding social media page.
   const goToSocial = (i) => {
     switch (i) {
       case 0:
-        window.location.replace("https://www.facebook.com/charlie.c.pine");
+        window.open("https://www.facebook.com/charlie.c.pine", "_blank");
         break;
       case 1:
-        window.location.replace("https://www.instagram.com/mintyphreshh/");
+        window.open("https://www.instagram.com/mintyphreshh/", "_blank");
         break;
       case 2:
-        window.location.replace("https://www.twitch.tv/epiqagl");
+        window.open("https://www.twitch.tv/epiqagl", "_blank");
         break;
       case 3:
-        window.location.replace("https://github.com/CharliePine22/");
+        window.open("https://github.com/CharliePine22/", "_blank");
         break;
       case 4:
-        window.location.replace("https://www.linkedin.com/in/charlespine/");
+        window.open("https://www.linkedin.com/in/charlespine/", "_blank");
+        break;
+      default:
         break;
     }
   };
@@ -66,7 +75,7 @@ const Home = (props) => {
         <div className={styles.description}>
           <h1>Charles Pine</h1>
           <p>
-            I'm a Full-Stack React Developer with a focus on Front-End
+            I'm a Full-Stack Web Developer with a specialization in React and focus on Front-End
             Development and UI.
           </p>
           <ul className={styles.socials}>
@@ -89,7 +98,7 @@ const Home = (props) => {
           <a
             href={resume}
             className={styles.resume}
-            download="cpine-resume.jpg"
+            download="cpine-resume.pdf"
           >
             Download Resume
           </a>

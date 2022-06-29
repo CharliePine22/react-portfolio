@@ -26,7 +26,8 @@
 }
 
 .landing-left {
-  background-color: #121315;
+  background-color: black;
+  /* background-color: #121315; */
   width: 50%;
   height: 100%;
   border-right: 1px solid transparent;
@@ -38,7 +39,8 @@
 }
 
 .landing-right {
-  background-color: #121315;
+  background-color: black;
+  /* background-color: #121315; */
   border-left: 1px solid transparent;
   width: 50%;
   height: 100%;
@@ -118,5 +120,15 @@
   100% {
     border-left: 1px solid transparent;
     right: -50%;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (min-width: 320px) and (max-width: 435px) {
+  .icon {
+    left: 44%;
+    bottom: 48%;
+    height: 55px;
+    width: 55px;
   }
 }

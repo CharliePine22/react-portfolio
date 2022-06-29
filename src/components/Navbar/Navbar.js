@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
+
 // For scrolling and auto setting active classes on nav items on links.
 import { Link } from "react-scroll";
 
@@ -17,7 +19,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import headShot from "../../assets/images/headshot.jfif";
 
 const Navbar = () => {
-  const [activeNavItem, setActiveNavItem] = useState("Home");
   const [navVisibility, setNavVisibility] = useState(false);
 
   // On mobile, hide the nav unless the user opens it
@@ -48,7 +49,6 @@ const Navbar = () => {
               to="home"
               activeClass={styles.active}
               spy={true}
-              onClick={() => setActiveNavItem("Home")}
             >
               <FaHome style={{ marginRight: "10px" }} /> Home
             </Link>
@@ -60,7 +60,6 @@ const Navbar = () => {
               to="portfolio"
               activeClass={styles.active}
               spy={true}
-              onClick={() => setActiveNavItem("Portfolio")}
             >
               <FaNewspaper style={{ marginRight: "10px" }} /> Portfolio
             </Link>
@@ -72,7 +71,6 @@ const Navbar = () => {
               to="skills"
               activeClass={styles.active}
               spy={true}
-              onClick={() => setActiveNavItem("Skills")}
             >
               <FaBookReader style={{ marginRight: "10px" }} /> Skills
             </Link>
@@ -84,7 +82,6 @@ const Navbar = () => {
               to="about"
               activeClass={styles.active}
               spy={true}
-              onClick={() => setActiveNavItem("About")}
             >
               <FaUserNinja style={{ marginRight: "10px" }} /> About
             </Link>
@@ -96,7 +93,6 @@ const Navbar = () => {
               to="contact"
               activeClass={styles.active}
               spy={true}
-              onClick={() => setActiveNavItem("Contact")}
             >
               <FaJournalWhills style={{ marginRight: "10px" }} /> Contact
             </Link>

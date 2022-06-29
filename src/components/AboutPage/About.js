@@ -1,7 +1,8 @@
+import React from "react";
 import styles from "./About.module.css";
 import Chicago from "../../assets/images/Chicago.jpg";
 import FadeInSection from "../Fade/FadeInSection";
-import { FaDumbbell, FaDog, FaGamepad, FaBook } from "react-icons/fa";
+import { FaDumbbell, FaGamepad, FaBook } from "react-icons/fa";
 
 const About = (props) => {
   return (
@@ -28,7 +29,7 @@ const About = (props) => {
               </div>
               {/* Right Side */}
               <div className={styles["about-info-right"]}>
-                <img src={Chicago} />
+                <img src={Chicago} alt='The city of Chciago'/>
               </div>
             </div>
             {/* Hobbies */}
