@@ -27,7 +27,6 @@
 
 .landing-left {
   background-color: black;
-  /* background-color: #121315; */
   width: 50%;
   height: 100%;
   border-right: 1px solid transparent;
@@ -40,7 +39,6 @@
 
 .landing-right {
   background-color: black;
-  /* background-color: #121315; */
   border-left: 1px solid transparent;
   width: 50%;
   height: 100%;

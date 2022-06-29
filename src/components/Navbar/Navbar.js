@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import styles from "./Navbar.module.css";
+import NavToggler from "../NavToggler/NavToggler";
 
 // For scrolling and auto setting active classes on nav items on links.
 import { Link } from "react-scroll";
@@ -13,7 +14,7 @@ import {
   FaJournalWhills,
   FaBookReader,
 } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
 
 // Headshot for bottom of nav with larger desktops
 import headShot from "../../assets/images/headshot.jfif";
@@ -27,11 +28,14 @@ const Navbar = () => {
   return (
     <>
       <span className={styles["nav-toggle"]}>
+        <NavToggler toggleNav={() => setNavVisibility(!navVisibility)} toggler={navVisibility}/>
+      </span>
+      {/* <span className={styles["nav-toggle"]}>
         <GiHamburgerMenu
-          size={35}
+          size={30}
           onClick={() => setNavVisibility(!navVisibility)}
         />
-      </span>
+      </span> */}
       <nav className={navStyles}>
         <div className={styles["nav-header"]}>
           <a href="/">

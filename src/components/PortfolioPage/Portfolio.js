@@ -31,6 +31,7 @@ const Portfolio = (props) => {
       ? styles["frontend-active"]
       : styles.frontend;
 
+  // Watch for the width of the screen to determine mobile carousel effect
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
@@ -43,7 +44,7 @@ const Portfolio = (props) => {
     };
   }, []);
 
-  const isMobile = width <= 430;
+  const isMobile = width <= 600;
 
   // Determine if user is on a mobile device and if so, add the carousel effect
   const determineSwiper = () => {

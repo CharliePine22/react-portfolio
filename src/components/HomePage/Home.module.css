@@ -175,7 +175,8 @@
   }
 
   .headshot-container {
-    width: 50%;
+    height: 248px;
+    width: 248px;
   }
 
   .resume {

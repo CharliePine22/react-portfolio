@@ -9,6 +9,7 @@ import Landing from "./components/LandingAnimation/Landing";
 import "./index.css";
 
 function App() {
+  // Scroll to top of window on refresh to view animation
   useEffect(() => {
     window.scrollTo(0, 0);
     const timer = setTimeout(() => {

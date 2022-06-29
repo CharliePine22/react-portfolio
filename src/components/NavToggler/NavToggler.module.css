@@ -1,0 +1,140 @@
+.container {
+  height: 40px;
+  width: 40px;
+  background: #527ca6;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+}
+
+.toggler {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding:0;
+  transform: rotate(90deg);
+  margin-left: 6px;
+  cursor: pointer;
+  transition: all 250ms;
+  position:relative;
+  opacity:.5;
+}
+
+.toggler:hover {
+  opacity:1;
+}
+
+.openNav, 
+.closeNav {
+  font-size: 1.25em;
+  font-weight: 900;
+}
+
+
+.closeNav:nth-child(1) {
+  animation: firstLineTransition linear .5s forwards;
+}
+
+.closeNav:nth-child(2) {
+  animation: hideMiddle linear .5s forwards;
+}
+
+.closeNav:nth-child(3) {
+  animation: secondLineTransition linear .5s forwards;
+}
+
+
+.openNav:nth-child(1) {
+  animation: firstLineReturn linear .5s forwards;
+}
+
+.openNav:nth-child(2) {
+  animation: secondLineReturn linear .5s forwards;
+}
+
+.openNav:nth-child(3) {
+  animation: revealMiddle linear .5s forwards;
+}
+
+
+/* Going from Hamburger to X */
+@keyframes firstLineTransition {
+  0% {
+    transform: rotate(0);
+    position:absolute;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    position:absolute;
+    /* bottom: -15px; */
+    left: -7px;
+  }
+}
+
+@keyframes secondLineTransition {
+  0% {
+    transform: rotate(0);
+    position:absolute;
+  }
+
+  100% {
+    transform: rotate(45deg);
+    position:absolute;
+    bottom: -15px;
+  }
+}
+
+@keyframes hideMiddle {
+  0% {
+    opacity:1;
+  }
+
+  100% {
+   position:absolute;
+   opacity: 0;
+  }
+}
+
+
+/* Going from X to Hamburger */
+@keyframes firstLineReturn {
+  0% {
+    transform: rotate(-45deg);
+    position:absolute;
+    bottom: -15px;
+    left: -9px;
+  }
+
+  100% {
+    transform: rotate(0);
+    position:static;
+  }
+}
+@keyframes secondLineReturn {
+  0% {
+    transform: rotate(45deg);
+    position:absolute;
+    bottom: -15px;
+  }
+
+  100% {
+    transform: rotate(0);
+    position:static;
+  }
+}
+
+@keyframes revealMiddle {
+  0% {
+    position:absolute;
+    opacity: 0;
+  }
+
+  100% {
+    position:static;
+    opacity:1;
+  }
+}
