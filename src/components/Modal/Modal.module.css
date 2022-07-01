@@ -10,12 +10,16 @@
   justify-content: center;
   align-items: center;
   color: white;
-  opacity:1;
+  opacity: 1;
 }
 
 .modalBody {
   font-size: 1.05em;
-  margin: 30px auto;
+  margin: 50px auto;
+}
+
+.modalBody p {
+  margin:0;
 }
 
 .modalContent {
@@ -25,7 +29,7 @@
   box-shadow: 1px 2px 9px black;
   text-align: center;
   border-radius: 5px;
-  width: 50%;
+  width: 60%;
   height: 40%;
   display: flex;
   flex-direction: column;
@@ -43,6 +47,11 @@
 
 .modalHeader {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 15%;
 }
 
 .border {
@@ -70,6 +79,7 @@
 }
 
 .submitBtn {
+  width: 120px;
   margin-top: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -112,13 +122,13 @@
 /* Fade In Modal Animation */
 @keyframes fadeInModal {
   0% {
-    display:none;
+    display: none;
     z-index: 0;
     opacity: 0;
     transform: translateY(50px);
   }
   100% {
-    display:flex;
+    display: flex;
     z-index: 1;
     opacity: 1;
     transform: translateY(0px);
@@ -128,13 +138,13 @@
 /* Fade Out Modal Animation */
 @keyframes fadeOutModal {
   0% {
-    display:flex;
+    display: flex;
     z-index: 1;
     opacity: 1;
     transform: translateY(0px);
   }
   100% {
-    display:none;
+    display: none;
     z-index: 0;
     opacity: 0;
     transform: translateY(50px);
@@ -143,9 +153,14 @@
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 875px) {
+  .actionsContainer {
+    flex-direction: column;
+  }
+
   .modalBody {
     display: flex;
     justify-content: center;
+    margin: 25px auto;
   }
 
   .modalBody p {
@@ -155,6 +170,7 @@
   .modalContent {
     width: 90%;
     height: 45%;
+    justify-content: space-evenly;
   }
 
   .modalHeader {
@@ -162,9 +178,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom:0;
   }
-}
-
-@media screen and (min-width: 875px) and (max-width: 1445px) {
-
 }

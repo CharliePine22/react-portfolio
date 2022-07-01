@@ -1,5 +1,5 @@
 import styles from "./Skills.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -22,13 +22,24 @@ import nextJSIcon from "../../assets/images/StackImages/nextjsicon.png";
 import FadeInSection from "../Fade/FadeInSection";
 
 const Skills = (props) => {
-  const currentWidth = window.innerWidth;
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <main id={props.id} className={styles.container}>
       <div className={styles["main-content"]}>
-        <div className={styles.header}>
           <h3>Skills</h3>
-        </div>
         <FadeInSection>
           <p className={styles.subheader}>
             While I mainly specialize in React and Python, I've been working on
@@ -54,7 +65,7 @@ const Skills = (props) => {
                   <FaBootstrap size={40} />
                   <p>Bootstrap</p>
                 </span>
-                {currentWidth <= 435 && <span style={{ color: "yellow" }}>
+                {width <= 800 && <span style={{ color: "yellow" }}>
                       <SiFirebase size={40} />
                       <p>Firebase</p>
                     </span>}
@@ -90,7 +101,7 @@ const Skills = (props) => {
                     <SiJquery size={40} />
                     <p>Jquery</p>
                   </span>
-                 {currentWidth >= 435 && <><span style={{ color: "#31648C" }}>
+                 {width >= 800 && <><span style={{ color: "#31648C" }}>
                     <SiPostgresql size={40} />
                     <p>PostgreSQL</p>
                   </span><span style={{ color: "yellow" }}>
@@ -126,7 +137,7 @@ const Skills = (props) => {
                   <img src={nextJSIcon} />
                   <p>NextJS</p>
                 </span>
-                {currentWidth <= 435 && <span style={{ color: "#31648C" }}>
+                {width <= 800 && <span style={{ color: "#31648C" }}>
                     <SiPostgresql size={40} />
                     <p>PostgreSQL</p>
                   </span>}

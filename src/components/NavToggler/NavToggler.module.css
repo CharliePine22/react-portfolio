@@ -1,30 +1,13 @@
 .container {
   height: 40px;
   width: 40px;
-  background: #527ca6;
+  background: white;
+  color:black;
   border-radius: 50%;
   display:flex;
   justify-content: center;
   align-items: center;
   padding:0;
-}
-
-.toggler {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding:0;
-  transform: rotate(90deg);
-  margin-left: 6px;
-  cursor: pointer;
-  transition: all 250ms;
-  position:relative;
-  opacity:.5;
-}
-
-.toggler:hover {
-  opacity:1;
 }
 
 .openNav, 
@@ -33,19 +16,17 @@
   font-weight: 900;
 }
 
-
 .closeNav:nth-child(1) {
   animation: firstLineTransition linear .5s forwards;
 }
 
 .closeNav:nth-child(2) {
-  animation: hideMiddle linear .5s forwards;
+  animation: hideMiddle linear .05s forwards;
 }
 
 .closeNav:nth-child(3) {
   animation: secondLineTransition linear .5s forwards;
 }
-
 
 .openNav:nth-child(1) {
   animation: firstLineReturn linear .5s forwards;
@@ -59,6 +40,24 @@
   animation: revealMiddle linear .5s forwards;
 }
 
+.toggler {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transform: rotate(90deg);
+  margin-left: 6px;
+  cursor: pointer;
+  /* transition: opacity 100ms; */
+  position:relative;
+  opacity: .25;
+}
+
+.toggler:hover {
+  opacity:1;
+}
+
 
 /* Going from Hamburger to X */
 @keyframes firstLineTransition {
@@ -70,8 +69,8 @@
   100% {
     transform: rotate(-45deg);
     position:absolute;
-    /* bottom: -15px; */
     left: -7px;
+    bottom: -16px;
   }
 }
 
@@ -84,7 +83,8 @@
   100% {
     transform: rotate(45deg);
     position:absolute;
-    bottom: -15px;
+    bottom: -16px;
+    left: -3px;
   }
 }
 
@@ -137,4 +137,9 @@
     position:static;
     opacity:1;
   }
+}
+
+
+@media screen and (min-width:700) and (max-width: 1024px) {
+  
 }

@@ -56,21 +56,6 @@
   text-shadow: 3px 3px #000000;
 }
 
-.header {
-  width: 100%;
-  float: left;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.header h3 {
-  font-size: 45px;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0;
-  text-shadow: 3px 3px #000000;
-}
-
 .main-content {
   height: auto;
   padding: 0 20px;
@@ -80,6 +65,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.main-content h3 {
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 3px 3px #000000;
 }
 
 .middle {
@@ -92,18 +85,10 @@
 }
 
 .middle span:nth-of-type(1) {
-  transform: translateX(-80px);
+  transform: translateX(-65px);
 }
 .middle span:nth-of-type(3) {
-  transform: translateX(80px);
-}
-
-.subheader {
-  max-width: 90%;
-  color: #a9afc3;
-  margin: 0;
-  line-height: 50px;
-  margin-bottom: 50px;
+  transform: translateX(65px);
 }
 
 .skills {
@@ -124,6 +109,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 50px 0;
 }
 
 .skills img {
@@ -131,10 +117,23 @@
   width: 40px;
 }
 
+.subheader {
+  max-width: 90%;
+  color: #a9afc3;
+  margin: 0;
+  line-height: 50px;
+  padding-top: 30px;
+}
+
+
 /* Small laptops */
 @media screen and (min-width: 0px) and (max-width: 1435px) {
   .container {
     width: 100%;
+  }
+
+  .skills-container {
+      margin: 25px 0;
   }
 }
 
@@ -161,6 +160,7 @@
 
   .middle {
     flex-direction: column;
+    left:0;
   }
 
   .middle span {
@@ -183,9 +183,14 @@
 }
 
 /* Mobile Devices */
-@media screen and (min-width: 375px) and (max-width: 750px) {
+@media screen and (max-width: 320px) {
   .col {
-    margin: 0 25px;
+    margin: 0 8px !important;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 812px) {
+  .col {
+    margin: 0 20px;
     height: 92% !important;
   }
 
@@ -202,6 +207,10 @@
 
   .main-content {
     padding: 0 10px;
+  }
+
+  .main-content h3 {
+    text-align: center;
   }
 
   .middle {
@@ -229,11 +238,12 @@
     width: 90%;
     border-radius: 5px;
     font-size: 0.9em;
+    margin-top: 20px;
   }
 }
 
 /* Tablets to Small Laptops */
-@media screen and (min-width: 750px) and (max-width: 1024px) {
+@media screen and (min-width: 750px) and (max-width: 1023px) {
   .col {
     margin: 10px 30px;
   }
@@ -259,4 +269,12 @@
   .col:nth-of-type(3) span:nth-of-type(4) {
     transform: translateX(60px);
   }
+
+  .skills {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+
 }

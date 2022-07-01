@@ -42,7 +42,8 @@
 
 .description p {
   margin-top: 0;
-  font-size: 1.2rem;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .headshot-container {
@@ -58,18 +59,19 @@
 
 .icon-border {
   border-right: 1px solid grey;
-  height: 32px;
+  height: 26px;
 }
 
 .resume {
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
-  color: #FFF;
-  border: 2px solid #FFF;
+  color: #fff;
+  border: 2px solid #fff;
   border-radius: 30px;
-  padding: 12px 20px;
+  padding: 10px 35px 10px;
   margin-top: 18px;
-  transition: all .25s;
+  font-size: 18px;
+  transition: all 0.25s;
 }
 
 .resume:hover {
@@ -77,7 +79,7 @@
   transform: translateY(-10px);
   color: black;
   font-weight: bold;
-  background-color: #FFF;
+  background-color: #fff;
   box-shadow: 1px 5px 5px 1px black;
 }
 
@@ -87,7 +89,7 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin-top:0;
+  margin-top: 0;
 }
 
 .socials li {
@@ -106,7 +108,6 @@
   color: white;
   cursor: pointer;
 }
-
 
 @keyframes fadeInHome {
   0% {
@@ -136,6 +137,10 @@
     margin-top: 20px;
   }
 
+  .description p {
+    margin: 20px 20px;
+  }
+
   .headshot-container {
     height: 225px;
     width: 225px;
@@ -143,10 +148,6 @@
 
   .icon-border {
     height: 25px;
-  }
-
-  .resume {
-    font-size: 1.25rem;
   }
 }
 
@@ -163,24 +164,11 @@
 
   .description-container {
     padding: 30px 20px 30px;
-    
-  }
-
-  .description h1 {
-    font-size: 2rem;
-  }
-
-  .description p {
-    font-size: .75em;
   }
 
   .headshot-container {
     height: 248px;
     width: 248px;
-  }
-
-  .resume {
-    padding: 8px 12px;
   }
 }
 

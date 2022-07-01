@@ -165,8 +165,8 @@ const Contact = (props) => {
                     <ReactTypingEffect
                       text={["work?", "books?", "puppies?"]}
                       typingDelay={0}
-                      eraseDelay={2500}
-                      speed={350}
+                      eraseDelay={1500}
+                      speed={300}
                     />
                   </i>
                 </strong>

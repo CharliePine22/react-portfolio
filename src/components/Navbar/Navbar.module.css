@@ -32,14 +32,14 @@
 
 /* Hamburger Nav Toggler */
 .nav-toggle {
-  color: white;
+  color: black;
   margin: 25px;
   padding: 0;
   position: fixed;
   cursor: pointer;
   height: 50px;
   width: 50px;
-  background-color: #527ca6;
+  background-color: white;
   border-radius: 50%;
   z-index: 2;
   display: none;
@@ -194,6 +194,7 @@
   }
 }
 
+/* Navbar up til large laptops */
 @media screen and (max-width: 1435px) {
   .nav-toggle {
     display: flex;
@@ -214,6 +215,7 @@
   }
 }
 
+/* Tablets to Laptop */
 @media screen and (min-width: 751px) and (max-width: 1434px) {
   .about-info {
     font-size: 1.6rem;
@@ -245,9 +247,9 @@
   }
 
   .nav-header h1 {
-    font-size: 2.4rem;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-right: 35px;
+    margin-bottom: 25px;
   }
 
   .footer-image {
@@ -264,15 +266,18 @@
   }
 }
 
+/* Mobile devices to Tablets */
 @media screen and (min-width: 320px) and (max-width: 750px) {
   .nav {
-    width: 50%;
+    width: 60%;
     max-width: 100%;
   }
 
-  /* .nav-toggle {
-    display: block;
-  } */
+  .nav-toggle {
+    height: 43px;
+    width: 43px;
+    margin: 15px 25px;
+  }
 
   .nav-list {
     padding: 70px 10px 30px;
@@ -283,13 +288,14 @@
   }
 
   .nav-header h1 {
-    font-size: 1.15em;
-    margin-right: 16px;
-    margin-bottom: 11px;
+    font-size: 1.2em;
+    margin-right: 19px;
+    margin-bottom: 27px;
   }
 
   .nav-item {
-    padding: 8px 15px;
+    padding: 8px 0px;
+    font-size: .9em;
   }
 
   .nav-footer {
@@ -311,5 +317,20 @@
 
   .footer-name {
     font-size: 1.2rem;
+  }
+}
+
+/* Nav Toggler Media Queries */
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .nav-toggle {
+    height: 42px;
+    width: 42px;
+    margin: 20px 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .nav-toggle {
+    margin: 16px 35px;
   }
 }

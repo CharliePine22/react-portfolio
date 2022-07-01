@@ -30,12 +30,6 @@ const Navbar = () => {
       <span className={styles["nav-toggle"]}>
         <NavToggler toggleNav={() => setNavVisibility(!navVisibility)} toggler={navVisibility}/>
       </span>
-      {/* <span className={styles["nav-toggle"]}>
-        <GiHamburgerMenu
-          size={30}
-          onClick={() => setNavVisibility(!navVisibility)}
-        />
-      </span> */}
       <nav className={navStyles}>
         <div className={styles["nav-header"]}>
           <a href="/">

@@ -25,14 +25,14 @@ const Home = (props) => {
   useEffect(() => {
     // Determine icon size on render
     if (window.innerWidth >= 435) {
-      setIconSize(32);
+      setIconSize(24);
     } else {
       setIconSize(27);
     }
     // Handle icon sizes if screen resizes
     const handleResize = () => {
       if (window.innerWidth >= 435) {
-        setIconSize(32);
+        setIconSize(24);
       } else {
         setIconSize(27);
       }
