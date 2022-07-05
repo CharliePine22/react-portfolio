@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { createPortal } from "react-dom";
-import { CSSTransition } from "react-transition-group";
-import styles from "./Modal.module.css";
+import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { CSSTransition } from 'react-transition-group';
+import styles from './Modal.module.css';
 
 const Modal = (props) => {
   // Submit form with details from previous submission
@@ -10,34 +10,34 @@ const Modal = (props) => {
     props.onClose();
   };
 
-  // Close modal on escape key click
+  // Escape Key Press Function
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       props.onClose();
     }
   };
 
-  // Listen for click outside of modal content and close the modal
+  // Listen for escape key press to close modal
   useEffect(() => {
-    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    document.body.addEventListener('keydown', closeOnEscapeKeyDown);
     return function cleanup() {
-      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+      document.body.removeEventListener('keydown', closeOnEscapeKeyDown);
     };
   }, []);
 
-  // If there is no modal initiator, dont show.
-  if (!props.show) {
-    return null;
-  }
+  const modalStyles = props.show ? styles.modal : styles.modalHidden;
+  const modalContentStyles = props.show
+    ? styles.modalContent
+    : styles.modalContentHidden;
 
   return createPortal(
     <>
-      <div className={styles.modal} id="modal">
-        <div className={styles.modalContent} id="modalContent">
+      <div className={modalStyles} id='modal'>
+        <div className={modalContentStyles} id='modalContent'>
           <div className={styles.modalHeader}>
             <h5 className={styles.heading}>{props.title}</h5>
+            <hr className={styles.border} />
           </div>
-          <hr className={styles.border} />
           <div className={styles.modalBody}>{props.children}</div>
           <div className={styles.modalActions}>
             <div className={styles.actionsContainer}>
@@ -52,7 +52,7 @@ const Modal = (props) => {
         </div>
       </div>
     </>,
-    document.getElementById("root")
+    document.getElementById('root')
   );
 };
 

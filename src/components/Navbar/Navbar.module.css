@@ -13,7 +13,8 @@
   top: 0;
   left: 0;
   z-index: 1;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .nav-hidden {
@@ -27,19 +28,19 @@
   top: 0;
   left: -350px;
   z-index: 1;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Hamburger Nav Toggler */
 .nav-toggle {
-  color: black;
   margin: 25px;
   padding: 0;
   position: fixed;
   cursor: pointer;
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 50%;
   z-index: 2;
   display: none;
@@ -198,8 +199,8 @@
 @media screen and (max-width: 1435px) {
   .nav-toggle {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-footer {
@@ -269,8 +270,8 @@
 /* Mobile devices to Tablets */
 @media screen and (min-width: 320px) and (max-width: 750px) {
   .nav {
-    width: 60%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 55%;
   }
 
   .nav-toggle {
@@ -295,7 +296,7 @@
 
   .nav-item {
     padding: 8px 0px;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .nav-footer {

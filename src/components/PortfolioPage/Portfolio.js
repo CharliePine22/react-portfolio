@@ -1,34 +1,34 @@
-import styles from "./Portfolio.module.css";
+import styles from './Portfolio.module.css';
 // Portfolio Nav Icons
-import { FaReact, FaPython, FaHtml5, FaCss3 } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import React, { useState, useEffect } from "react";
+import { FaReact, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import React, { useState, useEffect } from 'react';
 
 // Imported Project Data
-import { projectTitles } from "./ProjectData";
+import { projectTitles } from './ProjectData';
 
 // Carousel Imports
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 // Component Imports
-import FadeInSection from "../Fade/FadeInSection";
-import Popcard from "../Popcard/Popcard";
+import FadeInSection from '../Fade/FadeInSection';
+import Popcard from '../Popcard/Popcard';
 
 const Portfolio = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
-  const [currentLanguage, setCurrentLanguage] = useState("React");
+  const [currentLanguage, setCurrentLanguage] = useState('React');
   const [width, setWidth] = useState(window.innerWidth);
-  const selectedLanguage = currentLanguage.split(" ")[0].toLowerCase();
+  const selectedLanguage = currentLanguage.split(' ')[0].toLowerCase();
 
   // Styles for Portfolio Nav Icons
   const reactStyles =
-    currentLanguage == "React" ? styles["react-active"] : styles.react;
+    currentLanguage == 'React' ? styles['react-active'] : styles.react;
   const pythonStyles =
-    currentLanguage == "Python" ? styles["python-active"] : styles.python;
+    currentLanguage == 'Python' ? styles['python-active'] : styles.python;
   const htmlStyles =
-    currentLanguage == "HTML | CSS | JS"
-      ? styles["frontend-active"]
+    currentLanguage == 'HTML | CSS | JS'
+      ? styles['frontend-active']
       : styles.frontend;
 
   // Watch for the width of the screen to determine mobile carousel effect
@@ -37,10 +37,10 @@ const Portfolio = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -58,7 +58,8 @@ const Portfolio = (props) => {
             showIndicators={false}
             infiniteLoop={true}
             showThumbs={false}
-            style={{overflow: 'visible'}}
+            style={{ overflow: 'visible' }}
+            swipeable={false}
           >
             {projectTitles[selectedLanguage].map((project, i) => {
               return (
@@ -102,118 +103,83 @@ const Portfolio = (props) => {
   return (
     <>
       <main id={props.id} className={styles.container}>
-        <div className={styles["portfolio-content"]}>
+        <div className={styles['portfolio-content']}>
           <h3>Portfolio</h3>
-          <FadeInSection style={{ width: "100%" }}>
-            <div className={styles["portfolio-description"]}>
+          <FadeInSection style={{ width: '100%' }}>
+            <div className={styles['portfolio-description']}>
               <p>Here are some of the projects that I've worked on!</p>
             </div>
             {/* Projects Card */}
             <div className={styles.projects}>
               {/* Nav Side */}
-              <div className={styles["projects-nav"]}>
+              <div className={styles['projects-nav']}>
                 {/* React Projects Icon */}
                 <span
                   className={reactStyles}
-                  onClick={() => setCurrentLanguage("React")}
+                  onClick={() => setCurrentLanguage('React')}
                 >
-                  <FaReact
-                    size={
-                      width >= 1440
-                        ? 50
-                        : width <= 375
-                        ? 35
-                        : 48
-                    }
-                  />
+                  <FaReact size={width >= 1440 ? 50 : width <= 375 ? 35 : 48} />
                 </span>
 
                 {/* Python Projects Icon */}
                 <span
                   className={pythonStyles}
-                  onClick={() => setCurrentLanguage("Python")}
+                  onClick={() => setCurrentLanguage('Python')}
                 >
                   <FaPython
-                    size={
-                      width >= 1440
-                        ? 50
-                        : width <= 375
-                        ? 35
-                        : 48
-                    }
+                    size={width >= 1440 ? 50 : width <= 375 ? 35 : 48}
                   />
                 </span>
 
                 {/* HTML, CSS, JS Projects Icon */}
                 <span
                   className={htmlStyles}
-                  onClick={() => setCurrentLanguage("HTML | CSS | JS")}
+                  onClick={() => setCurrentLanguage('HTML | CSS | JS')}
                 >
                   <FaHtml5
                     className={styles.html}
-                    size={
-                      width >= 1440
-                        ? 42
-                        : width <= 375
-                        ? 30
-                        : 33
-                    }
+                    size={width >= 1440 ? 42 : width <= 375 ? 30 : 33}
                     style={{
                       color:
-                        currentLanguage == "HTML | CSS | JS"
-                          ? "#E34F26"
-                          : "#A3A9BD",
+                        currentLanguage == 'HTML | CSS | JS'
+                          ? '#E34F26'
+                          : '#A3A9BD',
                     }}
-                  />{" "}
+                  />{' '}
                   <FaCss3
                     className={styles.css}
-                    size={
-                      width >= 1440
-                        ? 42
-                        : width <= 375
-                        ? 30
-                        : 33
-                    }
+                    size={width >= 1440 ? 42 : width <= 375 ? 30 : 33}
                     style={{
                       color:
-                        currentLanguage == "HTML | CSS | JS"
-                          ? "#2965f1"
-                          : "#A3A9BD",
+                        currentLanguage == 'HTML | CSS | JS'
+                          ? '#2965f1'
+                          : '#A3A9BD',
                     }}
-                  />{" "}
+                  />{' '}
                   <IoLogoJavascript
                     className={styles.javascript}
-                    size={
-                      width >= 1440
-                        ? 42
-                        : width <= 375
-                        ? 30
-                        : 33
-                    }
+                    size={width >= 1440 ? 42 : width <= 375 ? 30 : 33}
                     style={{
                       color:
-                        currentLanguage == "HTML | CSS | JS"
-                          ? "#F7DF1E"
-                          : "#A3A9BD",
+                        currentLanguage == 'HTML | CSS | JS'
+                          ? '#F7DF1E'
+                          : '#A3A9BD',
                     }}
                   />
                 </span>
               </div>
 
               {/* Right Side */}
-              <div className={styles["projects-container"]}>
-                <div className={styles["language-title"]}>
+              <div className={styles['projects-container']}>
+                <div className={styles['language-title']}>
                   <h3>{currentLanguage}</h3>
                 </div>
                 {/* Popcard for each project */}
-                <div className={styles["current-projects"]}>
+                <div className={styles['current-projects']}>
                   {determineSwiper()}
                 </div>
               </div>
             </div>
-            {/* <div className={styles.more}>
-              <button>More Details</button>
-            </div> */}
           </FadeInSection>
         </div>
       </main>

@@ -1,47 +1,46 @@
 .container {
   height: 40px;
   width: 40px;
-  background: white;
-  color:black;
+  color: white;
   border-radius: 50%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding:0;
+  padding: 0;
 }
 
-.openNav, 
+.openNav,
 .closeNav {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 900;
 }
 
 .closeNav:nth-child(1) {
-  animation: firstLineTransition linear .5s forwards;
+  animation: firstLineTransition linear 0.4s forwards;
 }
 
 .closeNav:nth-child(2) {
-  animation: hideMiddle linear .05s forwards;
+  animation: hideMiddle linear 0.001s forwards;
 }
 
 .closeNav:nth-child(3) {
-  animation: secondLineTransition linear .5s forwards;
+  animation: secondLineTransition linear 0.4s forwards;
 }
 
 .openNav:nth-child(1) {
-  animation: firstLineReturn linear .5s forwards;
+  animation: firstLineReturn linear 0.4s forwards;
 }
 
 .openNav:nth-child(2) {
-  animation: secondLineReturn linear .5s forwards;
+  animation: secondLineReturn linear 0.4s forwards;
 }
 
 .openNav:nth-child(3) {
-  animation: revealMiddle linear .5s forwards;
+  animation: revealMiddle linear 0.4s forwards;
 }
 
 .toggler {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -49,26 +48,26 @@
   transform: rotate(90deg);
   margin-left: 6px;
   cursor: pointer;
-  /* transition: opacity 100ms; */
-  position:relative;
-  opacity: .25;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+  opacity: 0.25;
 }
 
 .toggler:hover {
-  opacity:1;
+  opacity: 1;
 }
-
 
 /* Going from Hamburger to X */
 @keyframes firstLineTransition {
   0% {
     transform: rotate(0);
-    position:absolute;
+    position: absolute;
   }
 
   100% {
     transform: rotate(-45deg);
-    position:absolute;
+    position: absolute;
     left: -7px;
     bottom: -16px;
   }
@@ -77,12 +76,12 @@
 @keyframes secondLineTransition {
   0% {
     transform: rotate(0);
-    position:absolute;
+    position: absolute;
   }
 
   100% {
     transform: rotate(45deg);
-    position:absolute;
+    position: absolute;
     bottom: -16px;
     left: -3px;
   }
@@ -90,56 +89,53 @@
 
 @keyframes hideMiddle {
   0% {
-    opacity:1;
+    opacity: 1;
   }
 
   100% {
-   position:absolute;
-   opacity: 0;
+    position: absolute;
+    opacity: 0;
   }
 }
-
 
 /* Going from X to Hamburger */
 @keyframes firstLineReturn {
   0% {
     transform: rotate(-45deg);
-    position:absolute;
+    position: absolute;
     bottom: -15px;
     left: -9px;
   }
 
   100% {
     transform: rotate(0);
-    position:static;
+    position: static;
   }
 }
 @keyframes secondLineReturn {
   0% {
     transform: rotate(45deg);
-    position:absolute;
+    position: absolute;
     bottom: -15px;
   }
 
   100% {
     transform: rotate(0);
-    position:static;
+    position: static;
   }
 }
 
 @keyframes revealMiddle {
   0% {
-    position:absolute;
+    position: absolute;
     opacity: 0;
   }
 
   100% {
-    position:static;
-    opacity:1;
+    position: static;
+    opacity: 1;
   }
 }
 
-
-@media screen and (min-width:700) and (max-width: 1024px) {
-  
+@media screen and (min-width: 700) and (max-width: 1024px) {
 }

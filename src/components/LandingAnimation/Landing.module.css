@@ -1,12 +1,23 @@
 .icon {
+  height: 61px;
+  width: 61px;
+  /* border-radius: 10px;
+  border: 1px solid white; */
+  z-index: 10;
+}
+
+.icon-container {
+  animation: rotatingSpinner linear 1s forwards,
+    endSpinner 300ms linear 1s forwards, fadeIcon 400ms linear 1.3s forwards,
+    rippleEffect 0.75s linear 1s forwards;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
   height: 65px;
   width: 65px;
-  animation: rotatingSpinner linear 1s forwards, endSpinner 300ms linear 1s forwards, fadeIcon 400ms linear 1.3s forwards;
-  border: 2px solid white;
   border-radius: 10px;
-  position: absolute;
-  left: 48%;
-  bottom: 50%;
   z-index: 10;
 }
 
@@ -22,7 +33,8 @@
   justify-content: center;
   position: absolute;
   overflow: hidden;
-  animation: hideLanding 1s linear 2.25s forwards;
+  animation: hideLanding 1s linear 2.5s forwards;
+  animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
 }
 
 .landing-left {
@@ -30,11 +42,12 @@
   width: 50%;
   height: 100%;
   border-right: 1px solid transparent;
-  animation: slideLeft 1s forwards;
-  animation-delay: 1.5s;
+  animation: slideLeft 800ms forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  animation-delay: 1.8s;
   position: absolute;
   z-index: 9;
-  left:0;
+  left: 0;
 }
 
 .landing-right {
@@ -42,8 +55,9 @@
   border-left: 1px solid transparent;
   width: 50%;
   height: 100%;
-  animation: slideRight 1s forwards;
-  animation-delay: 1.5s;
+  animation: slideRight 800ms forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  animation-delay: 1.8s;
   position: absolute;
   right: 0;
   z-index: 9;
@@ -62,27 +76,27 @@
 /* End spinner clicking animation */
 @keyframes endSpinner {
   50% {
-   transform:scale(1.15); 
-   box-shadow: 0px 0px 5px #FFF;
-   -moz-box-shadow: 0px 0px 5px #FFF;
-   -webkit-box-shadow: 0px 0px 5px #FFF;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 5px #fff;
+    -moz-box-shadow: 0px 0px 5px #fff;
+    -webkit-box-shadow: 0px 0px 5px #fff;
   }
   100% {
     transform: scale(1);
-    box-shadow: 0px 0px 1px #FFF;
-    -moz-box-shadow: 0px 0px 1px #FFF;
-    -webkit-box-shadow: 0px 0px 1px #FFF;
-
+    box-shadow: 0px 0px 1px #fff;
+    -moz-box-shadow: 0px 0px 1px #fff;
+    -webkit-box-shadow: 0px 0px 1px #fff;
   }
 }
 
+/* Hide icon after animation finishes */
 @keyframes hideLanding {
   0% {
-    z-index:0;
+    z-index: 0;
   }
 
   100% {
-    z-index:-1;
+    z-index: -1;
   }
 }
 
@@ -121,12 +135,28 @@
   }
 }
 
+/* Ripple Effect For Icon */
+@keyframes rippleEffect {
+  0% {
+    height: 65px;
+    width: 65px;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+  }
+}
+
 /* Mobile Devices */
 @media screen and (min-width: 320px) and (max-width: 435px) {
-  .icon {
+  /* .icon {
     left: 44%;
     bottom: 48%;
     height: 55px;
     width: 55px;
-  }
+  } */
 }

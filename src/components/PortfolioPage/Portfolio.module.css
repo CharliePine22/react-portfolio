@@ -10,34 +10,6 @@
   width: 80%;
 }
 
-.more {
-  width:100%;
-  display:flex;
-  justify-content: center;
-}
-
-.more button {
-  padding: 15px 30px;
-  background-color: #fff;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-  font-size: 1em;
-  /* box-shadow: rgba(0, 0, 0, 1) 0px 12px 28px 0px, rgba(0, 0, 0, 1) 0px 2px 4px 0px, rgba(255, 255, 255, 1) 0px 0px 0px 1px inset; */
-}
-
-.more button:hover {
-  color: #fff;
-  background-color: black;
-  border: 1px solid #fff;
-} 
-
-.more button:focus {
-  outline: none;
-}
-
 .portfolio-content {
   display: flex;
   flex-direction: column;
@@ -84,7 +56,7 @@
 .projects-nav {
   height: 100%;
   width: 18%;
-  border-right: 1px solid rgba(255,255,255,0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +84,7 @@
 
 /* Python */
 .python-active {
-  color: rgba(255,210,62,1) !important;
+  color: rgba(255, 210, 62, 1) !important;
 }
 
 .python:hover {
@@ -162,7 +134,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #111319;
-  perspective:1000px;
+  perspective: 1000px;
   transform-style: preserve-3d;
 }
 
@@ -186,7 +158,7 @@
 
 /* Carousel Component Styles */
 .carousel {
-  width:100%;
+  width: 100%;
 }
 
 /* Disable hidden overflows on carousel for popcard effect to work on mobile */

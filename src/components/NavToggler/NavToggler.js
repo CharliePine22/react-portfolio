@@ -1,5 +1,5 @@
-import styles from "./NavToggler.module.css";
-import React from "react";
+import styles from './NavToggler.module.css';
+import React from 'react';
 
 const NavToggler = (props) => {
   return (
@@ -10,17 +10,17 @@ const NavToggler = (props) => {
         classNames={styles}
         unmountOnExit
       > */}
-        <div className={styles.toggler} onClick={props.toggleNav}>
-          <span className={props.toggler ? styles.closeNav : styles.openNav}>
-            |
-          </span>
-          <span className={props.toggler ? styles.closeNav : styles.openNav}>
-            |
-          </span>
-          <span className={props.toggler ? styles.closeNav : styles.openNav}>
-            |
-          </span>
-        </div>
+      <div className={styles.toggler} onClick={props.toggleNav}>
+        <span className={props.toggler ? styles.closeNav : styles.openNav}>
+          |
+        </span>
+        <span className={props.toggler ? styles.closeNav : styles.openNav}>
+          |
+        </span>
+        <span className={props.toggler ? styles.closeNav : styles.openNav}>
+          |
+        </span>
+      </div>
       {/* </CSSTransition> */}
     </div>
   );
