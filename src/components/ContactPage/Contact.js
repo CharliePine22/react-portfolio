@@ -1,16 +1,17 @@
-import styles from "./Contact.module.css";
-import emailjs from "@emailjs/browser";
-import ReactTypingEffect from "react-typing-effect";
-import React, { useRef, useState } from "react";
-import { FaPhone, FaDiscord } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import FadeInSection from "../Fade/FadeInSection";
-import Modal from "../Modal/Modal";
+import styles from './Contact.module.css';
+import emailjs from '@emailjs/browser';
+import ReactTypingEffect from 'react-typing-effect';
+import { CSSTransition } from 'react-transition-group';
+import React, { useRef, useState } from 'react';
+import { FaPhone, FaDiscord } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import FadeInSection from '../Fade/FadeInSection';
+import Modal from '../Modal/Modal';
 
 const Contact = (props) => {
   // Message Form States
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState('');
   const [hasError, setHasError] = useState(false);
 
   // Modal Display State
@@ -26,36 +27,36 @@ const Contact = (props) => {
 
   // List of dictionaries containing contact data to be mapped out
   const contactIcons = [
-    { name: "Phone", icon: <FaPhone size={26} />, content: "224-944-3640" },
+    { name: 'Phone', icon: <FaPhone size={26} />, content: '224-944-3640' },
     {
-      name: "Email",
+      name: 'Email',
       icon: <MdEmail size={30} />,
-      content: "charlespine22@gmail.com",
+      content: 'charlespine22@gmail.com',
     },
-    { name: "Discord", icon: <FaDiscord size={30} />, content: "EpiqAGL#5924" },
+    { name: 'Discord', icon: <FaDiscord size={30} />, content: 'EpiqAGL#5924' },
   ];
 
   // Submit Button Styles
   const submitButtonStyles = isSubmitting
-    ? styles["submit-loading"]
-    : !isSubmitting && !hasError && statusMessage !== ""
+    ? styles['submit-loading']
+    : !isSubmitting && !hasError && statusMessage !== ''
     ? `${styles.submit} ${styles.success}`
-    : !isSubmitting && hasError && statusMessage !== ""
+    : !isSubmitting && hasError && statusMessage !== ''
     ? `${styles.submit} ${styles.error}`
     : styles.submit;
 
   // Status Message Styles
   const statusMessageStyles =
-    statusMessage !== "" && !isSubmitting && hasError
-      ? `${styles.status} ${styles["status-error"]}`
-      : statusMessage !== "" && !isSubmitting && !hasError
-      ? `${styles.status} ${styles["status-success"]}`
+    statusMessage !== '' && !isSubmitting && hasError
+      ? `${styles.status} ${styles['status-error']}`
+      : statusMessage !== '' && !isSubmitting && !hasError
+      ? `${styles.status} ${styles['status-success']}`
       : styles.status;
 
   // If the user has already submitted a message and they click an input, remove the message and styles
   const inputFocusHandler = (e) => {
-    if (statusMessage !== "" && isSubmitting == false) {
-      setStatusMessage("");
+    if (statusMessage !== '' && isSubmitting == false) {
+      setStatusMessage('');
     }
     e.target.style.borderColor = 'rgba(169, 175, 195, 0.5)';
   };
@@ -70,27 +71,35 @@ const Contact = (props) => {
     let messageFlag = true;
 
     // If any fields are left blank or not formatted correctly, cancel send function and display error
-    if (nameRef.current.value.trim() == "") {
+    if (nameRef.current.value.trim() == '') {
       setStatusMessage('Please fill out all fields!');
       nameRef.current.style.borderColor = 'red';
+      nameRef.current.style.transition =
+        'all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)';
       nameFlag = false;
     }
-    if (emailRef.current.value.trim() == "" || !emailRef.current.value.includes('@')) {
-      setStatusMessage("Please use the correct email format.")
+    if (
+      emailRef.current.value.trim() == '' ||
+      !emailRef.current.value.includes('@')
+    ) {
+      setStatusMessage('Please use the correct email format.');
       emailRef.current.style.borderColor = 'red';
+      emailRef.current.style.transition =
+        'all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)';
       emailFlag = false;
     }
-    if (messageRef.current.value.trim() == "") {
+    if (messageRef.current.value.trim() == '') {
       setStatusMessage('Please fill out all fields!');
       messageRef.current.style.borderColor = 'red';
+      messageRef.current.style.transition =
+        'all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)';
       messageFlag = false;
-    } 
-
-    // If all flags are true, it means there are no erorrs, so continue with sending message
-    if(nameFlag && emailFlag && messageFlag) {
-      submitFlag = true;
     }
 
+    // If all flags are true, it means there are no erorrs, so continue with sending message
+    if (nameFlag && emailFlag && messageFlag) {
+      submitFlag = true;
+    }
 
     if (submitFlag) {
       // EmailJS SDK Sent Email
@@ -103,11 +112,11 @@ const Contact = (props) => {
         )
         .then(
           (result) => {
-            setStatusMessage("Message Sent!");
+            setStatusMessage('Message Sent!');
             setHasError(false);
           },
           (error) => {
-            setStatusMessage("An error occured, please try again!");
+            setStatusMessage('An error occured, please try again!');
             setHasError(true);
           }
         );
@@ -115,9 +124,9 @@ const Contact = (props) => {
       setTimeout(() => {
         setIsSubmitting(false);
         // Reset Input Values
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        messageRef.current.value = "";
+        nameRef.current.value = '';
+        emailRef.current.value = '';
+        messageRef.current.value = '';
       }, 1500);
     } else {
       setIsSubmitting(false);
@@ -138,10 +147,10 @@ const Contact = (props) => {
         </div>
         <FadeInSection>
           {/* Phone, Email, and Discord Contact List */}
-          <div className={styles["contact-methods-container"]}>
-            <ul className={styles["contact-methods-list"]}>
+          <div className={styles['contact-methods-container']}>
+            <ul className={styles['contact-methods-list']}>
               {contactIcons.map((icon) => (
-                <li key={icon.name} className={styles["contact-item"]}>
+                <li key={icon.name} className={styles['contact-item']}>
                   <div className={styles.top}>
                     {icon.icon}
                     <h3>{icon.name}</h3>
@@ -155,15 +164,15 @@ const Contact = (props) => {
           </div>
 
           {/* Contact Message Form */}
-          <div className={styles["form-container"]}>
-            <div className={styles["form-title"]}>
+          <div className={styles['form-container']}>
+            <div className={styles['form-title']}>
               <h3>
-                Looking to discuss something further? <br /> Or talk about{" "}
+                Looking to discuss something further? <br /> Or talk about{' '}
                 <strong>
                   <i>
-                    {" "}
+                    {' '}
                     <ReactTypingEffect
-                      text={["work?", "books?", "puppies?"]}
+                      text={['work?', 'books?', 'puppies?']}
                       typingDelay={0}
                       eraseDelay={1500}
                       speed={300}
@@ -174,40 +183,40 @@ const Contact = (props) => {
               <p>Send a message below and I'll do my best to reply soon!</p>
             </div>
             {/* Form */}
-            <form method="POST" ref={formRef}>
+            <form method='POST' ref={formRef}>
               {/* Name */}
-              <div className={styles["form-name"]}>
+              <div className={styles['form-name']}>
                 <input
                   ref={nameRef}
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='Name'
                   onFocus={inputFocusHandler}
                   required
                 />
               </div>
               {/* Email */}
-              <div className={styles["form-email"]}>
+              <div className={styles['form-email']}>
                 <input
                   ref={emailRef}
-                  type="email"
-                  id="email"
-                  placeholder="Email"
+                  type='email'
+                  id='email'
+                  placeholder='Email'
                   onFocus={inputFocusHandler}
-                  name="email"
+                  name='email'
                   required
                 />
               </div>
               {/* Message */}
-              <div className={styles["form-message"]}>
+              <div className={styles['form-message']}>
                 <input
                   ref={messageRef}
-                  type="textarera"
-                  id="message"
-                  placeholder="Message"
+                  type='textarera'
+                  id='message'
+                  placeholder='Message'
                   onFocus={inputFocusHandler}
-                  name="message"
+                  name='message'
                   required
                 />
               </div>
@@ -216,18 +225,18 @@ const Contact = (props) => {
                 {/* Button */}
                 <button
                   onClick={() => setShow(true)}
-                  type="button"
+                  type='button'
                   className={submitButtonStyles}
-                  onMouseOver={() => setStatusMessage("")}
+                  onMouseOver={() => setStatusMessage('')}
                 >
-                  {isSubmitting ? "Submitting" : "Submit"}
+                  {isSubmitting ? 'Submitting' : 'Submit'}
                 </button>
                 <div className={statusMessageStyles}>
                   {/* Status */}
                   <p>{statusMessage}</p>
                 </div>
                 <Modal
-                  title="Confirm Submit"
+                  title='Confirm Submit'
                   onSubmit={formSubmitHandler}
                   onClose={() => setShow(false)}
                   show={show}

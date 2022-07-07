@@ -13,8 +13,8 @@
   top: 0;
   left: 0;
   z-index: 1;
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+  transition: all 0.5s cubic-bezier(0.7, 0.1, 0.3, 0.9);
 }
 
 .nav-hidden {
@@ -28,8 +28,8 @@
   top: 0;
   left: -350px;
   z-index: 1;
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.7, 0.1, 0.3, 0.9);
+  transition: all 0.5s cubic-bezier(0.7, 0.1, 0.3, 0.9);
 }
 
 /* Hamburger Nav Toggler */

@@ -1,9 +1,17 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { CSSTransition } from 'react-transition-group';
 import styles from './Modal.module.css';
+import { CSSTransition } from 'react-transition-group';
 
 const Modal = (props) => {
+  // Timeout to allow for modal fade out animation
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('This will run after 1 second!');
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Submit form with details from previous submission
   const submitFormHandler = (e) => {
     props.onSubmit(e);
@@ -25,6 +33,7 @@ const Modal = (props) => {
     };
   }, []);
 
+  // Modal Styles for Fade Animations
   const modalStyles = props.show ? styles.modal : styles.modalHidden;
   const modalContentStyles = props.show
     ? styles.modalContent

@@ -50,7 +50,7 @@
 
 .top h3 {
   font-size: 1em;
-  font-weight:normal;
+  font-weight: normal;
 }
 
 .bottom {
@@ -106,7 +106,9 @@
 }
 
 /* SUBMIT BUTTON STYLES */
-.submit,
+
+/* BUTTON COMES OUT ON HOVER */
+/* .submit,
 .submit-loading {
   background-color: transparent;
   border: 2px solid black;
@@ -125,6 +127,31 @@
   box-shadow: 1px 5px 5px 1px black;
   border: 2px solid black;
   transform: translateY(-10px);
+} */
+
+/* BUTTON PRESSES IN ON HOVER  */
+.submit,
+.submit-loading {
+  background-color: #111319;
+  border: 2px solid black;
+  border-radius: 3px;
+  width: 158px;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: #7e7e7e;
+  font-size: 1.3rem;
+  transition: all 0.25s;
+  transform: translateY(-10px);
+  box-shadow: 1px 5px 5px 1px black;
+}
+
+.submit:hover {
+  color: #7e7e7e;
+  background-color: transparent;
+  box-shadow: 0 0 5px black;
+  border: 2px solid black;
+  transform: translateY(0px);
+  color: white;
 }
 
 .submit-loading {
@@ -209,6 +236,7 @@
   width: 100%;
   margin-bottom: 60px;
   display: flex;
+  transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .form-title {
@@ -257,15 +285,35 @@
   opacity: 1;
 }
 
+/* Transition Styles */
+.transitionEnter {
+  opacity: 0;
+  transform: translateY(75px);
+}
+.transitionEnterActive {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms, transform 300ms;
+}
+.transitionExit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.transitionExitActive {
+  opacity: 0;
+  transform: translateY(75px);
+  transition: opacity 300ms, transform 300ms;
+}
+
 /* Fade In Success Styles Keyframe */
 @keyframes fadeInSuccess {
   0% {
     color: white;
-    background-color:#111319;
+    background-color: #111319;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
   100% {
-    color:white;
+    color: white;
     background-color: green;
     /* box-shadow: 0px 15px 20px rgba(0, 255, 0, 0.4); */
     box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.4);
@@ -276,11 +324,11 @@
 @keyframes fadeInError {
   0% {
     color: white;
-    background-color:#111319;
+    background-color: #111319;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
   100% {
-    color:white;
+    color: white;
     background-color: red;
     box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
   }
@@ -288,24 +336,27 @@
 
 /* Floating Button Animation for submit button when loading. */
 @keyframes buttonHover {
-  0%, 50%, 100%  {
+  0%,
+  50%,
+  100% {
     transform: translateY(-10px);
     box-shadow: 1px 8px 5px 1px black;
   }
-  25%, 75% {
+  25%,
+  75% {
     transform: translateY(0px);
     box-shadow: 1px 2px 2px 1px black;
-  } 
+  }
 }
 
 /* Fade In Status Message */
 @keyframes fadeInMessage {
   0% {
-    opacity:0;
+    opacity: 0;
   }
 
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
@@ -316,7 +367,7 @@
   }
 
   .actions {
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -375,7 +426,7 @@
   }
 
   .top {
-    width:65%;
+    width: 65%;
   }
 
   .top h3 {
