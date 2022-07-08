@@ -4,14 +4,6 @@ import styles from './Modal.module.css';
 import { CSSTransition } from 'react-transition-group';
 
 const Modal = (props) => {
-  // Timeout to allow for modal fade out animation
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      console.log('This will run after 1 second!');
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
   // Submit form with details from previous submission
   const submitFormHandler = (e) => {
     props.onSubmit(e);

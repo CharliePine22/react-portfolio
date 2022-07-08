@@ -18,6 +18,7 @@ body {
   letter-spacing: 0;
   background-color: black;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -42,24 +43,9 @@ h6 {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.2);
-  transition: all 500ms;
+  transition: background 500ms;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.15);
-}
-
-.my-node-enter {
-  opacity: 0;
-}
-.my-node-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-.my-node-exit {
-  opacity: 1;
-}
-.my-node-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
 }
