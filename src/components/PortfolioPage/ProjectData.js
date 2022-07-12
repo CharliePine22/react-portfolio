@@ -64,7 +64,7 @@ export const projectTitles = {
         'An application in which a user can rank, view, and edit their owned games.',
       image: video,
       github: 'https://github.com/CharliePine22/video_game_database',
-      live: '',
+      live: 'https://video-game-database.vercel.app',
       stack: [
         { src: nextjsIcon, name: 'NextJS' },
         { src: mongodbIcon, name: 'MongoDB' },
