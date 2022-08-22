@@ -79,7 +79,7 @@
 .card:hover > .front .stats {
   font-size: 1em;
   position: absolute;
-  bottom: -32%;
+  bottom: -37%;
   right: -62px;
   flex-direction: column;
   align-items: center;

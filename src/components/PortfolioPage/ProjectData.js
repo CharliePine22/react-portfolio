@@ -2,7 +2,7 @@
 // React Project Images
 import retro from '../../assets/images/ProjectImages/retro-chat-ss.png';
 import simply from '../../assets/images/ProjectImages/simply-phresh.png';
-import video from '../../assets/images/ProjectImages/video-game-databaseBIG.jpg';
+import video from '../../assets/images/ProjectImages/gameflix-screenshot.png';
 // Python Project Images
 import animal from '../../assets/images/ProjectImages/animal-crossing-database.png';
 import planner from '../../assets/images/ProjectImages/planner.png';
@@ -26,12 +26,26 @@ import nextjsIcon from '../../assets/images/StackImages/nextjs-logo.png';
 import oauthIcon from '../../assets/images/StackImages/oauth-logo.png';
 import pythonIcon from '../../assets/images/StackImages/python-icon.png';
 import rawgIcon from '../../assets/images/StackImages/rawg-logo.jpg';
+import expressIcon from '../../assets/images/StackImages/express.png';
 import reactIcon from '../../assets/images/StackImages/react-icon.png';
 import sqlIcon from '../../assets/images/StackImages/sql-icon.png';
 
 // Project data to be mapped out
 export const projectTitles = {
   react: [
+    {
+      title: 'GameFlix',
+      description:
+        'An application inspired by Netflix and VRV build with the Rawg.io database. Add, view, and discover new video games',
+      image: video,
+      github: 'https://github.com/CharliePine22/gameflix',
+      live: 'https://gameflixx.netlify.app/',
+      stack: [
+        { src: rawgIcon, name: 'RAWG' },
+        { src: mongodbIcon, name: 'MongoDB' },
+        { src: expressIcon, name: 'ExpressJS' },
+      ],
+    },
     {
       title: 'Retro Chat',
       description:
@@ -56,19 +70,6 @@ export const projectTitles = {
         { src: reactIcon, name: 'React-Redux' },
         { src: firebaseIcon, name: 'Firebase' },
         { src: sqlIcon, name: 'SQL' },
-      ],
-    },
-    {
-      title: 'Video Game Database',
-      description:
-        'An application in which a user can rank, view, and edit their owned games.',
-      image: video,
-      github: 'https://github.com/CharliePine22/video_game_database',
-      live: 'https://video-game-database.vercel.app',
-      stack: [
-        { src: nextjsIcon, name: 'NextJS' },
-        { src: mongodbIcon, name: 'MongoDB' },
-        { src: rawgIcon, name: 'Rawg' },
       ],
     },
   ],
