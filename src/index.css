@@ -17,7 +17,7 @@ body {
   word-wrap: break-word;
   letter-spacing: 0;
   background-color: black;
-  overflow: hidden;
+  /* overflow: hidden; */
   scroll-behavior: smooth;
 }
 
@@ -29,7 +29,7 @@ h5,
 h6 {
   font-family: 'Bevan', cursive;
 }
-
+/* 
 ::-webkit-scrollbar {
   width: 0.6rem;
 }
@@ -48,4 +48,4 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.15);
-}
+} */
