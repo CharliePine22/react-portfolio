@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0b2985f.css",
-    "main.js": "/static/js/main.4c27d2e7.js",
+    "main.css": "/static/css/main.0756204b.css",
+    "main.js": "/static/js/main.49384760.js",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
+    "static/media/gameflix-screenshot.png": "/static/media/gameflix-screenshot.c72555c2e81930aea652.png",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
-    "static/media/video-game-databaseBIG.jpg": "/static/media/video-game-databaseBIG.59a1f0c4d02856f1c4a5.jpg",
     "static/media/animal-crossing-database.png": "/static/media/animal-crossing-database.f2cea1bb7177b4aac590.png",
     "static/media/current-cj-image.jpg": "/static/media/current-cj-image.6492fc75087d8e032e14.jpg",
     "static/media/terror-trades.png": "/static/media/terror-trades.6f079fea8cc08d332190.png",
@@ -19,13 +19,14 @@
     "static/media/python-icon.png": "/static/media/python-icon.2e65c2b73eddaaf97e06.png",
     "static/media/retro-chat-ss.png": "/static/media/retro-chat-ss.c88fced1e1edeb0b3cf6.png",
     "static/media/headshot.jfif": "/static/media/headshot.89b34cac1b59212a81bd.jfif",
+    "static/media/express.png": "/static/media/express.b44f5a4b0ab040328aac.png",
     "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.a0b2985f.css.map": "/static/css/main.a0b2985f.css.map",
-    "main.4c27d2e7.js.map": "/static/js/main.4c27d2e7.js.map"
+    "main.0756204b.css.map": "/static/css/main.0756204b.css.map",
+    "main.49384760.js.map": "/static/js/main.49384760.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0b2985f.css",
-    "static/js/main.4c27d2e7.js"
+    "static/css/main.0756204b.css",
+    "static/js/main.49384760.js"
   ]
 }
