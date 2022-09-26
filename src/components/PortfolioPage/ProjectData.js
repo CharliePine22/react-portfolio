@@ -36,10 +36,10 @@ export const projectTitles = {
     {
       title: 'GameFlix',
       description:
-        'An application inspired by Netflix and VRV build with the Rawg.io database. Add, view, and discover new video games',
+        'An application inspired by Netflix and VRV built with Rawg.IO API. Add, view, and discover new video games',
       image: video,
       github: 'https://github.com/CharliePine22/gameflix',
-      live: 'https://gameflixx.netlify.app/',
+      live: 'https://gameflexx.herokuapp.com/',
       stack: [
         { src: rawgIcon, name: 'RAWG' },
         { src: mongodbIcon, name: 'MongoDB' },
