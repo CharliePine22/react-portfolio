@@ -148,7 +148,7 @@
 .submit:hover {
   color: #7e7e7e;
   background-color: transparent;
-  box-shadow: 0 0 5px black;
+  box-shadow: inset 0 0 10px black;
   border: 2px solid black;
   transform: translateY(0px);
   color: white;

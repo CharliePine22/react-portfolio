@@ -78,6 +78,7 @@ const Contact = (props) => {
         'all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955)';
       nameFlag = false;
     }
+    // If the email is blank or doesnt include the '@' symbol, throw an error.
     if (
       emailRef.current.value.trim() == '' ||
       !emailRef.current.value.includes('@')
@@ -101,6 +102,7 @@ const Contact = (props) => {
       submitFlag = true;
     }
 
+    // If there are no errors, submit the form
     if (submitFlag) {
       // EmailJS SDK Sent Email
       emailjs
