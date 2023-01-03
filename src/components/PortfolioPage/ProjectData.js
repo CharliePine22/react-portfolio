@@ -30,7 +30,7 @@ import expressIcon from '../../assets/images/StackImages/express.png';
 import reactIcon from '../../assets/images/StackImages/react-icon.png';
 import sqlIcon from '../../assets/images/StackImages/sql-icon.png';
 
-// Project data to be mapped out
+// Project data to be mapped outsss
 export const projectTitles = {
   react: [
     {
@@ -39,7 +39,7 @@ export const projectTitles = {
         'An application inspired by Netflix and VRV built with Rawg.IO API. Add, view, and discover new video games',
       image: video,
       github: 'https://github.com/CharliePine22/gameflix',
-      live: 'https://gameflexx.herokuapp.com/',
+      live: 'https://cybrary2022.onrender.com/',
       stack: [
         { src: rawgIcon, name: 'RAWG' },
         { src: mongodbIcon, name: 'MongoDB' },
