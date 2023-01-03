@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0756204b.css",
-    "main.js": "/static/js/main.4f071409.js",
+    "main.js": "/static/js/main.87ed1b35.js",
     "static/media/Chicago.jpg": "/static/media/Chicago.2effd8a0dc08ccf3c865.jpg",
     "static/media/gameflix-screenshot.png": "/static/media/gameflix-screenshot.c72555c2e81930aea652.png",
     "static/media/planner.png": "/static/media/planner.c79d7a751b1fee49d434.png",
@@ -23,10 +23,10 @@
     "static/media/javascript-icon.png": "/static/media/javascript-icon.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
     "main.0756204b.css.map": "/static/css/main.0756204b.css.map",
-    "main.4f071409.js.map": "/static/js/main.4f071409.js.map"
+    "main.87ed1b35.js.map": "/static/js/main.87ed1b35.js.map"
   },
   "entrypoints": [
     "static/css/main.0756204b.css",
-    "static/js/main.4f071409.js"
+    "static/js/main.87ed1b35.js"
   ]
 }
