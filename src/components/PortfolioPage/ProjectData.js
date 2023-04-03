@@ -39,7 +39,7 @@ export const projectTitles = {
         'An application inspired by Netflix and VRV built with Rawg.IO API. Add, view, and discover new video games',
       image: video,
       github: 'https://github.com/CharliePine22/gameflix',
-      live: 'https://cybrary2022.onrender.com/',
+      live: 'https://gameflixx.netlify.app',
       stack: [
         { src: rawgIcon, name: 'RAWG' },
         { src: mongodbIcon, name: 'MongoDB' },
