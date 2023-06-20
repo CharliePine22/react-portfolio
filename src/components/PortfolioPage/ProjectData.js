@@ -1,6 +1,7 @@
 // Card image imports, named them the first word of their respective project title
 // React Project Images
-import retro from '../../assets/images/ProjectImages/retro-chat-ss.png';
+// import retro from '../../assets/images/ProjectImages/retro-chat-ss.png';
+import jcj from '../../assets/images/ProjectImages/jcj-logo.png';
 import simply from '../../assets/images/ProjectImages/simply-phresh.png';
 import video from '../../assets/images/ProjectImages/gameflix-screenshot.png';
 // Python Project Images
@@ -50,13 +51,13 @@ export const projectTitles = {
       title: 'JCJ Swag',
       description:
         'A fashion eCommerce app built with NextJS, Sanity, and Stripe.',
-      image: retro,
-      github: 'https://github.com/CharliePine22/jcj-ecommerce',
+      image: jcj,
+      github: 'https://github.com/CharliePine22/ecommerce',
       live: 'https://jcj-ecommerce.vercel.app/', //Right now, this app is broken, need to fix....
       stack: [
-        { src: reactIcon, name: 'React' },
-        { src: firebaseIcon, name: 'Firebase' },
-        { src: chatengineIcon, name: 'Chat Engine' },
+        { src: nextjsIcon, name: 'NextJs' },
+        { src: firebaseIcon, name: 'Sanity' },
+        { src: chatengineIcon, name: 'Stripe' },
       ],
     },
     // {
