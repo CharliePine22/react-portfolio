@@ -39,7 +39,7 @@ export const projectTitles = {
         'An application inspired by Netflix and VRV built with Rawg.IO API. Add, view, and discover new video games',
       image: video,
       github: 'https://github.com/CharliePine22/gameflix',
-      live: 'https://gameflixx.netlify.app',
+      live: 'https://cybrary2022.onrender.com/',
       stack: [
         { src: rawgIcon, name: 'RAWG' },
         { src: mongodbIcon, name: 'MongoDB' },
@@ -47,18 +47,31 @@ export const projectTitles = {
       ],
     },
     {
-      title: 'Retro Chat',
+      title: 'JCJ Swag',
       description:
-        "A chat application inspired by AOL's Instant Messanger (AIM).",
+        'A fashion eCommerce app built with NextJS, Sanity, and Stripe.',
       image: retro,
-      github: 'https://github.com/CharliePine22/retro-chat-application',
-      live: 'https://retro-chat-cp.netlify.app/', //Right now, this app is broken, need to fix....
+      github: 'https://github.com/CharliePine22/jcj-ecommerce',
+      live: 'https://jcj-ecommerce.vercel.app/', //Right now, this app is broken, need to fix....
       stack: [
         { src: reactIcon, name: 'React' },
         { src: firebaseIcon, name: 'Firebase' },
         { src: chatengineIcon, name: 'Chat Engine' },
       ],
     },
+    // {
+    //   title: 'Retro Chat',
+    //   description:
+    //     "A chat application inspired by AOL's Instant Messanger (AIM).",
+    //   image: retro,
+    //   github: 'https://github.com/CharliePine22/retro-chat-application',
+    //   live: 'https://retro-chat-cp.netlify.app/', //Right now, this app is broken, need to fix....
+    //   stack: [
+    //     { src: reactIcon, name: 'React' },
+    //     { src: firebaseIcon, name: 'Firebase' },
+    //     { src: chatengineIcon, name: 'Chat Engine' },
+    //   ],
+    // },
     {
       title: 'Simply Phresh',
       description:
@@ -67,7 +80,7 @@ export const projectTitles = {
       github: 'https://github.com/CharliePine22/Simply-Phresh',
       live: 'https://simply-phresh.web.app/meals',
       stack: [
-        { src: reactIcon, name: 'React-Redux' },
+        { src: nextjsIcon, name: 'NextJs' },
         { src: firebaseIcon, name: 'Firebase' },
         { src: sqlIcon, name: 'SQL' },
       ],
