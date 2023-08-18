@@ -53,7 +53,7 @@ export const projectTitles = {
         'A fashion eCommerce app built with NextJS, Sanity, and Stripe.',
       image: jcj,
       github: 'https://github.com/CharliePine22/ecommerce',
-      live: 'https://jcj-ecommerce.vercel.app/', //Right now, this app is broken, need to fix....
+      live: 'https://jcj-swag.vercel.app/', //Right now, this app is broken, need to fix....
       stack: [
         { src: nextjsIcon, name: 'NextJs' },
         { src: firebaseIcon, name: 'Sanity' },
