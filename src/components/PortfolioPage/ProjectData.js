@@ -61,12 +61,12 @@ export const projectTitles = {
       ],
     },
     // {
-    //   title: 'Retro Chat',
+    //   title: 'Phantom Chat',
     //   description:
-    //     "A chat application inspired by AOL's Instant Messanger (AIM).",
+    //     "A chat application inspired by the video game Persona 5.",
     //   image: retro,
-    //   github: 'https://github.com/CharliePine22/retro-chat-application',
-    //   live: 'https://retro-chat-cp.netlify.app/', //Right now, this app is broken, need to fix....
+    //   github: 'https://github.com/CharliePine22/phantom-chat',
+    //   live: 'https://phantomchat.vercel.app/', 
     //   stack: [
     //     { src: reactIcon, name: 'React' },
     //     { src: firebaseIcon, name: 'Firebase' },
