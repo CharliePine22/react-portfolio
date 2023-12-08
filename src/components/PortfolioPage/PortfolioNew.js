@@ -78,9 +78,9 @@ const PortfolioNew = (props) => {
                         <h6>Toolkit</h6>
                         <div
                           className={styles.stackList}
-                          style={{
-                            justifyContent: (i == 3 || i == 1) && "flex-end",
-                          }}
+                          // style={{
+                          //   justifyContent: (i == 3 || i == 1) && "flex-end",
+                          // }}
                         >
                           {project.stack.map((item) => {
                             return (
@@ -95,9 +95,9 @@ const PortfolioNew = (props) => {
 
                       <div
                         className={styles.portfolioActions}
-                        style={{
-                          justifyContent: (i == 3 || i == 1) && "flex-end",
-                        }}
+                        // style={{
+                        //   justifyContent: (i == 3 || i == 1) && "flex-end",
+                        // }}
                       >
                         <div
                           className={styles.action}
