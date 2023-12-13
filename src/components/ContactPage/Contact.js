@@ -27,13 +27,11 @@ const Contact = (props) => {
 
   // List of dictionaries containing contact data to be mapped out
   const contactIcons = [
-    { name: 'Phone', icon: <FaPhone size={26} />, content: '224-944-3640' },
     {
       name: 'Email',
       icon: <MdEmail size={30} />,
       content: 'charlespine22@gmail.com',
     },
-    { name: 'Discord', icon: <FaDiscord size={30} />, content: 'EpiqAGL#5924' },
   ];
 
   // Submit Button Styles
