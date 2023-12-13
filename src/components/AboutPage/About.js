@@ -27,9 +27,9 @@ const About = (props) => {
                 </p>
               </div>
               {/* Right Side */}
-              <div className={styles['about-info-right']}>
-                <img src={Chicago} alt='The city of Chciago' />
-              </div>
+              // <div className={styles['about-info-right']}>
+              //   <img src={Chicago} alt='The city of Chciago' />
+              // </div>
             </div>
             {/* Hobbies */}
             <div className={styles.hobbies}>
