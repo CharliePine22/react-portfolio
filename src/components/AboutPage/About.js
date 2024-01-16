@@ -17,10 +17,10 @@ const About = (props) => {
               {/* Left Side */}
               <div className={styles['about-info-left']}>
                 <h3>
-                  Hey there, I'm <span>Charles Pine</span>
+                  Hey there, I'm  <span>Charlie</span>
                 </h3>
                 <p>
-                  I'm a Full Stack Developer with 3 years of experience. I love
+                  I'm a Full Stack Developer with a speciality with the MERN stack, with 3 years of experience. I love
                   making people laugh and exploring new places. My passion for
                   coding allows me to continue learning new ways to approach
                   problems and different ways to google Stack Overflow.
