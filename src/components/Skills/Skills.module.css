@@ -16,6 +16,10 @@
   margin: 10px 40px;
 }
 
+.col svg {
+  filter: drop-shadow(-2px 2px 0px rgba(0, 0, 0, 1));
+}
+
 .col:nth-of-type(1) span:nth-of-type(2),
 .col:nth-of-type(1) span:nth-of-type(3) {
   transform: translateX(-80px);
@@ -125,7 +129,6 @@
   padding-top: 30px;
 }
 
-
 /* Small laptops */
 @media screen and (min-width: 0px) and (max-width: 1435px) {
   .container {
@@ -133,7 +136,7 @@
   }
 
   .skills-container {
-      margin: 25px 0;
+    margin: 25px 0;
   }
 }
 
@@ -160,7 +163,7 @@
 
   .middle {
     flex-direction: column;
-    left:0;
+    left: 0;
   }
 
   .middle span {
@@ -235,6 +238,7 @@
   }
 
   .skills {
+    justify-content: space-around;
     width: 90%;
     border-radius: 5px;
     font-size: 0.9em;
@@ -276,5 +280,4 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1300px) {
-
 }

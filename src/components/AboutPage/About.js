@@ -9,25 +9,27 @@ const About = (props) => {
     <>
       <main id={props.id} className={styles['about-container']}>
         <div className={styles['about-content']}>
-          <div className={styles['about-title']}>
-            <h3>About Me</h3>
-          </div>
           <FadeInSection>
+            <div className={styles['about-title']}>
+              <h3>About Me</h3>
+            </div>
             <div className={styles['about-info']}>
               {/* Left Side */}
               <div className={styles['about-info-left']}>
                 <h3>
-                  Hey there, I'm  <span>Charlie</span>
+                  Hey there, I'm <span>Charlie</span>
                 </h3>
                 <p>
-                  I'm a Full Stack Developer with a speciality with the MERN stack, with 3 years of experience. I love
-                  making people laugh and exploring new places. My passion for
-                  coding allows me to continue learning new ways to approach
-                  problems and different ways to google Stack Overflow.
+                  A seasoned web developer with a dynamic mindset and two years
+                  of experience as a Web Developer. My journey in the
+                  ever-evolving world of web development has been nothing short
+                  of exhilarating, marked by continuous learning and a fervent
+                  passion for problem-solving. I thrive on challenges and find
+                  joy in unraveling complex problems, transforming them into
+                  elegant and efficient solutions.
                 </p>
               </div>
               {/* Right Side */}
-
             </div>
             {/* Hobbies */}
             <div className={styles.hobbies}>

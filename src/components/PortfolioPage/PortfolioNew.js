@@ -1,33 +1,24 @@
-import styles from "./Portfolio.module.css";
-// Portfolio Nav Icons
-import {
-  FaReact,
-  FaPython,
-  FaHtml5,
-  FaCss3,
-  FaLink,
-  FaGithub,
-} from "react-icons/fa";
-import React, { useState, useEffect } from "react";
+import styles from './Portfolio.module.css';
+import React, { useState, useEffect } from 'react';
 
 // Imported Project Data
-import { projectTitles } from "./ProjectData";
+import { projectTitles } from './ProjectData';
 
 // Component Imports
-import FadeInSection from "../Fade/FadeInSection";
+import FadeInSection from '../Fade/FadeInSection';
 
 const PortfolioNew = (props) => {
   // TODO: HAVE TO FIX PYTHON HOVER COLORS
-  const [currentLanguage, setCurrentLanguage] = useState("React");
+  const [currentLanguage, setCurrentLanguage] = useState('React');
   const [width, setWidth] = useState(window.innerWidth);
-  const selectedLanguage = currentLanguage.split(" ")[0].toLowerCase();
+  const selectedLanguage = currentLanguage.split(' ')[0].toLowerCase();
 
   const goToGithub = (project) => {
-    window.open(project, "_blank");
+    window.open(project, '_blank');
   };
 
   const goToWebsite = (project) => {
-    window.open(project, "_blank");
+    window.open(project, '_blank');
   };
 
   // Watch for the width of the screen to determine mobile carousel effect
@@ -36,10 +27,10 @@ const PortfolioNew = (props) => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -48,10 +39,10 @@ const PortfolioNew = (props) => {
   return (
     <>
       <main id={props.id} className={styles.container}>
-        <div className={styles["portfolio-content"]}>
-          <h3>Portfolio</h3>
-          <FadeInSection style={{ width: "100%" }}>
-            <div className={styles["portfolio-description"]}>
+        <div className={styles['portfolio-content']}>
+          <FadeInSection style={{ width: '100%' }}>
+            <h3>Portfolio</h3>
+            <div className={styles['portfolio-description']}>
               <p>Here are some of the projects that I've worked on!</p>
             </div>
             <div className={styles.wrapper}>
@@ -68,7 +59,7 @@ const PortfolioNew = (props) => {
                     {/* Project Information */}
                     <div className={styles.projectItemHeader}>
                       <h2>{project.title}</h2>
-                      {project.title == "Phantom Chat" && (
+                      {project.title == 'Phantom Chat' && (
                         <h6>Currently in Development</h6>
                       )}
                       <p>{project.description}</p>
@@ -93,12 +84,7 @@ const PortfolioNew = (props) => {
                         </div>
                       </div>
 
-                      <div
-                        className={styles.portfolioActions}
-                        // style={{
-                        //   justifyContent: (i == 3 || i == 1) && "flex-end",
-                        // }}
-                      >
+                      <div className={styles.portfolioActions}>
                         <div
                           className={styles.action}
                           onClick={() => goToGithub(project.github)}
@@ -110,7 +96,7 @@ const PortfolioNew = (props) => {
                           className={styles.action}
                           onClick={() => goToWebsite(project.live)}
                         >
-                          <p>Live</p>
+                          <p>View Site</p>
                           {/* <FaLink size={26} /> */}
                         </div>
                       </div>

@@ -139,15 +139,15 @@ const Contact = (props) => {
       <div className={styles.container}>
         {/* Contact Page Header */}
 
-        <div className={styles.title}>
-          <h3>Contact</h3>
-          <p>
-            Looking to get in touch? Reach out using any of the methods below!
-          </p>
-        </div>
         <FadeInSection>
+          <div className={styles.title}>
+            <h3>Contact</h3>
+            {/* <p>
+            Looking to get in touch? Reach out using any of the methods below!
+          </p> */}
+          </div>
           {/* Phone, Email, and Discord Contact List */}
-          <div className={styles['contact-methods-container']}>
+          {/* <div className={styles['contact-methods-container']}>
             <ul className={styles['contact-methods-list']}>
               {contactIcons.map((icon) => (
                 <li key={icon.name} className={styles['contact-item']}>
@@ -161,7 +161,7 @@ const Contact = (props) => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Message Form */}
           <div className={styles['form-container']}>

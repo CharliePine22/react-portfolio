@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@500&family=Stint+Ultra+Expanded&display=swap');
+@font-face {
+  font-family: 'Stint Ultra Expanded';
+  src: local('Stint'),
+    url(./assets/fonts/Stint_Ultra_Expanded/StintUltraExpanded-Regular.ttf)
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Pontano Sans';
+  src: local('Stint'),
+    url(./assets/fonts/Stint_Ultra_Expanded/StintUltraExpanded-Regular.ttf)
+      format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -11,7 +26,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   font-size: 18px;
   line-height: 30px;
   word-wrap: break-word;
@@ -27,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bevan', cursive;
+  font-family: 'Stint Ultra Expanded', serif;
 }
 /* 
 ::-webkit-scrollbar {

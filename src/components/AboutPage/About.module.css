@@ -17,6 +17,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  text-align: center;
 }
 
 .about-info {
@@ -24,6 +25,7 @@
   height: auto;
   clear: both;
   display: flex;
+  justify-content: center;
   padding-top: 60px;
 }
 
@@ -37,7 +39,7 @@
 }
 
 .about-info p {
-  max-width: 90%;
+  max-width: 100%;
   color: #a9afc3;
   margin: 0;
   line-height: 50px;
@@ -48,7 +50,7 @@
 }
 
 .about-info-left {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -71,6 +73,7 @@
   width: 100%;
   float: left;
   color: #fff;
+  text-align: left;
 }
 
 .about-title h3 {
@@ -157,10 +160,6 @@
 
 /* Tablets to Small Laptops */
 @media screen and (min-width: 813px) and (max-width: 1435px) {
-  .about-info-left {
-    width: 55%;
-  }
-
   .about-info-right {
     width: 45%;
   }
@@ -172,23 +171,23 @@
 
 /* Desktops */
 @media screen and (min-width: 1600px) {
-  .about-info {
+  /* .about-info {
     justify-content: space-between;
-  }
+  } */
 
   .about-info p {
     font-size: 1.3em;
     line-height: 65px;
   }
 
-  .about-info-left {
+  /* .about-info-left {
     width: 60%;
-  }
+  } */
 
-  .about-info-right {
+  /* .about-info-right {
     width: 40%;
     margin-right: 15px;
-  }
+  } */
 
   .hobbies {
     margin-top: 60px;
