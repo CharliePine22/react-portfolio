@@ -45,7 +45,7 @@ export const projectTitles = {
     {
       title: 'Gameflix',
       description:
-        "Inspired by Netflix and Crunchyroll, allows users to browse for their favorite games or discover new ones. Also allows users to track games they've played and certain stats.",
+        'Inspired by Netflix and Crunchyroll, allows users to browse for their favorite games, log their progress with owned games, or discover new ones.',
       image: video,
       github: 'https://github.com/CharliePine22/gameflix',
       live: 'https://gameflixx.netlify.app/',
