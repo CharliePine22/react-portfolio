@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
-import resume from '../../assets/images/res2.pdf';
+import resume from '../../assets/images/PINE_2025_RESUME.pdf';
 import {
   FaFacebook,
   FaInstagram,
